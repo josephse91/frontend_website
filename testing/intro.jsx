@@ -2,11 +2,11 @@ import React from "react";
 import ReactDOM from "react-dom";
 
 const logos = ["eat", "sleep", "code", "repeat"];
+const arrow = "\u27AA";
 
 function CreateLogos() {
   const content = [];
   for (let i = 0; i < logos.length; i++) {
-    const imageImport = `./images/{logos[i]}_logo.svg`;
     content.push(
       <div className="logo" id={logos[i]}>
         <img
@@ -42,7 +42,7 @@ function GreetingBuild() {
       </div>
       <div className="scrollEnter">
         <p className="scrollPrompt">
-          <span>&#10154</span> Scroll to enter page <span>&#10154</span>
+          <span>{arrow}</span> Scroll to enter page <span>{arrow}</span>
         </p>
       </div>
     </div>
@@ -50,17 +50,22 @@ function GreetingBuild() {
 }
 
 function PhotoSide() {
-  <div className="introPic">
-    <image className="me" src="./images/CP3GQ.png"></image>
-  </div>;
+  return (
+    <div className="introPic">
+      <img className="me" src="./images/CP3GQ.png" />
+    </div>
+  );
 }
 
-/*
 function IntroPage() {
-  <GreetingBuild/>
-  <PhotoSide/>
+  return (
+    <div className="intro">
+      <GreetingBuild />
+      <PhotoSide />
+    </div>
+  );
 }
-*/
+
 // */
 const logoContainer = <div className="logo-container"></div>;
 
@@ -73,5 +78,5 @@ document.addEventListener("DOMContentLoaded", () => {
 
 document.addEventListener("DOMContentLoaded", () => {
   const main = document.getElementById("main");
-  ReactDOM.render(<GreetingBuild/><PhotoSide/>, main);
+  ReactDOM.render(<IntroPage />, main);
 });
