@@ -24,28 +24,44 @@ function CreateLogos() {
   }
   return content;
 }
-/*
-function IntroBuild() {
+// /*
+function GreetingBuild() {
   return (
-  <div className="greetings">
+    <div className="greetings">
       <div className="logo-container">
-        <CreateLogos/>
+        <CreateLogos />
       </div>
-      <div class="intro-content">
-        <div class="nameplate"><p>Serge-Edouard</p> <p>Joseph</p> <p id="charactertag">Self-taught :: Problem Solver :: Optimist</p></div>
-        <div class="intro_statement"><p >Just a new Software Engineer looking for a great fit</p></div>
+      <div className="intro-content">
+        <div className="nameplate">
+          <p>Serge-Edouard</p> <p>Joseph</p>{" "}
+          <p id="charactertag">Self-taught :: Problem Solver :: Optimist</p>
+        </div>
+        <div className="intro_statement">
+          <p>Just a new Software Engineer looking for a great fit</p>
+        </div>
       </div>
-      <div class="scrollEnter"> 
-        <p class="scrollPrompt"> <span>&#10154</span> Scroll to enter page <span>&#10154</span>
+      <div className="scrollEnter">
+        <p className="scrollPrompt">
+          <span>&#10154</span> Scroll to enter page <span>&#10154</span>
         </p>
       </div>
     </div>
-    <div class="introPic">
-      <image class="me" src="./images/CP3GQ.png"></image>
-    </div>
-  )
+  );
+}
+
+function PhotoSide() {
+  <div className="introPic">
+    <image className="me" src="./images/CP3GQ.png"></image>
+  </div>;
+}
+
+/*
+function IntroPage() {
+  <GreetingBuild/>
+  <PhotoSide/>
 }
 */
+// */
 const logoContainer = <div className="logo-container"></div>;
 
 /*
@@ -57,5 +73,5 @@ document.addEventListener("DOMContentLoaded", () => {
 
 document.addEventListener("DOMContentLoaded", () => {
   const main = document.getElementById("main");
-  ReactDOM.render(<CreateLogos />, main);
+  ReactDOM.render(<GreetingBuild/><PhotoSide/>, main);
 });

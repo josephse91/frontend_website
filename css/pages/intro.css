@@ -18,6 +18,11 @@
   overflow: hidden;
 }
 
+.intro {
+  height: 100%;
+  width: 100%;
+}
+
 .greetings {
   /* position: relative; */
   grid-row: 1 / span 1;
