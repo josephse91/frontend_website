@@ -1,0 +1,45 @@
+* {
+  font-size: 10;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.main {
+  align-self: flex-start;
+  display: flex;
+  margin: 2rem 2rem 1rem;
+  gap: 1rem;
+}
+
+.logo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 6rem;
+  width: 7.5rem;
+}
+
+.logo_image {
+  width: 100%;
+  height: 70%;
+}
+
+.grid-cell {
+  border: 5px solid black;
+  /* background-color: aqua; */
+}
+
+svg {
+  position: absolute;
+  height: 100vh;
+  width: 100vw;
+}
+
+.box {
+  x: 5%;
+  y: 5%;
+  height: 25rem;
+  width: 25rem;
+  fill: coral;
+}
