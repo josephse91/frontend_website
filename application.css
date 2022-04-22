@@ -1,0 +1,10 @@
+@import "./css/layout/navigation.css";
+@import "./css/pages/intro.css.css";
+
+* {
+  box-sizing: border-box;
+  font-size: 10px;
+  font-family: "Merriweather", serif;
+  margin: 0;
+  padding: 0;
+}
