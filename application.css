@@ -1,5 +1,6 @@
 @import "./css/layout/navigation.css";
-@import "./css/pages/intro.css.css";
+@import "./css/pages/intro.css";
+@import "./css/pages/home.css";
 
 * {
   box-sizing: border-box;

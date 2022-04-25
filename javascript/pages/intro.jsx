@@ -1,11 +1,22 @@
 import React from "react";
 import SvgComponents from "../components/svgComponent.jsx";
 
-const logos = ["eat", "sleep", "code", "repeat"];
-const arrow = "\u27AA";
+class IntroPage extends React.Component {
+  render() {
+    return (
+      <div className="intro">
+        <GreetingBuild />
+        <PhotoSide />
+        <SvgComponents />
+      </div>
+    );
+  }
+}
 
 function CreateLogos() {
+  const logos = ["eat", "sleep", "code", "repeat"];
   const content = [];
+
   for (let i = 0; i < logos.length; i++) {
     content.push(
       <div className="logo" id={logos[i]}>
@@ -26,9 +37,10 @@ function CreateLogos() {
 }
 // /*
 function GreetingBuild() {
+  const arrow = "\u27AA";
   return (
     <div className="greetings">
-      <div className="logo-container">
+      <div className="logo-container slide-in">
         <CreateLogos />
       </div>
       <div className="intro-content">
@@ -41,7 +53,7 @@ function GreetingBuild() {
         </div>
       </div>
       <div className="scrollEnter">
-        <p className="scrollPrompt">
+        <p className="scrollPrompt bounce">
           <span>{arrow}</span> Scroll to enter page <span>{arrow}</span>
         </p>
       </div>
@@ -53,16 +65,6 @@ function PhotoSide() {
   return (
     <div className="introPic">
       <img className="me" src="./images/CP3GQ.png" />
-    </div>
-  );
-}
-
-function IntroPage() {
-  return (
-    <div className="intro">
-      <GreetingBuild />
-      <PhotoSide />
-      <SvgComponents />
     </div>
   );
 }

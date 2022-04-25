@@ -48,49 +48,79 @@ function SvgComponents() {
     fill: "url(#teal_grade)"
   })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("use", {
     href: "#mycircle",
-    id: "c100_5"
+    id: "c100_5",
+    x: "100em",
+    y: "5em"
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("use", {
     href: "#mycircle",
-    id: "c5_45"
+    id: "c5_45",
+    x: "5em",
+    y: "45em"
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("use", {
     href: "#mycircle",
-    id: "c90_50"
+    id: "c90_50",
+    x: "90em",
+    y: "50em"
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("use", {
     href: "#mycircle",
-    id: "c40_25"
+    id: "c40_25",
+    x: "40em",
+    y: "25em"
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("use", {
     href: "#mycircle",
-    id: "c50_65"
+    id: "c50_65",
+    x: "50em",
+    y: "65em"
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("use", {
     href: "#mycircle",
-    id: "c120_75"
+    id: "c120_75",
+    x: "120em",
+    y: "75em"
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("use", {
     href: "#mycircle",
-    id: "c150_30"
+    id: "c150_30",
+    x: "150em",
+    y: "30em"
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("use", {
     href: "#mysquare",
-    id: "d20_20"
+    id: "d20_20",
+    x: "20em",
+    y: "20em"
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("use", {
     href: "#mysquare",
-    id: "d35_50"
+    id: "d35_50",
+    x: "35em",
+    y: "50em"
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("use", {
     href: "#mysquare",
-    id: "d50_7"
+    id: "d50_7",
+    x: "50em",
+    y: "7em"
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("use", {
     href: "#mysquare",
-    id: "d120_40"
+    id: "d120_40",
+    x: "120em",
+    y: "40em"
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("use", {
     href: "#mysquare",
-    id: "d25_75"
+    id: "d25_75",
+    x: "25em",
+    y: "75em"
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("use", {
     href: "#mysquare",
-    id: "d80_70"
+    id: "d80_70",
+    x: "80em",
+    y: "70em"
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("use", {
     href: "#mysquare",
-    id: "d150_65"
+    id: "d150_65",
+    x: "150em",
+    y: "65em"
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("use", {
     href: "#mysquare",
-    id: "d130_15"
+    id: "d130_15",
+    x: "130em",
+    y: "15em"
   })));
 }
 
@@ -172,12 +202,56 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _components_svgComponent_jsx__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../components/svgComponent.jsx */ "./javascript/components/svgComponent.jsx");
+function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, "prototype", { writable: false }); return Constructor; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); Object.defineProperty(subClass, "prototype", { writable: false }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } else if (call !== void 0) { throw new TypeError("Derived constructors may only return object or undefined"); } return _assertThisInitialized(self); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})); return true; } catch (e) { return false; } }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
 
 
-var logos = ["eat", "sleep", "code", "repeat"];
-var arrow = "\u27AA";
+
+
+var IntroPage = /*#__PURE__*/function (_React$Component) {
+  _inherits(IntroPage, _React$Component);
+
+  var _super = _createSuper(IntroPage);
+
+  function IntroPage() {
+    _classCallCheck(this, IntroPage);
+
+    return _super.apply(this, arguments);
+  }
+
+  _createClass(IntroPage, [{
+    key: "render",
+    value: function render() {
+      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+        className: "intro"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(GreetingBuild, null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(PhotoSide, null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_svgComponent_jsx__WEBPACK_IMPORTED_MODULE_1__["default"], null));
+    }
+  }]);
+
+  return IntroPage;
+}((react__WEBPACK_IMPORTED_MODULE_0___default().Component));
 
 function CreateLogos() {
+  var logos = ["eat", "sleep", "code", "repeat"];
   var content = [];
 
   for (var i = 0; i < logos.length; i++) {
@@ -197,10 +271,11 @@ function CreateLogos() {
 
 
 function GreetingBuild() {
+  var arrow = "\u27AA";
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: "greetings"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
-    className: "logo-container"
+    className: "logo-container slide-in"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(CreateLogos, null)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: "intro-content"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
@@ -212,7 +287,7 @@ function GreetingBuild() {
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", null, "Just a new Software Engineer looking for a great fit"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: "scrollEnter"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", {
-    className: "scrollPrompt"
+    className: "scrollPrompt bounce"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("span", null, arrow), " Scroll to enter page ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("span", null, arrow))));
 }
 
@@ -223,12 +298,6 @@ function PhotoSide() {
     className: "me",
     src: "./images/CP3GQ.png"
   }));
-}
-
-function IntroPage() {
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
-    className: "intro"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(GreetingBuild, null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(PhotoSide, null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_svgComponent_jsx__WEBPACK_IMPORTED_MODULE_1__["default"], null));
 }
 
 
