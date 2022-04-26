@@ -1,8 +1,12 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import { IntroPage } from "./javascript/pages/intro";
-import Home from "./javascript/pages/home";
 import { HashRouter as Router, Route, Routes } from "react-router-dom";
+import { IntroPage } from "./javascript/pages/intro";
+import Layout from "./javascript/pages/layout";
+import Home from "./javascript/pages/home";
+import About from "./javascript/pages/about";
+import Portfolio from "./javascript/pages/portfolio";
+import Contact from "./javascript/pages/contact";
 
 export function App() {
   return (

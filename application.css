@@ -1,6 +1,10 @@
 @import "./css/layout/navigation.css";
 @import "./css/pages/intro.css";
 @import "./css/pages/home.css";
+@import "./css/layout/layout.css";
+@import "./css/pages/about.css";
+@import "./css/pages/portfolio.css";
+@import "./css/pages/contact.css";
 
 * {
   box-sizing: border-box;

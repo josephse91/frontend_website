@@ -70,7 +70,7 @@ function IntroPage() {
     setTimeout(scrollUpdate, 1000, 0);
 
     if (scrollRatio > 5) {
-      navigate("/home");
+      navigate("/sj/home");
     }
     return;
   }
