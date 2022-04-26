@@ -9,7 +9,13 @@ export function App() {
     <Router>
       <Routes>
         <Route path="/" element={<IntroPage />} />
-        <Route path="home" element={<Home />} />
+        <Route path="sj" element={<Layout />}>
+          <Route index element={<Home />} />
+          <Route path="home" element={<Home />} />
+          <Route path="about" element={<About />} />
+          <Route path="portfolio" element={<Portfolio />} />
+          <Route path="contact" element={<Contact />} />
+        </Route>
       </Routes>
     </Router>
   );

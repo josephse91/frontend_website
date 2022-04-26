@@ -1,17 +1,6 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import SvgComponents from "../components/svgComponent.jsx";
-
-class IntroPage extends React.Component {
-  render() {
-    return (
-      <div className="intro">
-        <GreetingBuild />
-        <PhotoSide />
-        <SvgComponents />
-      </div>
-    );
-  }
-}
 
 function CreateLogos() {
   const logos = ["eat", "sleep", "code", "repeat"];
@@ -25,7 +14,7 @@ function CreateLogos() {
           src={"./images/" + logos[i] + "_logo.svg"}
         />
         <div>
-          <p class="logo_text">
+          <p className="logo_text">
             {logos[i]}
             <span>()</span>
           </p>
@@ -35,7 +24,7 @@ function CreateLogos() {
   }
   return content;
 }
-// /*
+
 function GreetingBuild() {
   const arrow = "\u27AA";
   return (
@@ -65,6 +54,32 @@ function PhotoSide() {
   return (
     <div className="introPic">
       <img className="me" src="./images/CP3GQ.png" />
+    </div>
+  );
+}
+
+function IntroPage() {
+  let [accScroll, scrollUpdate] = useState(0);
+  let navigate = useNavigate();
+
+  function scrollHandler(e) {
+    let currentScroll = e.deltaY;
+    let scrollRatio = Math.abs(accScroll) / currentScroll;
+
+    scrollUpdate(accScroll + currentScroll);
+    setTimeout(scrollUpdate, 1000, 0);
+
+    if (scrollRatio > 5) {
+      navigate("/home");
+    }
+    return;
+  }
+
+  return (
+    <div className="intro" onWheel={scrollHandler}>
+      <GreetingBuild />
+      <PhotoSide />
+      <SvgComponents />
     </div>
   );
 }

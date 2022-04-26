@@ -192,7 +192,7 @@
 
   50% {
     transform: translateX(0%);
-    gap: 3rem;
+    gap: 6rem;
   }
 
   100% {
@@ -208,6 +208,6 @@
 
 .slide-in {
   animation-name: slide-in;
-  animation-duration: 1s;
+  animation-duration: 2s;
   animation-iteration-count: 1;
 }

@@ -6,12 +6,12 @@ function SvgComponents() {
       <svg className="svg-screen">
         <defs>
           <linearGradient id="brown_grade" gradientTransform="rotate(45)">
-            <stop offset="0%" stop-color="#ffffff" />
-            <stop offset="95%" stop-color="#d79922" />
+            <stop offset="0%" stopColor="#ffffff" />
+            <stop offset="95%" stopColor="#d79922" />
           </linearGradient>
           <linearGradient id="teal_grade" gradientTransform="rotate(45)">
-            <stop offset="0%" stop-color="#ffffff" />
-            <stop offset="95%" stop-color="#4056a1" />
+            <stop offset="0%" stopColor="#ffffff" />
+            <stop offset="95%" stopColor="#4056a1" />
           </linearGradient>
           <rect
             id="mysquare"
