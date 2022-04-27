@@ -1,0 +1,15 @@
+@import "navigation.scss";
+@import "../pages/intro.scss";
+@import "../pages/home.scss";
+@import "layout.scss";
+@import "../pages/about.scss";
+@import "../pages/portfolio.scss";
+@import "../pages/contact.scss";
+
+* {
+  box-sizing: border-box;
+  font-size: 10px;
+  font-family: "Merriweather", serif;
+  margin: 0;
+  padding: 0;
+}

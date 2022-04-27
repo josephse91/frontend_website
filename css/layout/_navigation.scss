@@ -1,7 +1,7 @@
+@import "../helpers/variables";
+
 .navbar {
-  background-color: #4056a1;
-  /* background-color: #c5cbe3; */
-  /* background-color: #efe2ba; */
+  background-color: $deepBlue;
   display: flex;
   justify-content: space-between;
   font-size: 2rem;
@@ -17,11 +17,8 @@
 
 .navButton {
   font-size: 2.5rem;
-  color: #efe2ba;
+  color: $lightBrown;
   text-decoration: none;
-  /* color: #4056a1; */
-  /* color: #d79922; */
-  /* color: #f13c20; */
   padding: 0.5rem 0.5rem;
   margin: 1rem;
   display: inline-block;
