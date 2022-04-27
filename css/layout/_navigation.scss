@@ -5,23 +5,83 @@
   display: flex;
   justify-content: space-between;
   font-size: 2rem;
-  /* border-bottom-style: solid;
-  border-bottom-color: black;
-  border-bottom-width: 0.2rem; */
-  /* border-bottom: 0.1rem solid black; */
   border-bottom-left-radius: 1rem;
   border-bottom-right-radius: 1rem;
   box-shadow: 0.3em 0.3em 0.3em 0.3em rgba(0, 0, 0, 0.199);
   animation: navdrop 0.5s ease-in-out;
+  height: 7.5rem;
 }
 
 .navButton {
-  font-size: 2.5rem;
+  font-size: 1.75rem;
   color: $lightBrown;
   text-decoration: none;
-  padding: 0.5rem 0.5rem;
-  margin: 1rem;
+  padding: 2rem 0.5rem;
+  // margin: 1rem;
   display: inline-block;
+}
+
+.navsection {
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+  width: 33%;
+  color: $lightBrown;
+}
+
+#navleft {
+  padding-left: 2rem;
+}
+
+#navright {
+  flex-direction: row-reverse;
+  padding-right: 1rem;
+}
+
+#navmid {
+  justify-content: center;
+}
+
+.nav_logo {
+  // max-height: 4rem;
+  // width: 4rem;
+  display: inline-block;
+}
+
+#linkedin_outer {
+  fill: $lightBlue;
+}
+
+#linkedin_inner {
+  fill: $deepBlue;
+}
+
+#github_logo {
+  fill: $lightBlue;
+}
+
+#self_logo {
+  background-color: $lightBlue;
+  border-radius: 100%;
+  font-family: Georgia, Times, "Times New Roman", serif;
+  padding: 0.5rem;
+}
+
+#navmid div p {
+  display: inline-block;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: 4rem;
+  font-weight: 700;
+  color: $tomato;
+  padding: 0.15rem;
+}
+
+#signature {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: 2rem;
+  font-weight: 700;
+  text-align: right;
+  color: $lightBrown;
 }
 
 @keyframes navdrop {

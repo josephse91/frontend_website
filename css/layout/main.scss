@@ -5,6 +5,7 @@
 @import "../pages/about.scss";
 @import "../pages/portfolio.scss";
 @import "../pages/contact.scss";
+@import "../helpers/fonts";
 
 * {
   box-sizing: border-box;
@@ -12,4 +13,5 @@
   font-family: "Merriweather", serif;
   margin: 0;
   padding: 0;
+  // border: 0.1rem dashed black;
 }

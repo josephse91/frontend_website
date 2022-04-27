@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import SvgComponents from "../components/svgComponent.jsx";
+import { SvgComponents } from "../components/svgComponent.jsx";
 
 function CreateLogos() {
   const logos = ["eat", "sleep", "code", "repeat"];

@@ -1,27 +1,85 @@
 @charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&family=Playfair+Display:wght@400;500&family=Roboto:ital,wght@0,300;0,400;1,400&display=swap");
 .navbar {
   background-color: #4056a1;
   display: flex;
   justify-content: space-between;
   font-size: 2rem;
-  /* border-bottom-style: solid;
-  border-bottom-color: black;
-  border-bottom-width: 0.2rem; */
-  /* border-bottom: 0.1rem solid black; */
   border-bottom-left-radius: 1rem;
   border-bottom-right-radius: 1rem;
   box-shadow: 0.3em 0.3em 0.3em 0.3em rgba(0, 0, 0, 0.199);
   -webkit-animation: navdrop 0.5s ease-in-out;
           animation: navdrop 0.5s ease-in-out;
+  height: 7.5rem;
 }
 
 .navButton {
-  font-size: 2.5rem;
+  font-size: 1.75rem;
   color: #efe2ba;
   text-decoration: none;
-  padding: 0.5rem 0.5rem;
-  margin: 1rem;
+  padding: 2rem 0.5rem;
   display: inline-block;
+}
+
+.navsection {
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+  width: 33%;
+  color: #efe2ba;
+}
+
+#navleft {
+  padding-left: 2rem;
+}
+
+#navright {
+  flex-direction: row-reverse;
+  padding-right: 1rem;
+}
+
+#navmid {
+  justify-content: center;
+}
+
+.nav_logo {
+  display: inline-block;
+}
+
+#linkedin_outer {
+  fill: #c5cbe3;
+}
+
+#linkedin_inner {
+  fill: #4056a1;
+}
+
+#github_logo {
+  fill: #c5cbe3;
+}
+
+#self_logo {
+  background-color: #c5cbe3;
+  border-radius: 100%;
+  font-family: Georgia, Times, "Times New Roman", serif;
+  padding: 0.5rem;
+}
+
+#navmid div p {
+  display: inline-block;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: 4rem;
+  font-weight: 700;
+  color: #f13c20;
+  padding: 0.15rem;
+}
+
+#signature {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: 2rem;
+  font-weight: 700;
+  text-align: right;
+  color: #efe2ba;
 }
 
 @-webkit-keyframes navdrop {
