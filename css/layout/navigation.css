@@ -1,20 +1,25 @@
 .navbar {
   background-color: #4056a1;
-  background-color: #c5cbe3;
-  background-color: #efe2ba;
+  /* background-color: #c5cbe3; */
+  /* background-color: #efe2ba; */
   display: flex;
   justify-content: space-between;
   font-size: 2rem;
-  border-bottom: #4056a1;
-  border-bottom-width: 1rem;
-  border-bottom-left-radius: 3rem;
-  border-bottom-right-radius: 3rem;
+  /* border-bottom-style: solid;
+  border-bottom-color: black;
+  border-bottom-width: 0.2rem; */
+  /* border-bottom: 0.1rem solid black; */
+  border-bottom-left-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+  box-shadow: 0.3em 0.3em 0.3em 0.3em rgba(0, 0, 0, 0.199);
+  animation: navdrop 0.5s ease-in-out;
 }
 
 .navButton {
   font-size: 2.5rem;
-  /* color: #efe2ba; */
-  color: #4056a1;
+  color: #efe2ba;
+  text-decoration: none;
+  /* color: #4056a1; */
   /* color: #d79922; */
   /* color: #f13c20; */
   padding: 0.5rem 0.5rem;
@@ -22,6 +27,12 @@
   display: inline-block;
 }
 
-.aboutnav {
-  font-size: 2.5rem;
+@keyframes navdrop {
+  0% {
+    transform: translateY(-100%);
+  }
+
+  100% {
+    transform: translateY(0%);
+  }
 }
