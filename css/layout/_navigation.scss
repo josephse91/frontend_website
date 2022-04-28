@@ -17,8 +17,10 @@
   text-decoration: none;
   padding: 2rem 0.5rem;
   color: $color60;
-  // margin: 1rem;
   display: inline-block;
+  border-radius: 10%;
+
+  @extend %hover_colors;
 }
 
 .navsection {
@@ -33,47 +35,53 @@
   padding-left: 2rem;
 }
 
+#navmid {
+  justify-content: center;
+}
+
+#self_logo {
+  display: inline-block;
+  background-color: $color60;
+  border-radius: 100%;
+  font-family: Georgia, Times, "Times New Roman", serif;
+  padding: 0.75rem;
+  font-size: 4rem;
+  font-weight: 700;
+  color: $color60alt;
+
+  @extend %hover_colors;
+}
+
 #navright {
   flex-direction: row-reverse;
   padding-right: 1rem;
 }
 
-#navmid {
-  justify-content: center;
-}
-
 .nav_logo {
-  // max-height: 4rem;
-  // width: 4rem;
   display: inline-block;
 }
 
-#linkedin_outer {
+.linkedin_outer {
   fill: $color60;
 }
 
-#linkedin_inner {
+.linkedin_outer_hover {
+  fill: $color60alt;
+}
+
+.linkedin_inner {
   fill: $color30;
+}
+
+.linkedin_inner_hover {
+  fill: $color10;
 }
 
 #github_logo {
   fill: $color60;
-}
-
-#self_logo {
-  background-color: $color60;
-  border-radius: 100%;
-  font-family: Georgia, Times, "Times New Roman", serif;
-  padding: 0.5rem;
-}
-
-#navmid div p {
-  display: inline-block;
-  font-family: Georgia, "Times New Roman", Times, serif;
-  font-size: 4rem;
-  font-weight: 700;
-  color: $color60alt;
-  padding: 0.15rem;
+  &:hover {
+    fill: $color60alt;
+  }
 }
 
 #signature {

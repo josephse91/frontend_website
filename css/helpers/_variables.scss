@@ -36,3 +36,10 @@ $color30: $sleek_2;
 $color10: $sleek_3;
 $color30alt: $sleek_4;
 $color60alt: $sleek_1; // Looks good with text
+
+%hover_colors {
+  &:hover {
+    background-color: $color60alt;
+    color: $color30alt;
+  }
+}

@@ -20,11 +20,8 @@ function Navbar() {
         </NavLink>
       </div>
       <div className="navsection" id="navmid">
-        <NavLink to="/" className="Introlink">
-          <div id="self_logo">
-            <p>S</p>
-            <p>J</p>
-          </div>
+        <NavLink to="/" id="introButton">
+          <div id="self_logo">SJ</div>
         </NavLink>
       </div>
       <div className="navsection" id="navright">

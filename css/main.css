@@ -1,5 +1,10 @@
 @charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&family=Playfair+Display:wght@400;500&family=Roboto:ital,wght@0,300;0,400;1,400&display=swap");
+#self_logo:hover, .navButton:hover {
+  background-color: #2c3531;
+  color: #ffcb9a;
+}
+
 .navbar {
   background-color: #116466;
   display: flex;
@@ -19,6 +24,7 @@
   padding: 2rem 0.5rem;
   color: #d1e8e2;
   display: inline-block;
+  border-radius: 10%;
 }
 
 .navsection {
@@ -33,45 +39,51 @@
   padding-left: 2rem;
 }
 
+#navmid {
+  justify-content: center;
+}
+
+#self_logo {
+  display: inline-block;
+  background-color: #d1e8e2;
+  border-radius: 100%;
+  font-family: Georgia, Times, "Times New Roman", serif;
+  padding: 0.75rem;
+  font-size: 4rem;
+  font-weight: 700;
+  color: #2c3531;
+}
+
 #navright {
   flex-direction: row-reverse;
   padding-right: 1rem;
-}
-
-#navmid {
-  justify-content: center;
 }
 
 .nav_logo {
   display: inline-block;
 }
 
-#linkedin_outer {
+.linkedin_outer {
   fill: #d1e8e2;
 }
 
-#linkedin_inner {
+.linkedin_outer_hover {
+  fill: #2c3531;
+}
+
+.linkedin_inner {
   fill: #116466;
+}
+
+.linkedin_inner_hover {
+  fill: #d9b08c;
 }
 
 #github_logo {
   fill: #d1e8e2;
 }
-
-#self_logo {
-  background-color: #d1e8e2;
-  border-radius: 100%;
-  font-family: Georgia, Times, "Times New Roman", serif;
-  padding: 0.5rem;
-}
-
-#navmid div p {
-  display: inline-block;
-  font-family: Georgia, "Times New Roman", Times, serif;
-  font-size: 4rem;
-  font-weight: 700;
-  color: #2c3531;
-  padding: 0.15rem;
+#github_logo:hover {
+  fill: #2c3531;
 }
 
 #signature {
@@ -99,6 +111,11 @@
     transform: translateY(0%);
   }
 }
+.navButton:hover, #self_logo:hover {
+  background-color: #2c3531;
+  color: #ffcb9a;
+}
+
 .intro {
   position: relative;
   display: grid;
@@ -322,12 +339,37 @@
           animation-iteration-count: 1;
 }
 
+.navButton:hover, #self_logo:hover {
+  background-color: #2c3531;
+  color: #ffcb9a;
+}
+
 h1 {
   font-size: 4rem;
 }
 
+.navButton:hover, #self_logo:hover {
+  background-color: #2c3531;
+  color: #ffcb9a;
+}
+
 .layout {
   background-color: #d1e8e2;
+}
+
+.navButton:hover, #self_logo:hover {
+  background-color: #2c3531;
+  color: #ffcb9a;
+}
+
+.navButton:hover, #self_logo:hover {
+  background-color: #2c3531;
+  color: #ffcb9a;
+}
+
+.navButton:hover, #self_logo:hover {
+  background-color: #2c3531;
+  color: #ffcb9a;
 }
 
 * {
