@@ -1,7 +1,7 @@
 @charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&family=Playfair+Display:wght@400;500&family=Roboto:ital,wght@0,300;0,400;1,400&display=swap");
 .navbar {
-  background-color: #4056a1;
+  background-color: #116466;
   display: flex;
   justify-content: space-between;
   font-size: 2rem;
@@ -15,9 +15,9 @@
 
 .navButton {
   font-size: 1.75rem;
-  color: #efe2ba;
   text-decoration: none;
   padding: 2rem 0.5rem;
+  color: #d1e8e2;
   display: inline-block;
 }
 
@@ -26,7 +26,7 @@
   gap: 1.5rem;
   align-items: center;
   width: 33%;
-  color: #efe2ba;
+  color: #d1e8e2;
 }
 
 #navleft {
@@ -47,19 +47,19 @@
 }
 
 #linkedin_outer {
-  fill: #c5cbe3;
+  fill: #d1e8e2;
 }
 
 #linkedin_inner {
-  fill: #4056a1;
+  fill: #116466;
 }
 
 #github_logo {
-  fill: #c5cbe3;
+  fill: #d1e8e2;
 }
 
 #self_logo {
-  background-color: #c5cbe3;
+  background-color: #d1e8e2;
   border-radius: 100%;
   font-family: Georgia, Times, "Times New Roman", serif;
   padding: 0.5rem;
@@ -70,7 +70,7 @@
   font-family: Georgia, "Times New Roman", Times, serif;
   font-size: 4rem;
   font-weight: 700;
-  color: #f13c20;
+  color: #2c3531;
   padding: 0.15rem;
 }
 
@@ -79,7 +79,7 @@
   font-size: 2rem;
   font-weight: 700;
   text-align: right;
-  color: #efe2ba;
+  color: #d1e8e2;
 }
 
 @-webkit-keyframes navdrop {
@@ -167,7 +167,7 @@
   align-self: center;
   max-inline-size: 60%;
   text-align: center;
-  color: #efe2ba;
+  color: white;
 }
 
 .intro_statement p {
@@ -180,12 +180,12 @@
   flex-direction: column;
   align-content: center;
   justify-content: space-evenly;
-  color: #f13c20;
-  background-color: #efe2ba;
+  color: #2c3531;
+  background-color: #d1e8e2;
   box-shadow: inset 0 -3em 3em rgba(0, 0, 0, 0.1), 0 0 0 2px rgba(0, 0, 0, 0.322), 0.3em 0.3em 1em rgba(0, 0, 0, 0.3);
   padding: 1rem;
   /* border: 1.5rem ridge rgba(207, 121, 9, 0.589); */
-  border: 1.5rem ridge #d79922;
+  border: 1.5rem ridge #116466;
   /* border: 1.5rem ridge rgba(32, 136, 233, 0.507); */
 }
 
@@ -229,7 +229,7 @@
 .scrollPrompt {
   font-size: 2rem;
   font-weight: 700;
-  color: #efe2ba;
+  color: #d9b08c;
 }
 
 .scrollEnter span {
@@ -327,7 +327,7 @@ h1 {
 }
 
 .layout {
-  background-color: #c5cbe3;
+  background-color: #d1e8e2;
 }
 
 * {

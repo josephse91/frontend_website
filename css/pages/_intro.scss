@@ -68,7 +68,7 @@
   align-self: center;
   max-inline-size: 60%;
   text-align: center;
-  color: $lightBrown;
+  color: white;
 }
 
 .intro_statement p {
@@ -81,13 +81,13 @@
   flex-direction: column;
   align-content: center;
   justify-content: space-evenly;
-  color: $tomato;
-  background-color: $lightBrown;
+  color: $color60alt;
+  background-color: $color60;
   box-shadow: inset 0 -3em 3em rgba(0, 0, 0, 0.1),
     0 0 0 2px rgba(0, 0, 0, 0.322), 0.3em 0.3em 1em rgba(0, 0, 0, 0.3);
   padding: 1rem;
   /* border: 1.5rem ridge rgba(207, 121, 9, 0.589); */
-  border: 1.5rem ridge $tanBrown;
+  border: 1.5rem ridge $color30;
   /* border: 1.5rem ridge rgba(32, 136, 233, 0.507); */
 }
 
@@ -131,7 +131,7 @@
 .scrollPrompt {
   font-size: 2rem;
   font-weight: 700;
-  color: $lightBrown;
+  color: $color10;
 }
 
 .scrollEnter span {

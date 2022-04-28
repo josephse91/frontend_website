@@ -3,15 +3,6 @@ import { Link, NavLink, useNavigate } from "react-router-dom";
 import { LinkedInLogo, GithubLogo } from "./svgComponent";
 
 function Navbar() {
-  function introNavigate(e) {
-    e.preventDefault();
-    console.log("hello");
-    navigate = useNavigate();
-
-    navigate("/");
-    return;
-  }
-
   return (
     <div className="navbar">
       <div className="navsection" id="navleft">
@@ -29,12 +20,12 @@ function Navbar() {
         </NavLink>
       </div>
       <div className="navsection" id="navmid">
-        <Link to="/" className="Introlink">
+        <NavLink to="/" className="Introlink">
           <div id="self_logo">
             <p>S</p>
             <p>J</p>
           </div>
-        </Link>
+        </NavLink>
       </div>
       <div className="navsection" id="navright">
         <p id="signature">

@@ -1,7 +1,38 @@
+// Theme set 1
+
 $lightBlue: #c5cbe3;
 $tanBrown: #d79922;
 $lightBrown: #efe2ba;
 $deepBlue: #4056a1;
 $tomato: #f13c20;
+
+// Theme set 2 - seems too light and feminine
+
+$minimal_1: #eae7cd;
+$minimal_2: #d8c3a5;
+$minimal_3: #8e8d8a;
+$minimal_4: #e98074;
+$minimal_5: #e85a4f;
+
+// Theme set 3 - sleek
+$sleek_1: #2c3531;
+$sleek_2: #116466;
+$sleek_3: #d9b08c;
+$sleek_4: #ffcb9a;
+$sleek_5: #d1e8e2;
+
+//
 $neutral-gray: #be8d8a;
 $teal: #2b6777;
+
+// $color60: $lightBlue;
+// $color30: $deepBlue;
+// $color10: $tomato;
+// $color30alt: $tanBrown;
+// $color60alt: $lightBrown;
+
+$color60: $sleek_5;
+$color30: $sleek_2;
+$color10: $sleek_3;
+$color30alt: $sleek_4;
+$color60alt: $sleek_1; // Looks good with text
