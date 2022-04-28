@@ -25,7 +25,7 @@ function Navbar() {
         </NavLink>
       </div>
       <div className="navsection" id="navright">
-        <p id="signature">
+        <p id="nametag">
           Serge-Edouard <br />
           Joseph
         </p>

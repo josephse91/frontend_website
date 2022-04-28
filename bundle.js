@@ -50,7 +50,7 @@ function Navbar() {
     className: "navsection",
     id: "navright"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", {
-    id: "signature"
+    id: "nametag"
   }, "Serge-Edouard ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("br", null), "Joseph"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_svgComponent__WEBPACK_IMPORTED_MODULE_1__.LinkedInLogo, null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_svgComponent__WEBPACK_IMPORTED_MODULE_1__.GithubLogo, null)));
 }
 
@@ -281,7 +281,8 @@ __webpack_require__.r(__webpack_exports__);
 
 function About() {
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
-    className: "about"
+    className: "pageContent",
+    id: "about"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h1", null, "This will be the about page"));
 }
 
@@ -302,7 +303,8 @@ __webpack_require__.r(__webpack_exports__);
 
 function Contact() {
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
-    className: "contact"
+    className: "pageContent",
+    id: "contact"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h1", null, "This will be the contact me page"));
 }
 
@@ -359,7 +361,8 @@ var Home = /*#__PURE__*/function (_React$Component) {
     key: "render",
     value: function render() {
       return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
-        className: "home"
+        className: "pageContent",
+        id: "home"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h1", null, "This will be the home page"));
     }
   }]);
@@ -501,7 +504,9 @@ __webpack_require__.r(__webpack_exports__);
 function Layout() {
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: "layout"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_navbar__WEBPACK_IMPORTED_MODULE_1__["default"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__.Outlet, null));
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    className: "underNav"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_navbar__WEBPACK_IMPORTED_MODULE_1__["default"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__.Outlet, null)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", null, "This will be footer"));
 }
 
 /***/ }),
@@ -521,7 +526,8 @@ __webpack_require__.r(__webpack_exports__);
 
 function Portfolio() {
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
-    className: "portfolio"
+    className: "pageContent",
+    id: "portfolio"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h1", null, "This will be the portfolio page"));
 }
 

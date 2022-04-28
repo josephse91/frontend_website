@@ -5,8 +5,12 @@ import Navbar from "../components/navbar";
 export default function Layout() {
   return (
     <div className="layout">
-      <Navbar />
-      <Outlet />
+      <div className="underNav">
+        <Navbar />
+
+        <Outlet />
+      </div>
+      <div>This will be footer</div>
     </div>
   );
 }

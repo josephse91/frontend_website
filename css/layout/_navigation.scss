@@ -1,9 +1,11 @@
 @import "../helpers/variables";
 
 .navbar {
-  background-color: $color30;
+  position: sticky;
+  top: 0;
   display: flex;
   justify-content: space-between;
+  background-color: $color30;
   font-size: 2rem;
   border-bottom-left-radius: 1rem;
   border-bottom-right-radius: 1rem;
@@ -84,7 +86,7 @@
   }
 }
 
-#signature {
+#nametag {
   font-family: Georgia, "Times New Roman", Times, serif;
   font-size: 2rem;
   font-weight: 700;
