@@ -36,6 +36,26 @@ class Home extends React.Component {
     return descriptions;
   }
 
+  accordianHandle(event) {
+    event.preventDefault();
+
+    let educationItem = event.currentTarget;
+    let itemDescription = educationItem.nextElementSibling;
+    let bullet = document.getElementById("bullet");
+
+    if (itemDescription.style.display === "block") {
+      itemDescription.style.display = "none";
+      bullet.style.transform = "rotate(270deg)";
+      educationItem.classList.remove("education_active");
+    } else {
+      itemDescription.style.display = "block";
+      bullet.style.transform = "rotate(0deg)";
+      educationItem.classList.add("education_active");
+
+      console.log(educationItem, educationItem[0]);
+    }
+  }
+
   render() {
     return (
       <div className="pageContent" id="home">
@@ -58,7 +78,7 @@ class Home extends React.Component {
           <h1 className="section_title" id="education_title">
             Education
           </h1>
-          <h2 className="education">
+          <h2 className="education" onClick={this.accordianHandle}>
             <Bullet />
             App Academy
           </h2>

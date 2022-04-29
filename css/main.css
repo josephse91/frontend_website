@@ -404,6 +404,17 @@
 
 .education {
   font-size: 2rem;
+  color: #116466;
+  cursor: pointer;
+}
+
+.education_active {
+  background-color: #2c3531;
+  color: #ffcb9a;
+  fill: #ffcb9a;
+}
+.education_active svg {
+  fill: #ffcb9a;
 }
 
 #bullet {
@@ -412,20 +423,37 @@
   max-width: -moz-fit-content;
   max-width: fit-content;
   display: inline-block;
-  border: 1px solid black;
   transform: rotate(270deg);
+  margin-right: 1rem;
 }
 
 .education_description {
+  display: none;
   list-style-type: disc;
   transform: translate(4rem, 0);
 }
 
 .bullet {
   font-size: 1.5rem;
-  margin-top: 0.5rem;
 }
 
+@-webkit-keyframes drop-down {
+  0% {
+    display: none;
+  }
+  100% {
+    display: block;
+  }
+}
+
+@keyframes drop-down {
+  0% {
+    display: none;
+  }
+  100% {
+    display: block;
+  }
+}
 .navButton:hover, #self_logo:hover {
   background-color: #2c3531;
   color: #ffcb9a;

@@ -62,22 +62,44 @@
 
 .education {
   font-size: 2rem;
+  // background-color: $color30;
+  color: $color30;
+  // border: 0.3rem solid $color30;
+  cursor: pointer;
+}
+
+.education_active {
+  background-color: $color60alt;
+  color: $color30alt;
+  fill: $color30alt;
+  svg {
+    fill: $color30alt;
+  }
 }
 
 #bullet {
   max-height: 2rem;
   max-width: fit-content;
   display: inline-block;
-  border: 1px solid black;
   transform: rotate(270deg);
+  margin-right: 1rem;
 }
 
 .education_description {
+  display: none;
   list-style-type: disc;
   transform: translate(4rem, 0);
 }
 
 .bullet {
   font-size: 1.5rem;
-  margin-top: 0.5rem;
+}
+
+@keyframes drop-down {
+  0% {
+    display: none;
+  }
+  100% {
+    display: block;
+  }
 }

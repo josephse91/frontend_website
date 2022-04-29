@@ -388,6 +388,25 @@ var Home = /*#__PURE__*/function (_React$Component) {
       return descriptions;
     }
   }, {
+    key: "accordianHandle",
+    value: function accordianHandle(event) {
+      event.preventDefault();
+      var educationItem = event.currentTarget;
+      var itemDescription = educationItem.nextElementSibling;
+      var bullet = document.getElementById("bullet");
+
+      if (itemDescription.style.display === "block") {
+        itemDescription.style.display = "none";
+        bullet.style.transform = "rotate(270deg)";
+        educationItem.classList.remove("education_active");
+      } else {
+        itemDescription.style.display = "block";
+        bullet.style.transform = "rotate(0deg)";
+        educationItem.classList.add("education_active");
+        console.log(educationItem, educationItem[0]);
+      }
+    }
+  }, {
     key: "render",
     value: function render() {
       return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
@@ -408,7 +427,8 @@ var Home = /*#__PURE__*/function (_React$Component) {
         className: "section_title",
         id: "education_title"
       }, "Education"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h2", {
-        className: "education"
+        className: "education",
+        onClick: this.accordianHandle
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_svgComponent__WEBPACK_IMPORTED_MODULE_1__.Bullet, null), "App Academy"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("ul", {
         className: "education_description"
       }, this.education())));
