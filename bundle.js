@@ -66,6 +66,7 @@ function Navbar() {
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "Bullet": () => (/* binding */ Bullet),
 /* harmony export */   "GithubLogo": () => (/* binding */ GithubLogo),
 /* harmony export */   "LinkedInLogo": () => (/* binding */ LinkedInLogo),
 /* harmony export */   "SvgComponents": () => (/* binding */ SvgComponents)
@@ -245,22 +246,24 @@ function GithubLogo() {
     d: "M319.988 7.973C143.293 7.973 0 151.242 0 327.96c0 141.392 91.678 261.298 218.826 303.63 16.004 2.964 21.886-6.957 21.886-15.414 0-7.63-.319-32.835-.449-59.552-89.032 19.359-107.8-37.772-107.8-37.772-14.552-36.993-35.529-46.831-35.529-46.831-29.032-19.879 2.209-19.442 2.209-19.442 32.126 2.245 49.04 32.954 49.04 32.954 28.56 48.922 74.883 34.76 93.131 26.598 2.882-20.681 11.15-34.807 20.315-42.803-71.08-8.067-145.797-35.516-145.797-158.14 0-34.926 12.52-63.485 32.965-85.88-3.33-8.078-14.291-40.606 3.083-84.674 0 0 26.87-8.61 88.029 32.8 25.512-7.075 52.878-10.642 80.056-10.76 27.2.118 54.614 3.673 80.162 10.76 61.076-41.386 87.922-32.8 87.922-32.8 17.398 44.08 6.485 76.631 3.154 84.675 20.516 22.394 32.93 50.953 32.93 85.879 0 122.907-74.883 149.93-146.117 157.856 11.481 9.921 21.733 29.398 21.733 59.233 0 42.792-.366 77.28-.366 87.804 0 8.516 5.764 18.473 21.992 15.354 127.076-42.354 218.637-162.274 218.637-303.582 0-176.695-143.269-319.988-320-319.988l-.023.107z"
   })));
 }
-/*
-function MyLogo() {
-  return (
-    // <svg id="my_logo" height="100" width="100" viewBox="0 0 100 100">
-    //   <circle class="self_logo" cx="33" cy="33" r="33"></circle>
-    //   <text class="initial" font-size="35px" x="15" y="40" fill="red">
-    //     S
-    //   </text>
-    //   <text class="initial" x="30" y="50" fill="red">
-    //     J
-    //   </text>
-    // </svg>
-  );
-}
-*/
 
+function Bullet() {
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("svg", {
+    version: "1.0",
+    xmlns: "http://www.w3.org/2000/svg",
+    width: "1280.000000pt",
+    height: "1280.000000pt",
+    viewBox: "0 0 1280.000000 1280.000000",
+    preserveAspectRatio: "xMidYMid meet",
+    id: "bullet"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("g", {
+    transform: "translate(0.000000,1280.000000) scale(0.100000,-0.100000)",
+    fill: "#000000",
+    stroke: "none"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("path", {
+    d: "M314 12790 c-195 -41 -335 -242 -309 -445 6 -51 383 -811 3040 -6125\r\n2901 -5801 3036 -6069 3082 -6110 61 -54 157 -99 231 -106 118 -13 258 40 334\r\n125 31 35 771 1508 3070 6106 2924 5849 3029 6062 3035 6126 15 173 -76 326\r\n-237 403 -59 27 -74 30 -160 30 -79 -1 -104 -5 -150 -26 -30 -13 -1359 -894\r\n-2953 -1956 l-2897 -1932 -2897 1932 c-1594 1062 -2923 1942 -2953 1956 -61\r\n27 -168 37 -236 22z"
+  })));
+}
 
 
 
@@ -322,6 +325,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _components_svgComponent__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../components/svgComponent */ "./javascript/components/svgComponent.jsx");
 function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -346,6 +350,7 @@ function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.g
 
 
 
+
 var Home = /*#__PURE__*/function (_React$Component) {
   _inherits(Home, _React$Component);
 
@@ -358,12 +363,55 @@ var Home = /*#__PURE__*/function (_React$Component) {
   }
 
   _createClass(Home, [{
+    key: "skillList",
+    value: function skillList() {
+      var skill = ["HTML/CSS", "Javascript ES5/ES6", "Ruby", "Ruby on Rails", "jQuery", "React", "Redux", "SQL(PostgreSQL/SQLite3)", "Git/GitHub", "SASS"];
+      var skills = [];
+
+      for (var i = 0; i < skill.length; i++) {
+        skills.push( /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("li", {
+          className: "skill"
+        }, skill[i]));
+      }
+
+      return skills;
+    }
+  }, {
+    key: "education",
+    value: function education() {
+      var appacademy = ["Created projects using front-end (client-side), back-end (server-side), and databases for web applications", "Created web application projects using Ruby on Rails framework", "Collaborated with developers to create efficient and scalable code", "Applied code optimization strategies and modern application techniques: \nTDD, scalability, algorithms, OOP, coding style, REST, security, single-page apps, and web development best practices"];
+      var descriptions = appacademy.map(function (el) {
+        return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("li", {
+          className: "bullet"
+        }, el);
+      });
+      return descriptions;
+    }
+  }, {
     key: "render",
     value: function render() {
       return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
         className: "pageContent",
         id: "home"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h1", null, "This will be the home page"));
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+        className: "leadStatement"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h1", null, "Success is no accident. It is hard work, perseverance, learning, studying, sacrifice and most of all, love of what you are doing or learning to do")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+        className: "skillsContainer"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h1", {
+        className: "section_title",
+        id: "skills_title"
+      }, "Skills"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("ul", {
+        className: "skills"
+      }, this.skillList())), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+        className: "educationContainer"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h1", {
+        className: "section_title",
+        id: "education_title"
+      }, "Education"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h2", {
+        className: "education"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_svgComponent__WEBPACK_IMPORTED_MODULE_1__.Bullet, null), "App Academy"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("ul", {
+        className: "education_description"
+      }, this.education())));
     }
   }]);
 
