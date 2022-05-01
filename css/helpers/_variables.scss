@@ -25,23 +25,26 @@ $sleek_5: #d1e8e2;
 $neutral-gray: #be8d8a;
 $teal: #2b6777;
 
-// $color60: $lightBlue;
-// $color30: $deepBlue;
-// $color10: $tomato;
-// $color30alt: $tanBrown;
-// $color60alt: $lightBrown;
+// $dominate: $lightBlue;
+// $subdom: $deepBlue;
+// $accent: $tomato;
+// $secondSub: $tanBrown;
+// $secondAccent: $lightBrown;
 
 // dominate, sub, accent, secondsub, secondaccent
 
-$color60: $sleek_5;
-$color30: $sleek_2;
-$color10: $sleek_3;
-$color30alt: $sleek_4;
-$color60alt: $sleek_1; // Looks good with text
+$dominate: $sleek_5;
+$subdom: $sleek_2;
+$accent: $sleek_3;
+$secondSub: $sleek_4;
+$secondAccent: $sleek_1; // Looks good with text
+
+$text: $secondAccent;
+$secondtext: $dominate;
 
 %hover_colors {
   &:hover {
-    background-color: $color60alt;
-    color: $color30alt;
+    background-color: $secondAccent;
+    color: $secondSub;
   }
 }

@@ -350,6 +350,7 @@
 .leadStatement {
   padding: 2rem;
   background-color: #d1e8e2;
+  color: #2c3531;
 }
 .leadStatement h1 {
   font-size: 2rem;
@@ -431,6 +432,7 @@
   display: none;
   list-style-type: disc;
   padding-left: 3rem;
+  color: #2c3531;
 }
 
 .bullet {

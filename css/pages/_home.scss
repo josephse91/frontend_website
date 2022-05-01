@@ -2,7 +2,8 @@
 
 .leadStatement {
   padding: 2rem;
-  background-color: $color60;
+  background-color: $dominate;
+  color: $text;
 
   h1 {
     font-size: 2rem;
@@ -12,7 +13,7 @@
 }
 
 .skillsContainer {
-  background-color: $color60alt;
+  background-color: $secondAccent;
   display: flex;
   flex-direction: column;
   padding: 1rem;
@@ -30,7 +31,7 @@
 }
 
 #skills_title {
-  color: $color30alt;
+  color: $secondSub;
 }
 
 .skills {
@@ -44,7 +45,7 @@
 
 .skill {
   font-size: 2rem;
-  color: $color60;
+  color: $secondtext;
   text-align: center;
 }
 
@@ -57,23 +58,23 @@
 }
 
 #education_title {
-  color: $color30;
+  color: $subdom;
 }
 
 .education {
   font-size: 2rem;
-  // background-color: $color30;
-  color: $color30;
-  // border: 0.3rem solid $color30;
+  // background-color: $subdom;
+  color: $subdom;
+  // border: 0.3rem solid $subdom;
   cursor: pointer;
 }
 
 .education_active {
-  background-color: $color60alt;
-  color: $color30alt;
-  fill: $color30alt;
+  background-color: $secondAccent;
+  color: $secondSub;
+  fill: $secondSub;
   svg {
-    fill: $color30alt;
+    fill: $secondSub;
   }
 }
 
@@ -89,6 +90,7 @@
   display: none;
   list-style-type: disc;
   padding-left: 3rem;
+  color: $text;
   // transform: translate(4rem, 0);
 }
 

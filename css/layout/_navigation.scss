@@ -5,7 +5,7 @@
   top: 0;
   display: flex;
   justify-content: space-between;
-  background-color: $color30;
+  background-color: $subdom;
   font-size: 2rem;
   border-bottom-left-radius: 1rem;
   border-bottom-right-radius: 1rem;
@@ -18,7 +18,7 @@
   font-size: 1.75rem;
   text-decoration: none;
   padding: 2rem 0.5rem;
-  color: $color60;
+  color: $dominate;
   display: inline-block;
   border-radius: 10%;
 
@@ -30,7 +30,7 @@
   gap: 1.5rem;
   align-items: center;
   width: 33%;
-  color: $color60;
+  color: $dominate;
 }
 
 #navleft {
@@ -43,13 +43,13 @@
 
 #self_logo {
   display: inline-block;
-  background-color: $color60;
+  background-color: $dominate;
   border-radius: 100%;
   font-family: Georgia, Times, "Times New Roman", serif;
   padding: 0.75rem;
   font-size: 4rem;
   font-weight: 700;
-  color: $color60alt;
+  color: $text;
 
   @extend %hover_colors;
 }
@@ -64,25 +64,25 @@
 }
 
 .linkedin_outer {
-  fill: $color60;
+  fill: $dominate;
 }
 
 .linkedin_outer_hover {
-  fill: $color60alt;
+  fill: $secondAccent;
 }
 
 .linkedin_inner {
-  fill: $color30;
+  fill: $subdom;
 }
 
 .linkedin_inner_hover {
-  fill: $color10;
+  fill: $accent;
 }
 
 #github_logo {
-  fill: $color60;
+  fill: $dominate;
   &:hover {
-    fill: $color60alt;
+    fill: $secondAccent;
   }
 }
 
@@ -91,7 +91,7 @@
   font-size: 2rem;
   font-weight: 700;
   text-align: right;
-  color: $color60;
+  color: $secondtext;
 }
 
 @keyframes navdrop {
