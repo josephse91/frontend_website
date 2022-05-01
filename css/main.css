@@ -430,7 +430,7 @@
 .education_description {
   display: none;
   list-style-type: disc;
-  transform: translate(4rem, 0);
+  padding-left: 3rem;
 }
 
 .bullet {
