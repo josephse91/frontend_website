@@ -17,7 +17,6 @@
   h1 {
     font-size: 2rem;
     font-style: italic;
-    // width: 60%;
   }
 }
 
@@ -60,8 +59,15 @@
   color: $subdom;
 }
 
+.e_logo {
+  display: inline-block;
+  margin-right: 1rem;
+  height: 2rem;
+}
+
 .education {
   font-size: 2rem;
+  margin-bottom: 0.5rem;
   // background-color: $subdom;
   color: $subdom;
   // border: 0.3rem solid $subdom;
@@ -71,10 +77,6 @@
 .education_active {
   background-color: $secondAccent;
   color: $secondSub;
-  fill: $secondSub;
-  svg {
-    fill: $secondSub;
-  }
 }
 
 #bullet {
@@ -86,22 +88,20 @@
 }
 
 .education_description {
-  display: none;
+  // position: fixed;
   list-style-type: disc;
   padding-left: 3rem;
   color: $text;
-  // transform: translate(4rem, 0);
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+}
+
+.education_description_active {
+  max-height: 15rem;
+  transition: max-height 0.2s ease-out;
 }
 
 .bullet {
   font-size: 1.5rem;
-}
-
-@keyframes drop-down {
-  0% {
-    display: none;
-  }
-  100% {
-    display: block;
-  }
 }

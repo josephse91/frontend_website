@@ -24,15 +24,28 @@ class Home extends React.Component {
     return skills;
   }
 
-  education() {
+  education(type) {
+    let descriptions = [];
+
     let appacademy = [
       "Created projects using front-end (client-side), back-end (server-side), and databases for web applications",
       "Created web application projects using Ruby on Rails framework",
       "Collaborated with developers to create efficient and scalable code",
       "Applied code optimization strategies and modern application techniques: \nTDD, scalability, algorithms, OOP, coding style, REST, security, single-page apps, and web development best practices",
     ];
+    let codecademy = ["HTML", "CSS", "Intermediate CSS", "SASS", "javascript"];
+    let binghamton = ["BS - Mechanical Engineering (Spring 2014)"];
 
-    let descriptions = appacademy.map((el) => <li className="bullet">{el}</li>);
+    let educationType;
+    if (type === "appacademy") {
+      educationType = appacademy;
+    } else if (type === "codecademy") {
+      educationType = codecademy;
+    } else if (type === "binghamton") {
+      educationType = binghamton;
+    }
+
+    descriptions = educationType.map((el) => <li className="bullet">{el}</li>);
     return descriptions;
   }
 
@@ -43,14 +56,18 @@ class Home extends React.Component {
     let itemDescription = educationItem.nextElementSibling;
     let bullet = educationItem.children.bullet;
 
+    console.log(bullet.children[0].style);
+
     // /*
-    if (itemDescription.style.display === "block") {
-      itemDescription.style.display = "none";
+    if (itemDescription.classList.length !== 1) {
+      itemDescription.classList.remove("education_description_active");
       bullet.style.transform = "rotate(270deg)";
+      bullet.children[0].style.fill = "black";
       educationItem.classList.remove("education_active");
     } else {
-      itemDescription.style.display = "block";
+      itemDescription.classList.add("education_description_active");
       bullet.style.transform = "rotate(0deg)";
+      bullet.children[0].style.fill = "tan";
       educationItem.classList.add("education_active");
 
       // console.log(educationItem, educationItem[0]);
@@ -61,6 +78,7 @@ class Home extends React.Component {
   render() {
     return (
       <div className="pageContent" id="home">
+        <div className="personalSide"></div>
         <div className="infoSide">
           <div className="leadStatement">
             <h1>
@@ -83,12 +101,30 @@ class Home extends React.Component {
             </h1>
             <h2 className="education" onClick={this.accordianHandle}>
               <Bullet />
-              App Academy
+              <img className="e_logo" src="../images/appacademy_logo.png" />
+              App Academy Open
             </h2>
-            <ul className="education_description">{this.education()}</ul>
+            <ul className="education_description">
+              {this.education("appacademy")}
+            </ul>
+            <h2 className="education" onClick={this.accordianHandle}>
+              <Bullet />
+              <img className="e_logo" src="../images/codecademy_logo.png" />
+              Codecademy
+            </h2>
+            <ul className="education_description">
+              {this.education("codecademy")}
+            </ul>
+            <h2 className="education" onClick={this.accordianHandle}>
+              <Bullet />
+              <img className="e_logo" src="../images/binghamton_logo.png" />
+              Binghamton
+            </h2>
+            <ul className="education_description">
+              {this.education("binghamton")}
+            </ul>
           </div>
         </div>
-        <div className="personalSide"></div>
       </div>
     );
   }
