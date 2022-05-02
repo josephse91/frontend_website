@@ -356,10 +356,16 @@ var Home = /*#__PURE__*/function (_React$Component) {
 
   var _super = _createSuper(Home);
 
-  function Home() {
+  function Home(props) {
+    var _this;
+
     _classCallCheck(this, Home);
 
-    return _super.apply(this, arguments);
+    _this = _super.call(this, props);
+    _this.state = {
+      quoteSlide: 0
+    };
+    return _this;
   }
 
   _createClass(Home, [{
@@ -407,7 +413,6 @@ var Home = /*#__PURE__*/function (_React$Component) {
       var educationItem = event.currentTarget;
       var itemDescription = educationItem.nextElementSibling;
       var bullet = educationItem.children.bullet;
-      console.log(bullet.children[0].style); // /*
 
       if (itemDescription.classList.length !== 1) {
         itemDescription.classList.remove("education_description_active");
@@ -418,9 +423,8 @@ var Home = /*#__PURE__*/function (_React$Component) {
         itemDescription.classList.add("education_description_active");
         bullet.style.transform = "rotate(0deg)";
         bullet.children[0].style.fill = "tan";
-        educationItem.classList.add("education_active"); // console.log(educationItem, educationItem[0]);
-      } // */
-
+        educationItem.classList.add("education_active");
+      }
     }
   }, {
     key: "render",
@@ -470,7 +474,45 @@ var Home = /*#__PURE__*/function (_React$Component) {
         src: "../images/binghamton_logo.png"
       }), "Binghamton"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("ul", {
         className: "education_description"
-      }, this.education("binghamton")))));
+      }, this.education("binghamton"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+        className: "learningContainer"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h1", {
+        className: "section_title",
+        id: "learning_title"
+      }, "Words to Live By"), this.generateQuote(this.state.quoteSlide))));
+    }
+  }, {
+    key: "generateQuote",
+    value: function generateQuote(i) {
+      var quotes = [["Live as if you were to die tomorrow. Learn as if you were to live forever.", "Mahatma Gandhi"], ["Being a student is easy. Learning requires actual work.", "William Crawford"], ["Change is the end result of all true learning.", "Leo Buscaglia"], ["The beautiful thing about learning is nobody can take it away from you.", "B.B King"], ["Commit yourself to lifelong learning. The most valuable asset you'll ever have is your mind and what you put into it.", "Albert Einstein"], ["No thief, however skillful, can rob one of knowledge, and that is why knowledge is the best and safest treasure to acquire.", "Frank Baum"], ["Never let formal education get in the way of your learning.", "Mark Twain"], ["Education is the passport to the future, for tomorrow belongs to those who prepare for it today.", "Malcolm X"], ["Success is no accident. It is hard work, perseverance, learning, studying, sacrifice and most of all, love of what you are doing or learning to do.", "Pele"], ["Continuous learning is the minimum requirement for success in any field.", "Brian Tracy"], ["The key to pursuing excellence is to embrace an organic, long-term learning process, and not to live in a shell of static, safe mediocrity. Usually, growth comes at the expense of previous comfort or safety.", "Josh Waitzkin"]];
+
+      var quoteButtons = function quoteButtons() {
+        var allButtons = [];
+
+        for (var n = 0; n < quotes.length; n++) {
+          var quoteId = "quote " + {
+            n: n
+          };
+          allButtons.push( /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("span", {
+            className: "quoteButton",
+            id: quoteId
+          }));
+        }
+
+        return allButtons;
+      };
+
+      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+        className: "quotesContainer"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+        className: "quoteBox"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+        className: "quote"
+      }, quotes[i][0]), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+        className: "author"
+      }, "~", quotes[i][1])), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+        className: "quoteButtons"
+      }, quoteButtons()));
     }
   }]);
 

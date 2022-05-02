@@ -386,7 +386,7 @@
   padding: 1rem;
   display: grid;
   grid-template-columns: repeat(5, 1fr);
-  grid-gap: 2rem 2rem;
+  grid-gap: 2rem 1.5rem;
   align-items: center;
   list-style-type: none;
 }
@@ -441,10 +441,66 @@
 .education_description_active {
   max-height: 15rem;
   transition: max-height 0.2s ease-out;
+  margin-bottom: 1rem;
 }
 
 .bullet {
   font-size: 1.5rem;
+}
+
+.learningContainer {
+  background-color: #2c3531;
+  border-top: 0.5rem solid #116466;
+}
+
+#learning_title {
+  color: #d1e8e2;
+}
+
+.quotesContainer {
+  display: flex;
+  background-color: #d1e8e2;
+  background-color: #2c3531;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.quoteBox {
+  display: flex;
+  flex-direction: column;
+  background-color: #116466;
+  border-radius: 1rem;
+  padding: 1rem;
+  gap: 3rem;
+  width: 60%;
+}
+
+.quote {
+  font-size: 2rem;
+  color: #116466;
+  color: #d1e8e2;
+}
+
+.author {
+  color: #ffcb9a;
+  font-weight: 700;
+  font-size: 1.5rem;
+  align-self: flex-end;
+}
+
+.quoteButtons {
+  display: flex;
+  justify-content: center;
+  gap: 2.5rem;
+}
+
+.quoteButton {
+  background-color: #ffcb9a;
+  height: 1rem;
+  width: 1rem;
+  border-radius: 0.5rem;
 }
 
 .navButton:hover, #self_logo:hover {

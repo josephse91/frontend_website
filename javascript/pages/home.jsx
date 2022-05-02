@@ -2,6 +2,13 @@ import React from "react";
 import { Bullet } from "../components/svgComponent";
 
 class Home extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      quoteSlide: 0,
+    };
+  }
+
   skillList() {
     let skill = [
       "HTML/CSS",
@@ -56,9 +63,6 @@ class Home extends React.Component {
     let itemDescription = educationItem.nextElementSibling;
     let bullet = educationItem.children.bullet;
 
-    console.log(bullet.children[0].style);
-
-    // /*
     if (itemDescription.classList.length !== 1) {
       itemDescription.classList.remove("education_description_active");
       bullet.style.transform = "rotate(270deg)";
@@ -69,10 +73,7 @@ class Home extends React.Component {
       bullet.style.transform = "rotate(0deg)";
       bullet.children[0].style.fill = "tan";
       educationItem.classList.add("education_active");
-
-      // console.log(educationItem, educationItem[0]);
     }
-    // */
   }
 
   render() {
@@ -124,7 +125,79 @@ class Home extends React.Component {
               {this.education("binghamton")}
             </ul>
           </div>
+          <div className="learningContainer">
+            <h1 className="section_title" id="learning_title">
+              Words to Live By
+            </h1>
+            {this.generateQuote(this.state.quoteSlide)}
+          </div>
         </div>
+      </div>
+    );
+  }
+
+  generateQuote(i) {
+    let quotes = [
+      [
+        "Live as if you were to die tomorrow. Learn as if you were to live forever.",
+        "Mahatma Gandhi",
+      ],
+      [
+        "Being a student is easy. Learning requires actual work.",
+        "William Crawford",
+      ],
+      ["Change is the end result of all true learning.", "Leo Buscaglia"],
+      [
+        "The beautiful thing about learning is nobody can take it away from you.",
+        "B.B King",
+      ],
+      [
+        "Commit yourself to lifelong learning. The most valuable asset you'll ever have is your mind and what you put into it.",
+        "Albert Einstein",
+      ],
+      [
+        "No thief, however skillful, can rob one of knowledge, and that is why knowledge is the best and safest treasure to acquire.",
+        "Frank Baum",
+      ],
+      [
+        "Never let formal education get in the way of your learning.",
+        "Mark Twain",
+      ],
+      [
+        "Education is the passport to the future, for tomorrow belongs to those who prepare for it today.",
+        "Malcolm X",
+      ],
+      [
+        "Success is no accident. It is hard work, perseverance, learning, studying, sacrifice and most of all, love of what you are doing or learning to do.",
+        "Pele",
+      ],
+      [
+        "Continuous learning is the minimum requirement for success in any field.",
+        "Brian Tracy",
+      ],
+      [
+        "The key to pursuing excellence is to embrace an organic, long-term learning process, and not to live in a shell of static, safe mediocrity. Usually, growth comes at the expense of previous comfort or safety.",
+        "Josh Waitzkin",
+      ],
+    ];
+
+    let quoteButtons = function () {
+      let allButtons = [];
+      for (let n = 0; n < quotes.length; n++) {
+        let quoteId = "quote " + { n };
+        allButtons.push(<span className="quoteButton" id={quoteId}></span>);
+      }
+
+      return allButtons;
+    };
+
+    return (
+      <div className="quotesContainer">
+        <div className="quoteBox">
+          <div className="quote">{quotes[i][0]}</div>
+          <div className="author">~{quotes[i][1]}</div>
+        </div>
+        <div className="quoteButtons">{quoteButtons()}</div>
       </div>
     );
   }
