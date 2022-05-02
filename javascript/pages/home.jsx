@@ -59,31 +59,34 @@ class Home extends React.Component {
   render() {
     return (
       <div className="pageContent" id="home">
-        <div className="leadStatement">
-          <h1>
-            Success is no accident. It is hard work, perseverance, learning,
-            studying, sacrifice and most of all, love of what you are doing or
-            learning to do
-          </h1>
-        </div>
+        <div className="infoSide">
+          <div className="leadStatement">
+            <h1>
+              Success is no accident. It is hard work, perseverance, learning,
+              studying, sacrifice and most of all, love of what you are doing or
+              learning to do
+            </h1>
+          </div>
 
-        <div className="skillsContainer">
-          <h1 className="section_title" id="skills_title">
-            Skills
-          </h1>
-          <ul className="skills">{this.skillList()}</ul>
-        </div>
+          <div className="skillsContainer">
+            <h1 className="section_title" id="skills_title">
+              Skills
+            </h1>
+            <ul className="skills">{this.skillList()}</ul>
+          </div>
 
-        <div className="educationContainer">
-          <h1 className="section_title" id="education_title">
-            Education
-          </h1>
-          <h2 className="education" onClick={this.accordianHandle}>
-            <Bullet />
-            App Academy
-          </h2>
-          <ul className="education_description">{this.education()}</ul>
+          <div className="educationContainer">
+            <h1 className="section_title" id="education_title">
+              Education
+            </h1>
+            <h2 className="education" onClick={this.accordianHandle}>
+              <Bullet />
+              App Academy
+            </h2>
+            <ul className="education_description">{this.education()}</ul>
+          </div>
         </div>
+        <div className="personalSide"></div>
       </div>
     );
   }

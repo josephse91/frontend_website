@@ -249,7 +249,7 @@
 .scrollPrompt {
   font-size: 2rem;
   font-weight: 700;
-  color: #d9b08c;
+  color: #d1e8e2;
 }
 
 .scrollEnter span {
@@ -347,6 +347,15 @@
   color: #ffcb9a;
 }
 
+.pageContent {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.personalSide {
+  background-color: #2c3531;
+}
+
 .leadStatement {
   padding: 2rem;
   background-color: #d1e8e2;
@@ -355,7 +364,6 @@
 .leadStatement h1 {
   font-size: 2rem;
   font-style: italic;
-  width: 60%;
 }
 
 .skillsContainer {
@@ -363,10 +371,6 @@
   display: flex;
   flex-direction: column;
   padding: 1rem;
-}
-.skillsContainer h1,
-.skillsContainer ul {
-  width: 60%;
 }
 
 .section_title {
@@ -381,22 +385,16 @@
 .skills {
   padding: 1rem;
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(5, 1fr);
   grid-gap: 2rem 2rem;
   align-items: center;
   list-style-type: none;
 }
 
 .skill {
-  font-size: 2rem;
+  font-size: 1.5rem;
   color: #d1e8e2;
   text-align: center;
-}
-
-.educationContainer h1,
-.educationContainer h2,
-.educationContainer ul {
-  width: 60%;
 }
 
 #education_title {
@@ -474,9 +472,6 @@ h1 {
 }
 
 /*
-.pageContent {
-}
-
 .underNav {
 }
 */

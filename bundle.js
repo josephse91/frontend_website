@@ -413,6 +413,8 @@ var Home = /*#__PURE__*/function (_React$Component) {
         className: "pageContent",
         id: "home"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+        className: "infoSide"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
         className: "leadStatement"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h1", null, "Success is no accident. It is hard work, perseverance, learning, studying, sacrifice and most of all, love of what you are doing or learning to do")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
         className: "skillsContainer"
@@ -431,7 +433,9 @@ var Home = /*#__PURE__*/function (_React$Component) {
         onClick: this.accordianHandle
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_svgComponent__WEBPACK_IMPORTED_MODULE_1__.Bullet, null), "App Academy"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("ul", {
         className: "education_description"
-      }, this.education())));
+      }, this.education()))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+        className: "personalSide"
+      }));
     }
   }]);
 
