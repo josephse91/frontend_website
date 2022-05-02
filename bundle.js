@@ -393,7 +393,7 @@ var Home = /*#__PURE__*/function (_React$Component) {
       event.preventDefault();
       var educationItem = event.currentTarget;
       var itemDescription = educationItem.nextElementSibling;
-      var bullet = document.getElementById("bullet");
+      var bullet = educationItem.children.bullet; // /*
 
       if (itemDescription.style.display === "block") {
         itemDescription.style.display = "none";
@@ -402,9 +402,9 @@ var Home = /*#__PURE__*/function (_React$Component) {
       } else {
         itemDescription.style.display = "block";
         bullet.style.transform = "rotate(0deg)";
-        educationItem.classList.add("education_active");
-        console.log(educationItem, educationItem[0]);
-      }
+        educationItem.classList.add("education_active"); // console.log(educationItem, educationItem[0]);
+      } // */
+
     }
   }, {
     key: "render",

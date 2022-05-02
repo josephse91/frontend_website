@@ -41,8 +41,9 @@ class Home extends React.Component {
 
     let educationItem = event.currentTarget;
     let itemDescription = educationItem.nextElementSibling;
-    let bullet = document.getElementById("bullet");
+    let bullet = educationItem.children.bullet;
 
+    // /*
     if (itemDescription.style.display === "block") {
       itemDescription.style.display = "none";
       bullet.style.transform = "rotate(270deg)";
@@ -52,8 +53,9 @@ class Home extends React.Component {
       bullet.style.transform = "rotate(0deg)";
       educationItem.classList.add("education_active");
 
-      console.log(educationItem, educationItem[0]);
+      // console.log(educationItem, educationItem[0]);
     }
+    // */
   }
 
   render() {
