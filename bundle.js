@@ -428,6 +428,11 @@ var Home = /*#__PURE__*/function (_React$Component) {
       }
     }
   }, {
+    key: "componentWillUnmount",
+    value: function componentWillUnmount() {
+      console.log("hello There");
+    }
+  }, {
     key: "render",
     value: function render() {
       return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
@@ -485,37 +490,50 @@ var Home = /*#__PURE__*/function (_React$Component) {
   }, {
     key: "componentDidMount",
     value: function componentDidMount() {
+      this.slideTimer();
+    }
+  }, {
+    key: "slideTimer",
+    value: function slideTimer() {
       var _this2 = this;
 
-      setInterval(function () {
+      this.quoteTimer = setInterval(function () {
         return _this2.setState(function (state) {
           return {
             quoteSlide: (state.quoteSlide + 1) % _this2.quotes.length
           };
         });
       }, 5000);
-    } // tick() {
-    //   this.setState(state => ({
-    //     quoteSlide: state.quoteSlide + 1 % quotes.length
-    //   }));
-    // }
-
+    }
   }, {
     key: "generateQuote",
     value: function generateQuote(i) {
       var quotes = this.quotes;
+      var that = this;
+
+      var clickQuote = function clickQuote(event) {
+        event.preventDefault();
+        clearInterval(that.quoteTimer);
+        var clickedQuote = event.target;
+        var clickedQuoteId = clickedQuote.id.slice(6);
+        var quoteNum = Number(clickedQuoteId);
+        console.log(that.quotes.length, quoteNum);
+        that.setState({
+          quoteSlide: quoteNum
+        });
+        that.slideTimer();
+      };
 
       var quoteButtons = function quoteButtons() {
         var allButtons = [];
 
         for (var n = 0; n < quotes.length; n++) {
-          var quoteId = "quote " + {
-            n: n
-          };
+          var quoteId = "quote " + n;
           var quoteClass = n === i ? "quoteButton activeQuote" : "quoteButton";
           allButtons.push( /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("span", {
             className: quoteClass,
-            id: quoteId
+            id: quoteId,
+            onClick: clickQuote
           }));
         }
 

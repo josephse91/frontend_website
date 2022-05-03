@@ -119,6 +119,10 @@ class Home extends React.Component {
     }
   }
 
+  componentWillUnmount() {
+    console.log("hello There");
+  }
+
   render() {
     return (
       <div className="pageContent" id="home">
@@ -180,7 +184,11 @@ class Home extends React.Component {
   }
 
   componentDidMount() {
-    setInterval(
+    this.slideTimer();
+  }
+
+  slideTimer() {
+    this.quoteTimer = setInterval(
       () =>
         this.setState((state) => ({
           quoteSlide: (state.quoteSlide + 1) % this.quotes.length,
@@ -189,21 +197,32 @@ class Home extends React.Component {
     );
   }
 
-  // tick() {
-  //   this.setState(state => ({
-  //     quoteSlide: state.quoteSlide + 1 % quotes.length
-  //   }));
-  // }
-
   generateQuote(i) {
     let quotes = this.quotes;
+    let that = this;
+
+    let clickQuote = function (event) {
+      event.preventDefault();
+      clearInterval(that.quoteTimer);
+
+      let clickedQuote = event.target;
+      let clickedQuoteId = clickedQuote.id.slice(6);
+      let quoteNum = Number(clickedQuoteId);
+
+      console.log(that.quotes.length, quoteNum);
+
+      that.setState({ quoteSlide: quoteNum });
+      that.slideTimer();
+    };
 
     let quoteButtons = function () {
       let allButtons = [];
       for (let n = 0; n < quotes.length; n++) {
-        let quoteId = "quote " + { n };
+        let quoteId = "quote " + n;
         let quoteClass = n === i ? "quoteButton activeQuote" : "quoteButton";
-        allButtons.push(<span className={quoteClass} id={quoteId}></span>);
+        allButtons.push(
+          <span className={quoteClass} id={quoteId} onClick={clickQuote}></span>
+        );
       }
 
       return allButtons;
