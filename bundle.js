@@ -365,6 +365,7 @@ var Home = /*#__PURE__*/function (_React$Component) {
     _this.state = {
       quoteSlide: 0
     };
+    _this.quotes = [["Live as if you were to die tomorrow. Learn as if you were to live forever.", "Mahatma Gandhi"], ["Being a student is easy. Learning requires actual work.", "William Crawford"], ["Change is the end result of all true learning.", "Leo Buscaglia"], ["The beautiful thing about learning is nobody can take it away from you.", "B.B King"], ["Commit yourself to lifelong learning. The most valuable asset you'll ever have is your mind and what you put into it.", "Albert Einstein"], ["No thief, however skillful, can rob one of knowledge, and that is why knowledge is the best and safest treasure to acquire.", "Frank Baum"], ["Never let formal education get in the way of your learning.", "Mark Twain"], ["Education is the passport to the future, for tomorrow belongs to those who prepare for it today.", "Malcolm X"], ["Success is no accident. It is hard work, perseverance, learning, studying, sacrifice and most of all, love of what you are doing or learning to do.", "Pele"], ["Continuous learning is the minimum requirement for success in any field.", "Brian Tracy"], ["The key to pursuing excellence is to embrace an organic, long-term learning process, and not to live in a shell of static, safe mediocrity.", "Josh Waitzkin"]];
     return _this;
   }
 
@@ -482,9 +483,27 @@ var Home = /*#__PURE__*/function (_React$Component) {
       }, "Words to Live By"), this.generateQuote(this.state.quoteSlide))));
     }
   }, {
+    key: "componentDidMount",
+    value: function componentDidMount() {
+      var _this2 = this;
+
+      setInterval(function () {
+        return _this2.setState(function (state) {
+          return {
+            quoteSlide: (state.quoteSlide + 1) % _this2.quotes.length
+          };
+        });
+      }, 5000);
+    } // tick() {
+    //   this.setState(state => ({
+    //     quoteSlide: state.quoteSlide + 1 % quotes.length
+    //   }));
+    // }
+
+  }, {
     key: "generateQuote",
     value: function generateQuote(i) {
-      var quotes = [["Live as if you were to die tomorrow. Learn as if you were to live forever.", "Mahatma Gandhi"], ["Being a student is easy. Learning requires actual work.", "William Crawford"], ["Change is the end result of all true learning.", "Leo Buscaglia"], ["The beautiful thing about learning is nobody can take it away from you.", "B.B King"], ["Commit yourself to lifelong learning. The most valuable asset you'll ever have is your mind and what you put into it.", "Albert Einstein"], ["No thief, however skillful, can rob one of knowledge, and that is why knowledge is the best and safest treasure to acquire.", "Frank Baum"], ["Never let formal education get in the way of your learning.", "Mark Twain"], ["Education is the passport to the future, for tomorrow belongs to those who prepare for it today.", "Malcolm X"], ["Success is no accident. It is hard work, perseverance, learning, studying, sacrifice and most of all, love of what you are doing or learning to do.", "Pele"], ["Continuous learning is the minimum requirement for success in any field.", "Brian Tracy"], ["The key to pursuing excellence is to embrace an organic, long-term learning process, and not to live in a shell of static, safe mediocrity. Usually, growth comes at the expense of previous comfort or safety.", "Josh Waitzkin"]];
+      var quotes = this.quotes;
 
       var quoteButtons = function quoteButtons() {
         var allButtons = [];
@@ -493,8 +512,9 @@ var Home = /*#__PURE__*/function (_React$Component) {
           var quoteId = "quote " + {
             n: n
           };
+          var quoteClass = n === i ? "quoteButton activeQuote" : "quoteButton";
           allButtons.push( /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("span", {
-            className: "quoteButton",
+            className: quoteClass,
             id: quoteId
           }));
         }
@@ -508,9 +528,9 @@ var Home = /*#__PURE__*/function (_React$Component) {
         className: "quoteBox"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
         className: "quote"
-      }, quotes[i][0]), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+      }, this.quotes[i][0]), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
         className: "author"
-      }, "~", quotes[i][1])), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+      }, "~", this.quotes[i][1])), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
         className: "quoteButtons"
       }, quoteButtons()));
     }

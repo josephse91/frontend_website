@@ -470,11 +470,12 @@
 .quoteBox {
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   background-color: #116466;
   border-radius: 1rem;
   padding: 1rem;
-  gap: 3rem;
   width: 60%;
+  min-height: 15rem;
 }
 
 .quote {
@@ -501,6 +502,11 @@
   height: 1rem;
   width: 1rem;
   border-radius: 0.5rem;
+  cursor: pointer;
+}
+
+.activeQuote {
+  background-color: #116466;
 }
 
 .navButton:hover, #self_logo:hover {
