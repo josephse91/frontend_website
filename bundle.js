@@ -365,72 +365,27 @@ var Home = /*#__PURE__*/function (_React$Component) {
     _this.state = {
       quoteSlide: 0
     };
-    _this.quotes = [["Live as if you were to die tomorrow. Learn as if you were to live forever.", "Mahatma Gandhi"], ["Being a student is easy. Learning requires actual work.", "William Crawford"], ["Change is the end result of all true learning.", "Leo Buscaglia"], ["The beautiful thing about learning is nobody can take it away from you.", "B.B King"], ["Commit yourself to lifelong learning. The most valuable asset you'll ever have is your mind and what you put into it.", "Albert Einstein"], ["No thief, however skillful, can rob one of knowledge, and that is why knowledge is the best and safest treasure to acquire.", "Frank Baum"], ["Never let formal education get in the way of your learning.", "Mark Twain"], ["Education is the passport to the future, for tomorrow belongs to those who prepare for it today.", "Malcolm X"], ["Success is no accident. It is hard work, perseverance, learning, studying, sacrifice and most of all, love of what you are doing or learning to do.", "Pele"], ["Continuous learning is the minimum requirement for success in any field.", "Brian Tracy"], ["The key to pursuing excellence is to embrace an organic, long-term learning process, and not to live in a shell of static, safe mediocrity.", "Josh Waitzkin"]];
+    _this.quotes = _this.quoteList();
     return _this;
   }
 
   _createClass(Home, [{
-    key: "skillList",
-    value: function skillList() {
-      var skill = ["HTML/CSS", "Javascript ES5/ES6", "Ruby", "Ruby on Rails", "jQuery", "React", "Redux", "SQL(PostgreSQL/SQLite3)", "Git/GitHub", "SASS"];
-      var skills = [];
-
-      for (var i = 0; i < skill.length; i++) {
-        skills.push( /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("li", {
-          className: "skill"
-        }, skill[i]));
-      }
-
-      return skills;
+    key: "componentDidMount",
+    value: function componentDidMount() {
+      this.slideTimer();
     }
   }, {
-    key: "education",
-    value: function education(type) {
-      var descriptions = [];
-      var appacademy = ["Created projects using front-end (client-side), back-end (server-side), and databases for web applications", "Created web application projects using Ruby on Rails framework", "Collaborated with developers to create efficient and scalable code", "Applied code optimization strategies and modern application techniques: \nTDD, scalability, algorithms, OOP, coding style, REST, security, single-page apps, and web development best practices"];
-      var codecademy = ["HTML", "CSS", "Intermediate CSS", "SASS", "javascript"];
-      var binghamton = ["BS - Mechanical Engineering (Spring 2014)"];
-      var educationType;
+    key: "slideTimer",
+    value: function slideTimer() {
+      var _this2 = this;
 
-      if (type === "appacademy") {
-        educationType = appacademy;
-      } else if (type === "codecademy") {
-        educationType = codecademy;
-      } else if (type === "binghamton") {
-        educationType = binghamton;
-      }
-
-      descriptions = educationType.map(function (el) {
-        return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("li", {
-          className: "bullet"
-        }, el);
-      });
-      return descriptions;
-    }
-  }, {
-    key: "accordianHandle",
-    value: function accordianHandle(event) {
-      event.preventDefault();
-      var educationItem = event.currentTarget;
-      var itemDescription = educationItem.nextElementSibling;
-      var bullet = educationItem.children.bullet;
-
-      if (itemDescription.classList.length !== 1) {
-        itemDescription.classList.remove("education_description_active");
-        bullet.style.transform = "rotate(270deg)";
-        bullet.children[0].style.fill = "black";
-        educationItem.classList.remove("education_active");
-      } else {
-        itemDescription.classList.add("education_description_active");
-        bullet.style.transform = "rotate(0deg)";
-        bullet.children[0].style.fill = "tan";
-        educationItem.classList.add("education_active");
-      }
-    }
-  }, {
-    key: "componentWillUnmount",
-    value: function componentWillUnmount() {
-      console.log("hello There");
+      this.quoteTimer = setInterval(function () {
+        return _this2.setState(function (state) {
+          return {
+            quoteSlide: (state.quoteSlide + 1) % _this2.quotes.length
+          };
+        });
+      }, 5000);
     }
   }, {
     key: "render",
@@ -488,22 +443,68 @@ var Home = /*#__PURE__*/function (_React$Component) {
       }, "Words to Live By"), this.generateQuote(this.state.quoteSlide))));
     }
   }, {
-    key: "componentDidMount",
-    value: function componentDidMount() {
-      this.slideTimer();
+    key: "accordianHandle",
+    value: function accordianHandle(event) {
+      event.preventDefault();
+      var educationItem = event.currentTarget;
+      var itemDescription = educationItem.nextElementSibling;
+      var bullet = educationItem.children.bullet;
+
+      if (itemDescription.classList.length !== 1) {
+        itemDescription.classList.remove("education_description_active");
+        bullet.style.transform = "rotate(270deg)";
+        bullet.children[0].style.fill = "black";
+        educationItem.classList.remove("education_active");
+      } else {
+        itemDescription.classList.add("education_description_active");
+        bullet.style.transform = "rotate(0deg)";
+        bullet.children[0].style.fill = "tan";
+        educationItem.classList.add("education_active");
+      }
     }
   }, {
-    key: "slideTimer",
-    value: function slideTimer() {
-      var _this2 = this;
+    key: "skillList",
+    value: function skillList() {
+      var skill = ["HTML/CSS", "Javascript ES5/ES6", "Ruby", "Ruby on Rails", "jQuery", "React", "Redux", "SQL(PostgreSQL/SQLite3)", "Git/GitHub", "SASS"];
+      var skills = [];
 
-      this.quoteTimer = setInterval(function () {
-        return _this2.setState(function (state) {
-          return {
-            quoteSlide: (state.quoteSlide + 1) % _this2.quotes.length
-          };
-        });
-      }, 5000);
+      for (var i = 0; i < skill.length; i++) {
+        skills.push( /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("li", {
+          className: "skill"
+        }, skill[i]));
+      }
+
+      return skills;
+    }
+  }, {
+    key: "education",
+    value: function education(type) {
+      var descriptions = [];
+      var appacademy = ["Created projects using front-end (client-side), back-end (server-side), and databases for web applications", "Created web application projects using Ruby on Rails framework", "Collaborated with developers to create efficient and scalable code", "Applied code optimization strategies and modern application techniques: \nTDD, scalability, algorithms, OOP, coding style, REST, security, single-page apps, and web development best practices"];
+      var codecademy = ["HTML", "CSS", "Intermediate CSS", "SASS", "javascript"];
+      var binghamton = ["BS - Mechanical Engineering (Spring 2014)"];
+      var educationType;
+
+      if (type === "appacademy") {
+        educationType = appacademy;
+      } else if (type === "codecademy") {
+        educationType = codecademy;
+      } else if (type === "binghamton") {
+        educationType = binghamton;
+      }
+
+      descriptions = educationType.map(function (el) {
+        return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("li", {
+          className: "bullet"
+        }, el);
+      });
+      return descriptions;
+    }
+  }, {
+    key: "quoteList",
+    value: function quoteList() {
+      var quotes = [["Live as if you were to die tomorrow. Learn as if you were to live forever.", "Mahatma Gandhi"], ["Being a student is easy. Learning requires actual work.", "William Crawford"], ["Change is the end result of all true learning.", "Leo Buscaglia"], ["The beautiful thing about learning is nobody can take it away from you.", "B.B King"], ["Commit yourself to lifelong learning. The most valuable asset you'll ever have is your mind and what you put into it.", "Albert Einstein"], ["No thief, however skillful, can rob one of knowledge, and that is why knowledge is the best and safest treasure to acquire.", "Frank Baum"], ["Never let formal education get in the way of your learning.", "Mark Twain"], ["Education is the passport to the future, for tomorrow belongs to those who prepare for it today.", "Malcolm X"], ["Success is no accident. It is hard work, perseverance, learning, studying, sacrifice and most of all, love of what you are doing or learning to do.", "Pele"], ["Continuous learning is the minimum requirement for success in any field.", "Brian Tracy"], ["The key to pursuing excellence is to embrace an organic, long-term learning process, and not to live in a shell of static, safe mediocrity.", "Josh Waitzkin"]];
+      return quotes;
     }
   }, {
     key: "generateQuote",
@@ -693,7 +694,9 @@ function Layout() {
     className: "layout"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: "underNav"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_navbar__WEBPACK_IMPORTED_MODULE_1__["default"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__.Outlet, null)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", null, "This will be footer"));
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_navbar__WEBPACK_IMPORTED_MODULE_1__["default"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__.Outlet, {
+    className: "pageContent"
+  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", null, "This will be footer"));
 }
 
 /***/ }),

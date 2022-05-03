@@ -19,6 +19,7 @@
   -webkit-animation: navdrop 0.5s ease-in-out;
           animation: navdrop 0.5s ease-in-out;
   height: 7.5rem;
+  z-index: 1;
 }
 
 .navButton {
@@ -353,7 +354,13 @@
 }
 
 .personalSide {
+  background-color: #d1e8e2;
   background-color: #2c3531;
+}
+
+.infoSide {
+  display: flex;
+  flex-direction: column;
 }
 
 .leadStatement {
@@ -451,6 +458,8 @@
 .learningContainer {
   background-color: #2c3531;
   border-top: 0.5rem solid #116466;
+  border-left: 0.25rem solid #116466;
+  flex-grow: 1;
 }
 
 #learning_title {
@@ -526,10 +535,16 @@ h1 {
   font-size: 4rem;
 }
 
-/*
 .underNav {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
 }
-*/
+
+.pageContent {
+  flex-grow: 1;
+}
+
 .navButton:hover, #self_logo:hover {
   background-color: #2c3531;
   color: #ffcb9a;

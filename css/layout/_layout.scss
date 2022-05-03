@@ -12,7 +12,12 @@ h1 {
   font-size: 4rem;
 }
 
-/*
 .underNav {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
 }
-*/
+
+.pageContent {
+  flex-grow: 1;
+}

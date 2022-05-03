@@ -6,7 +6,15 @@
 }
 
 .personalSide {
+  background-color: $dominate;
   background-color: $secondAccent;
+  // border-right: 0.5rem solid $secondAccent;
+  // border-right: 0.5rem solid $subdom;
+}
+
+.infoSide {
+  display: flex;
+  flex-direction: column;
 }
 
 .leadStatement {
@@ -30,7 +38,6 @@
 .section_title {
   font-size: 3rem;
   text-align: center;
-  // border: 1px solid white;
 }
 
 #skills_title {
@@ -51,9 +58,6 @@
   color: $secondtext;
   text-align: center;
 }
-
-// .educationContainer {
-// }
 
 #education_title {
   color: $subdom;
@@ -88,7 +92,6 @@
 }
 
 .education_description {
-  // position: fixed;
   list-style-type: disc;
   padding-left: 3rem;
   color: $text;
@@ -110,6 +113,8 @@
 .learningContainer {
   background-color: $secondAccent;
   border-top: 0.5rem solid $subdom;
+  border-left: 0.25rem solid $subdom;
+  flex-grow: 1;
 }
 
 #learning_title {

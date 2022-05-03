@@ -7,7 +7,7 @@ export default function Layout() {
     <div className="layout">
       <div className="underNav">
         <Navbar />
-        <Outlet />
+        <Outlet className="pageContent" />
       </div>
       <div>This will be footer</div>
     </div>

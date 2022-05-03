@@ -7,120 +7,21 @@ class Home extends React.Component {
     this.state = {
       quoteSlide: 0,
     };
-    this.quotes = [
-      [
-        "Live as if you were to die tomorrow. Learn as if you were to live forever.",
-        "Mahatma Gandhi",
-      ],
-      [
-        "Being a student is easy. Learning requires actual work.",
-        "William Crawford",
-      ],
-      ["Change is the end result of all true learning.", "Leo Buscaglia"],
-      [
-        "The beautiful thing about learning is nobody can take it away from you.",
-        "B.B King",
-      ],
-      [
-        "Commit yourself to lifelong learning. The most valuable asset you'll ever have is your mind and what you put into it.",
-        "Albert Einstein",
-      ],
-      [
-        "No thief, however skillful, can rob one of knowledge, and that is why knowledge is the best and safest treasure to acquire.",
-        "Frank Baum",
-      ],
-      [
-        "Never let formal education get in the way of your learning.",
-        "Mark Twain",
-      ],
-      [
-        "Education is the passport to the future, for tomorrow belongs to those who prepare for it today.",
-        "Malcolm X",
-      ],
-      [
-        "Success is no accident. It is hard work, perseverance, learning, studying, sacrifice and most of all, love of what you are doing or learning to do.",
-        "Pele",
-      ],
-      [
-        "Continuous learning is the minimum requirement for success in any field.",
-        "Brian Tracy",
-      ],
-      [
-        "The key to pursuing excellence is to embrace an organic, long-term learning process, and not to live in a shell of static, safe mediocrity.",
-        "Josh Waitzkin",
-      ],
-    ];
+    this.quotes = this.quoteList();
   }
 
-  skillList() {
-    let skill = [
-      "HTML/CSS",
-      "Javascript ES5/ES6",
-      "Ruby",
-      "Ruby on Rails",
-      "jQuery",
-      "React",
-      "Redux",
-      "SQL(PostgreSQL/SQLite3)",
-      "Git/GitHub",
-      "SASS",
-    ];
-
-    let skills = [];
-
-    for (let i = 0; i < skill.length; i++) {
-      skills.push(<li className="skill">{skill[i]}</li>);
-    }
-    return skills;
+  componentDidMount() {
+    this.slideTimer();
   }
 
-  education(type) {
-    let descriptions = [];
-
-    let appacademy = [
-      "Created projects using front-end (client-side), back-end (server-side), and databases for web applications",
-      "Created web application projects using Ruby on Rails framework",
-      "Collaborated with developers to create efficient and scalable code",
-      "Applied code optimization strategies and modern application techniques: \nTDD, scalability, algorithms, OOP, coding style, REST, security, single-page apps, and web development best practices",
-    ];
-    let codecademy = ["HTML", "CSS", "Intermediate CSS", "SASS", "javascript"];
-    let binghamton = ["BS - Mechanical Engineering (Spring 2014)"];
-
-    let educationType;
-    if (type === "appacademy") {
-      educationType = appacademy;
-    } else if (type === "codecademy") {
-      educationType = codecademy;
-    } else if (type === "binghamton") {
-      educationType = binghamton;
-    }
-
-    descriptions = educationType.map((el) => <li className="bullet">{el}</li>);
-    return descriptions;
-  }
-
-  accordianHandle(event) {
-    event.preventDefault();
-
-    let educationItem = event.currentTarget;
-    let itemDescription = educationItem.nextElementSibling;
-    let bullet = educationItem.children.bullet;
-
-    if (itemDescription.classList.length !== 1) {
-      itemDescription.classList.remove("education_description_active");
-      bullet.style.transform = "rotate(270deg)";
-      bullet.children[0].style.fill = "black";
-      educationItem.classList.remove("education_active");
-    } else {
-      itemDescription.classList.add("education_description_active");
-      bullet.style.transform = "rotate(0deg)";
-      bullet.children[0].style.fill = "tan";
-      educationItem.classList.add("education_active");
-    }
-  }
-
-  componentWillUnmount() {
-    console.log("hello There");
+  slideTimer() {
+    this.quoteTimer = setInterval(
+      () =>
+        this.setState((state) => ({
+          quoteSlide: (state.quoteSlide + 1) % this.quotes.length,
+        })),
+      5000
+    );
   }
 
   render() {
@@ -183,18 +84,118 @@ class Home extends React.Component {
     );
   }
 
-  componentDidMount() {
-    this.slideTimer();
+  accordianHandle(event) {
+    event.preventDefault();
+
+    let educationItem = event.currentTarget;
+    let itemDescription = educationItem.nextElementSibling;
+    let bullet = educationItem.children.bullet;
+
+    if (itemDescription.classList.length !== 1) {
+      itemDescription.classList.remove("education_description_active");
+      bullet.style.transform = "rotate(270deg)";
+      bullet.children[0].style.fill = "black";
+      educationItem.classList.remove("education_active");
+    } else {
+      itemDescription.classList.add("education_description_active");
+      bullet.style.transform = "rotate(0deg)";
+      bullet.children[0].style.fill = "tan";
+      educationItem.classList.add("education_active");
+    }
   }
 
-  slideTimer() {
-    this.quoteTimer = setInterval(
-      () =>
-        this.setState((state) => ({
-          quoteSlide: (state.quoteSlide + 1) % this.quotes.length,
-        })),
-      5000
-    );
+  skillList() {
+    let skill = [
+      "HTML/CSS",
+      "Javascript ES5/ES6",
+      "Ruby",
+      "Ruby on Rails",
+      "jQuery",
+      "React",
+      "Redux",
+      "SQL(PostgreSQL/SQLite3)",
+      "Git/GitHub",
+      "SASS",
+    ];
+
+    let skills = [];
+
+    for (let i = 0; i < skill.length; i++) {
+      skills.push(<li className="skill">{skill[i]}</li>);
+    }
+    return skills;
+  }
+
+  education(type) {
+    let descriptions = [];
+
+    let appacademy = [
+      "Created projects using front-end (client-side), back-end (server-side), and databases for web applications",
+      "Created web application projects using Ruby on Rails framework",
+      "Collaborated with developers to create efficient and scalable code",
+      "Applied code optimization strategies and modern application techniques: \nTDD, scalability, algorithms, OOP, coding style, REST, security, single-page apps, and web development best practices",
+    ];
+    let codecademy = ["HTML", "CSS", "Intermediate CSS", "SASS", "javascript"];
+    let binghamton = ["BS - Mechanical Engineering (Spring 2014)"];
+
+    let educationType;
+    if (type === "appacademy") {
+      educationType = appacademy;
+    } else if (type === "codecademy") {
+      educationType = codecademy;
+    } else if (type === "binghamton") {
+      educationType = binghamton;
+    }
+
+    descriptions = educationType.map((el) => <li className="bullet">{el}</li>);
+    return descriptions;
+  }
+
+  quoteList() {
+    let quotes = [
+      [
+        "Live as if you were to die tomorrow. Learn as if you were to live forever.",
+        "Mahatma Gandhi",
+      ],
+      [
+        "Being a student is easy. Learning requires actual work.",
+        "William Crawford",
+      ],
+      ["Change is the end result of all true learning.", "Leo Buscaglia"],
+      [
+        "The beautiful thing about learning is nobody can take it away from you.",
+        "B.B King",
+      ],
+      [
+        "Commit yourself to lifelong learning. The most valuable asset you'll ever have is your mind and what you put into it.",
+        "Albert Einstein",
+      ],
+      [
+        "No thief, however skillful, can rob one of knowledge, and that is why knowledge is the best and safest treasure to acquire.",
+        "Frank Baum",
+      ],
+      [
+        "Never let formal education get in the way of your learning.",
+        "Mark Twain",
+      ],
+      [
+        "Education is the passport to the future, for tomorrow belongs to those who prepare for it today.",
+        "Malcolm X",
+      ],
+      [
+        "Success is no accident. It is hard work, perseverance, learning, studying, sacrifice and most of all, love of what you are doing or learning to do.",
+        "Pele",
+      ],
+      [
+        "Continuous learning is the minimum requirement for success in any field.",
+        "Brian Tracy",
+      ],
+      [
+        "The key to pursuing excellence is to embrace an organic, long-term learning process, and not to live in a shell of static, safe mediocrity.",
+        "Josh Waitzkin",
+      ],
+    ];
+    return quotes;
   }
 
   generateQuote(i) {
