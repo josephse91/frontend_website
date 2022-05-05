@@ -1,6 +1,6 @@
 @import "../helpers/variables.scss";
 
-.pageContent {
+#home {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
 }

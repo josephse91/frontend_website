@@ -15,6 +15,11 @@
   z-index: 1;
 }
 
+a.navButton.active {
+  background-color: $secondAccent;
+  color: $secondSub;
+}
+
 .navButton {
   font-size: 1.75rem;
   text-decoration: none;
@@ -52,7 +57,7 @@
   font-weight: 700;
   color: $text;
 
-  @extend %hover_colors;
+  @extend %hover_colors_second;
 }
 
 #navright {

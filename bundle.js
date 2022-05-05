@@ -286,7 +286,81 @@ function About() {
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: "pageContent",
     id: "about"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h1", null, "This will be the about page"));
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    className: "aboutContent",
+    onClick: videoSelect
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    className: "videoTab"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h1", {
+    className: "videoTopic active"
+  }, "Origin of my Interest in Tech"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    className: "aboutVideo active"
+  }, videoTopic("day"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    className: "videoTab"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h1", {
+    className: "videoTopic"
+  }, "My Fit into Software Engineering"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    className: "aboutVideo"
+  }, videoTopic("specialization"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    className: "videoTab"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h1", {
+    className: "videoTopic"
+  }, "Self-Taught Journey"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    className: "aboutVideo"
+  }, videoTopic("self"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    className: "videoTab"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h1", {
+    className: "videoTopic"
+  }, "My Coding Community"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    className: "aboutVideo"
+  }, videoTopic("community")))));
+}
+
+function videoTopic(topic) {
+  var select = 0;
+
+  if (topic.startsWith("day")) {
+    select = 0;
+  } else if (topic.startsWith("specialization")) {
+    select = 1;
+  } else if (topic.startsWith("self")) {
+    select = 2;
+  } else if (topic.startsWith("community")) {
+    select = 3;
+  }
+
+  var videos = [["Day in the Life", "https://www.youtube.com/embed/oHBFD8cfXho"], ["specialization as a Software Engineer", "https://www.youtube.com/embed/Ouf-tpDAkK4"], ["Self-Taught", "https://www.youtube.com/embed/3EUDyn_31-Q"], ["Community", "https://www.youtube.com/embed/a0wY2TBs3zY"]];
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("iframe", {
+    className: "video",
+    width: "560",
+    height: "315",
+    title: videos[select][0],
+    src: videos[select][1],
+    frameBorder: "0",
+    allow: "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture;fullscreen"
+  });
+}
+
+function videoSelect(event) {
+  event.preventDefault();
+  var activeTab = document.getElementsByClassName("videoTopic active")[0];
+  var clickedTarget = event.target;
+
+  if (activeTab === clickedTarget) {
+    activeTab.classList.remove("active");
+    activeTab.nextElementSibling.classList.remove("active");
+    return;
+  }
+
+  if (clickedTarget.className !== "videoTopic active" && clickedTarget.className.includes("videoTopic")) {
+    if (activeTab) {
+      activeTab.classList.remove("active");
+      activeTab.nextElementSibling.classList.remove("active");
+    }
+
+    clickedTarget.classList.add("active");
+    clickedTarget.nextElementSibling.classList.add("active");
+  }
 }
 
 /***/ }),

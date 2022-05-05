@@ -44,6 +44,13 @@ $secondtext: $dominate;
 
 %hover_colors {
   &:hover {
+    background-color: $dominate;
+    color: $subdom;
+  }
+}
+
+%hover_colors_second {
+  &:hover {
     background-color: $secondAccent;
     color: $secondSub;
   }

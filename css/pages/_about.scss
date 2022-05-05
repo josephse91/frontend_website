@@ -1,1 +1,40 @@
 @import "../helpers/variables.scss";
+
+.aboutContent {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  width: 80rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.videoTopic {
+  font-size: 3rem;
+  height: 5rem;
+  text-align: center;
+  vertical-align: middle;
+  color: $dominate;
+  background-color: $subdom;
+  border-radius: 0.5rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  cursor: pointer;
+}
+
+.aboutVideo {
+  max-height: 0;
+  overflow: hidden;
+  background-color: $secondAccent;
+  //   border: 0.5rem solid $subdom;
+}
+
+.video {
+  display: block;
+  margin: 2rem auto;
+}
+
+.active {
+  max-height: 60rem;
+  color: $secondSub;
+}

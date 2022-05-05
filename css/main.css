@@ -1,6 +1,11 @@
 @charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&family=Playfair+Display:wght@400;500&family=Roboto:ital,wght@0,300;0,400;1,400&display=swap");
-#self_logo:hover, .navButton:hover {
+.navButton:hover {
+  background-color: #d1e8e2;
+  color: #116466;
+}
+
+#self_logo:hover {
   background-color: #2c3531;
   color: #ffcb9a;
 }
@@ -20,6 +25,11 @@
           animation: navdrop 0.5s ease-in-out;
   height: 7.5rem;
   z-index: 1;
+}
+
+a.navButton.active {
+  background-color: #2c3531;
+  color: #ffcb9a;
 }
 
 .navButton {
@@ -115,7 +125,12 @@
     transform: translateY(0%);
   }
 }
-.navButton:hover, #self_logo:hover {
+.navButton:hover {
+  background-color: #d1e8e2;
+  color: #116466;
+}
+
+#self_logo:hover {
   background-color: #2c3531;
   color: #ffcb9a;
 }
@@ -343,12 +358,17 @@
           animation-iteration-count: 1;
 }
 
-.navButton:hover, #self_logo:hover {
+.navButton:hover {
+  background-color: #d1e8e2;
+  color: #116466;
+}
+
+#self_logo:hover {
   background-color: #2c3531;
   color: #ffcb9a;
 }
 
-.pageContent {
+#home {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
 }
@@ -518,7 +538,12 @@
   background-color: #116466;
 }
 
-.navButton:hover, #self_logo:hover {
+.navButton:hover {
+  background-color: #d1e8e2;
+  color: #116466;
+}
+
+#self_logo:hover {
   background-color: #2c3531;
   color: #ffcb9a;
 }
@@ -545,17 +570,70 @@ h1 {
   flex-grow: 1;
 }
 
-.navButton:hover, #self_logo:hover {
+.navButton:hover {
+  background-color: #d1e8e2;
+  color: #116466;
+}
+
+#self_logo:hover {
   background-color: #2c3531;
   color: #ffcb9a;
 }
 
-.navButton:hover, #self_logo:hover {
+.aboutContent {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  width: 80rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.videoTopic {
+  font-size: 3rem;
+  height: 5rem;
+  text-align: center;
+  vertical-align: middle;
+  color: #d1e8e2;
+  background-color: #116466;
+  border-radius: 0.5rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  cursor: pointer;
+}
+
+.aboutVideo {
+  max-height: 0;
+  overflow: hidden;
+  background-color: #2c3531;
+}
+
+.video {
+  display: block;
+  margin: 2rem auto;
+}
+
+.active {
+  max-height: 60rem;
+  color: #ffcb9a;
+}
+
+.navButton:hover {
+  background-color: #d1e8e2;
+  color: #116466;
+}
+
+#self_logo:hover {
   background-color: #2c3531;
   color: #ffcb9a;
 }
 
-.navButton:hover, #self_logo:hover {
+.navButton:hover {
+  background-color: #d1e8e2;
+  color: #116466;
+}
+
+#self_logo:hover {
   background-color: #2c3531;
   color: #ffcb9a;
 }
