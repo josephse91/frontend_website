@@ -5,8 +5,10 @@ export default function About() {
     <div className="pageContent" id="about">
       <div className="aboutContent" onClick={videoSelect}>
         <div className="videoTab">
-          <h1 className="videoTopic active">Origin of my Interest in Tech</h1>
-          <div className="aboutVideo active">{videoTopic("day")}</div>
+          <h1 className="videoTopic activeVid">
+            Origin of my Interest in Tech
+          </h1>
+          <div className="aboutVideo activeVid">{videoTopic("day")}</div>
         </div>
         <div className="videoTab">
           <h1 className="videoTopic">My Fit into Software Engineering</h1>
@@ -51,8 +53,6 @@ function videoTopic(topic) {
   return (
     <iframe
       className="video"
-      width="560"
-      height="315"
       title={videos[select][0]}
       src={videos[select][1]}
       frameBorder="0"
@@ -64,24 +64,24 @@ function videoTopic(topic) {
 function videoSelect(event) {
   event.preventDefault();
 
-  let activeTab = document.getElementsByClassName("videoTopic active")[0];
+  let activeVidTab = document.getElementsByClassName("videoTopic activeVid")[0];
   let clickedTarget = event.target;
 
-  if (activeTab === clickedTarget) {
-    activeTab.classList.remove("active");
-    activeTab.nextElementSibling.classList.remove("active");
+  if (activeVidTab === clickedTarget) {
+    activeVidTab.classList.remove("activeVid");
+    activeVidTab.nextElementSibling.classList.remove("activeVid");
     return;
   }
 
   if (
-    clickedTarget.className !== "videoTopic active" &&
+    clickedTarget.className !== "videoTopic activeVid" &&
     clickedTarget.className.includes("videoTopic")
   ) {
-    if (activeTab) {
-      activeTab.classList.remove("active");
-      activeTab.nextElementSibling.classList.remove("active");
+    if (activeVidTab) {
+      activeVidTab.classList.remove("activeVid");
+      activeVidTab.nextElementSibling.classList.remove("activeVid");
     }
-    clickedTarget.classList.add("active");
-    clickedTarget.nextElementSibling.classList.add("active");
+    clickedTarget.classList.add("activeVid");
+    clickedTarget.nextElementSibling.classList.add("activeVid");
   }
 }

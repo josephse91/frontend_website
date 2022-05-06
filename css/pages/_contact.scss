@@ -1,1 +1,112 @@
 @import "../helpers/variables.scss";
+
+#contact {
+  display: flex;
+  flex-direction: column;
+}
+
+.contactBanner {
+  height: 10rem;
+  overflow: hidden;
+  position: relative;
+
+  img {
+    display: block;
+    height: 10rem;
+    width: 100%;
+    opacity: 0.3;
+    // transform: translate(0 -20rem);
+  }
+}
+
+.bannerOverlay {
+  position: absolute;
+  // top: 0;
+  height: 100%;
+  width: 100%;
+  background-color: $secondAccent;
+  z-index: 1;
+  opacity: 0.9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.bannerText {
+  font-size: 3rem;
+  color: $secondSub;
+}
+
+.contactGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  flex-grow: 1;
+}
+
+.visitorForm {
+  display: flex;
+  flex-direction: column;
+  //   align-items: center;
+  height: 90%;
+  margin: 2rem;
+  //   margin-left: 5rem;
+  background-color: $subdom;
+  padding: 2rem;
+  padding-left: 4rem;
+  gap: 1rem;
+  border-left: $subdom solid 0.5rem;
+}
+
+.formInput {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+
+  position: relative;
+
+  input,
+  textarea {
+    padding-left: 1rem;
+    width: 75%;
+    background-color: $dominate;
+    border-radius: 0.5rem;
+    font-size: 1.5rem;
+    line-height: 150%;
+  }
+
+  label {
+    position: absolute;
+    top: 2rem;
+    left: 1rem;
+    font-size: 1.5rem;
+    pointer-events: none;
+  }
+
+  label.active {
+    position: absolute;
+    font-size: 1rem;
+    top: 0.5rem;
+    left: 0.5rem;
+  }
+}
+
+.shortInput {
+  height: 6rem;
+}
+
+.longInput {
+  height: 15rem;
+  padding: 2rem;
+}
+
+#submitButton {
+  //   margin-top: 5rem;
+  align-self: center;
+  width: 10rem;
+
+  input {
+    text-align: center;
+    font-weight: 700;
+    padding-left: 0;
+  }
+}

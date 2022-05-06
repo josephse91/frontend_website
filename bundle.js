@@ -292,9 +292,9 @@ function About() {
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: "videoTab"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h1", {
-    className: "videoTopic active"
+    className: "videoTopic activeVid"
   }, "Origin of my Interest in Tech"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
-    className: "aboutVideo active"
+    className: "aboutVideo activeVid"
   }, videoTopic("day"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: "videoTab"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h1", {
@@ -332,8 +332,6 @@ function videoTopic(topic) {
   var videos = [["Day in the Life", "https://www.youtube.com/embed/oHBFD8cfXho"], ["specialization as a Software Engineer", "https://www.youtube.com/embed/Ouf-tpDAkK4"], ["Self-Taught", "https://www.youtube.com/embed/3EUDyn_31-Q"], ["Community", "https://www.youtube.com/embed/a0wY2TBs3zY"]];
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("iframe", {
     className: "video",
-    width: "560",
-    height: "315",
     title: videos[select][0],
     src: videos[select][1],
     frameBorder: "0",
@@ -343,23 +341,23 @@ function videoTopic(topic) {
 
 function videoSelect(event) {
   event.preventDefault();
-  var activeTab = document.getElementsByClassName("videoTopic active")[0];
+  var activeVidTab = document.getElementsByClassName("videoTopic activeVid")[0];
   var clickedTarget = event.target;
 
-  if (activeTab === clickedTarget) {
-    activeTab.classList.remove("active");
-    activeTab.nextElementSibling.classList.remove("active");
+  if (activeVidTab === clickedTarget) {
+    activeVidTab.classList.remove("activeVid");
+    activeVidTab.nextElementSibling.classList.remove("activeVid");
     return;
   }
 
-  if (clickedTarget.className !== "videoTopic active" && clickedTarget.className.includes("videoTopic")) {
-    if (activeTab) {
-      activeTab.classList.remove("active");
-      activeTab.nextElementSibling.classList.remove("active");
+  if (clickedTarget.className !== "videoTopic activeVid" && clickedTarget.className.includes("videoTopic")) {
+    if (activeVidTab) {
+      activeVidTab.classList.remove("activeVid");
+      activeVidTab.nextElementSibling.classList.remove("activeVid");
     }
 
-    clickedTarget.classList.add("active");
-    clickedTarget.nextElementSibling.classList.add("active");
+    clickedTarget.classList.add("activeVid");
+    clickedTarget.nextElementSibling.classList.add("activeVid");
   }
 }
 
@@ -382,7 +380,64 @@ function Contact() {
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: "pageContent",
     id: "contact"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h1", null, "This will be the contact me page"));
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    className: "contactBanner"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    className: "bannerOverlay"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h1", {
+    className: "bannerText"
+  }, "BE A PART OF MY CODING JOURNEY")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("img", {
+    src: "../images/contact me.jpg"
+  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    className: "contactGrid"
+  }, myContactInfo(), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    className: "contactForm"
+  }, contactForm())));
+}
+
+function myContactInfo() {
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    className: "myContactInfo"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h1", null, "I'D LOVE TO HEAR FROM YOU!"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("ul", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("li", null, "Is there a tech event you want to tell me about?"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("li", null, "Want to work on a project together?"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("li", null, "Need any advice learning any of the skills I\u2019ve learned?"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("li", null, "Is there a project you want to see?")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", null, "I look forward to building relationships within the tech community. Feel free to drop a message about anything"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h1", null, "CONTACT INFORMATION"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", null, "(516) 670-4896"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", null, "sjoseph.eng@gmail.com"));
+}
+
+function contactForm() {
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("form", {
+    className: "visitorForm"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    className: "formInput"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("label", {
+    htmlFor: "name"
+  }, "Name"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("input", {
+    className: "shortInput",
+    required: true,
+    name: "name",
+    id: "name",
+    type: "text"
+  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    className: "formInput"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("label", {
+    htmlFor: "email"
+  }, "Email"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("input", {
+    className: "shortInput",
+    name: "email",
+    id: "email",
+    type: "text"
+  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    className: "formInput"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("label", {
+    htmlFor: "message"
+  }, "Message"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("textarea", {
+    className: "longInput",
+    name: "message",
+    id: "message"
+  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    className: "formInput",
+    id: "submitButton"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("input", {
+    type: "submit",
+    value: "Submit"
+  })));
 }
 
 /***/ }),

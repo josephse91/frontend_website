@@ -26,15 +26,22 @@
   max-height: 0;
   overflow: hidden;
   background-color: $secondAccent;
-  //   border: 0.5rem solid $subdom;
+}
+
+@mixin videoSize($ratio: 1) {
+  height: 31.5rem * $ratio;
+  width: 56rem * $ratio;
 }
 
 .video {
+  @include videoSize();
   display: block;
   margin: 2rem auto;
+  height: 31.5rem;
+  width: 56rem;
 }
 
-.active {
+.activeVid {
   max-height: 60rem;
   color: $secondSub;
 }

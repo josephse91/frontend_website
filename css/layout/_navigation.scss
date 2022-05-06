@@ -12,7 +12,7 @@
   box-shadow: 0.3em 0.3em 0.3em 0.3em rgba(0, 0, 0, 0.199);
   animation: navdrop 0.5s ease-in-out;
   height: 7.5rem;
-  z-index: 1;
+  z-index: 10;
 }
 
 a.navButton.active {
@@ -67,28 +67,28 @@ a.navButton.active {
 
 .nav_logo {
   display: inline-block;
-}
 
-.linkedin_outer {
-  fill: $dominate;
-}
+  .linkedin_outer {
+    fill: $dominate;
+  }
 
-.linkedin_outer_hover {
-  fill: $secondAccent;
-}
-
-.linkedin_inner {
-  fill: $subdom;
-}
-
-.linkedin_inner_hover {
-  fill: $accent;
-}
-
-#github_logo {
-  fill: $dominate;
-  &:hover {
+  .linkedin_outer_hover {
     fill: $secondAccent;
+  }
+
+  .linkedin_inner {
+    fill: $subdom;
+  }
+
+  .linkedin_inner_hover {
+    fill: $accent;
+  }
+
+  #github_logo {
+    fill: $dominate;
+    &:hover {
+      fill: $secondAccent;
+    }
   }
 }
 
