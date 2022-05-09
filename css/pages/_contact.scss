@@ -55,13 +55,29 @@
   padding-left: 4rem;
   gap: 1rem;
   border-left: $subdom solid 0.5rem;
+
+  h1 {
+    margin-left: 6rem;
+  }
+}
+
+.formTitle {
+  display: inline-block;
+  width: 75%;
+  h1 {
+    color: $secondSub;
+    box-shadow: inset 0 -3em 3em rgba(0, 0, 0, 0.1),
+      0 0 0 2px rgba(0, 0, 0, 0.322), 0.3em 0.3em 1em rgba(0, 0, 0, 0.3);
+    font-size: 3rem;
+    text-align: center;
+  }
 }
 
 .formInput {
   display: flex;
+  flex-direction: column;
   gap: 2rem;
-  align-items: center;
-
+  margin-left: 4rem;
   position: relative;
 
   input,
@@ -76,7 +92,7 @@
 
   label {
     position: absolute;
-    top: 2rem;
+    top: 1.5rem;
     left: 1rem;
     font-size: 1.5rem;
     pointer-events: none;
@@ -91,12 +107,19 @@
 }
 
 .shortInput {
-  height: 6rem;
+  height: 5rem;
 }
 
 .longInput {
-  height: 15rem;
   padding: 2rem;
+}
+
+#message {
+  flex-grow: 1;
+}
+
+#messageBox {
+  flex-grow: 1;
 }
 
 #submitButton {
@@ -109,4 +132,50 @@
     font-weight: 700;
     padding-left: 0;
   }
+}
+
+.contactLeft {
+  margin-top: 5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  margin-left: 15%;
+  margin-right: 15%;
+
+  h1 {
+    font-size: 2.5rem;
+    color: $subdom;
+    margin-bottom: 1rem;
+  }
+
+  ul {
+    padding: 1rem;
+    padding-left: 2rem;
+  }
+
+  li,
+  p {
+    font-size: 1.5rem;
+    line-height: 150%;
+  }
+}
+.contactInfo {
+  flex-grow: 0.25;
+  p {
+    display: inline-block;
+    padding-left: 1rem;
+  }
+}
+
+#contactMission {
+  font-size: 2rem;
+  background-color: $secondAccent;
+  color: $dominate;
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+}
+
+.contactInfo .contactIcon {
+  display: inline-block;
+  max-height: 1.5rem;
 }

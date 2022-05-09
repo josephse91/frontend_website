@@ -1,4 +1,5 @@
 import React from "react";
+import { phoneIcon, mailIcon } from "../components/svgComponent";
 
 export default function Contact() {
   return (
@@ -11,7 +12,7 @@ export default function Contact() {
       </div>
       <div className="contactGrid">
         {myContactInfo()}
-        <div className="contactForm">{contactForm()}</div>
+        {contactForm()}
       </div>
     </div>
   );
@@ -19,21 +20,26 @@ export default function Contact() {
 
 function myContactInfo() {
   return (
-    <div className="myContactInfo">
-      <h1>I'D LOVE TO HEAR FROM YOU!</h1>
-      <ul>
-        <li>Is there a tech event you want to tell me about?</li>
-        <li>Want to work on a project together?</li>
-        <li>Need any advice learning any of the skills I’ve learned?</li>
-        <li>Is there a project you want to see?</li>
-      </ul>
-      <p>
-        I look forward to building relationships within the tech community. Feel
-        free to drop a message about anything
-      </p>
-      <h1>CONTACT INFORMATION</h1>
-      <p>(516) 670-4896</p>
-      <p>sjoseph.eng@gmail.com</p>
+    <div className="contactLeft">
+      <div className="contactWelcome">
+        <h1>I'D LOVE TO HEAR FROM YOU!</h1>
+        <p id="contactMission">
+          I look forward to building relationships within the tech community.
+          I'm open to any and every conversation.
+        </p>
+      </div>
+
+      <div className="contactInfo">
+        <h1>CONTACT INFORMATION</h1>
+        <div>
+          {phoneIcon()}
+          <p>(516) 670-4896</p>
+        </div>
+        <div>
+          {mailIcon()}
+          <p>sjoseph.eng@gmail.com</p>
+        </div>
+      </div>
     </div>
   );
 }
@@ -41,6 +47,10 @@ function myContactInfo() {
 function contactForm() {
   return (
     <form className="visitorForm">
+      <div className="formTitle">
+        <h1>GET IN TOUCH</h1>
+      </div>
+
       <div className="formInput">
         <label htmlFor="name">Name</label>
         <input
@@ -55,7 +65,7 @@ function contactForm() {
         <label htmlFor="email">Email</label>
         <input className="shortInput" name="email" id="email" type="text" />
       </div>
-      <div className="formInput">
+      <div className="formInput" id="messageBox">
         <label htmlFor="message">Message</label>
         <textarea className="longInput" name="message" id="message"></textarea>
       </div>
