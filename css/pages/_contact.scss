@@ -179,3 +179,31 @@
   display: inline-block;
   max-height: 1.5rem;
 }
+
+.contactLinks {
+  display: flex;
+  align-items: center;
+
+  .linkedin_outer {
+    fill: $subdom;
+    &:hover {
+      fill: $secondAccent;
+    }
+  }
+
+  .linkedin_outer_hover {
+    fill: $secondAccent;
+  }
+
+  .linkedin_inner {
+    fill: $dominate;
+  }
+
+  #github_logo {
+    fill: $subdom;
+    height: 3.5rem;
+    &:hover {
+      fill: $secondAccent;
+    }
+  }
+}

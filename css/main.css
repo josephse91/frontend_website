@@ -803,6 +803,30 @@ h1 {
   max-height: 1.5rem;
 }
 
+.contactLinks {
+  display: flex;
+  align-items: center;
+}
+.contactLinks .linkedin_outer {
+  fill: #116466;
+}
+.contactLinks .linkedin_outer:hover {
+  fill: #2c3531;
+}
+.contactLinks .linkedin_outer_hover {
+  fill: #2c3531;
+}
+.contactLinks .linkedin_inner {
+  fill: #d1e8e2;
+}
+.contactLinks #github_logo {
+  fill: #116466;
+  height: 3.5rem;
+}
+.contactLinks #github_logo:hover {
+  fill: #2c3531;
+}
+
 * {
   box-sizing: border-box;
   font-size: 10px;

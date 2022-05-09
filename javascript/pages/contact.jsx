@@ -1,5 +1,10 @@
 import React from "react";
-import { phoneIcon, mailIcon } from "../components/svgComponent";
+import {
+  LinkedInLogo,
+  GithubLogo,
+  phoneIcon,
+  mailIcon,
+} from "../components/svgComponent";
 
 export default function Contact() {
   return (
@@ -38,6 +43,10 @@ function myContactInfo() {
         <div>
           {mailIcon()}
           <p>sjoseph.eng@gmail.com</p>
+        </div>
+        <div className="contactLinks">
+          <LinkedInLogo />
+          <GithubLogo />
         </div>
       </div>
     </div>

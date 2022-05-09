@@ -447,7 +447,9 @@ function myContactInfo() {
     id: "contactMission"
   }, "I look forward to building relationships within the tech community. I'm open to any and every conversation.")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: "contactInfo"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h1", null, "CONTACT INFORMATION"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", null, (0,_components_svgComponent__WEBPACK_IMPORTED_MODULE_1__.phoneIcon)(), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", null, "(516) 670-4896")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", null, (0,_components_svgComponent__WEBPACK_IMPORTED_MODULE_1__.mailIcon)(), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", null, "sjoseph.eng@gmail.com"))));
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h1", null, "CONTACT INFORMATION"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", null, (0,_components_svgComponent__WEBPACK_IMPORTED_MODULE_1__.phoneIcon)(), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", null, "(516) 670-4896")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", null, (0,_components_svgComponent__WEBPACK_IMPORTED_MODULE_1__.mailIcon)(), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", null, "sjoseph.eng@gmail.com")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    className: "contactLinks"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_svgComponent__WEBPACK_IMPORTED_MODULE_1__.LinkedInLogo, null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_svgComponent__WEBPACK_IMPORTED_MODULE_1__.GithubLogo, null))));
 }
 
 function contactForm() {
