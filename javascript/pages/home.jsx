@@ -27,7 +27,16 @@ class Home extends React.Component {
   render() {
     return (
       <div className="pageContent" id="home">
-        <div className="personalSide"></div>
+        <div className="personalSide">
+          <div className="homeVideo">
+            <iframe
+              src="https://www.youtube.com/embed/GnXQU-QiTMo"
+              title="Home Video"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; allowfullscreen"
+            ></iframe>
+          </div>
+        </div>
         <div className="infoSide">
           <div className="leadStatement">
             <h1>

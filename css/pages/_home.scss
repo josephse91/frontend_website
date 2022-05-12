@@ -8,8 +8,20 @@
 .personalSide {
   background-color: $dominate;
   background-color: $secondAccent;
-  // border-right: 0.5rem solid $secondAccent;
-  // border-right: 0.5rem solid $subdom;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.homeVideo {
+  position: sticky;
+  top: 25%;
+
+  iframe {
+    width: 56rem;
+    height: 31.5rem;
+  }
 }
 
 .infoSide {

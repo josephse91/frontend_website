@@ -9,7 +9,7 @@ export default function About() {
           <div className="aboutVideo activeVid">{videoTopic("day")}</div>
         </div>
         <div className="videoTab">
-          <h1 className="videoTopic">Software Engineer at heart</h1>
+          <h1 className="videoTopic">Software Engineer at Heart</h1>
           <div className="aboutVideo">{videoTopic("specialization")}</div>
         </div>
         <div className="videoTab">
@@ -17,7 +17,7 @@ export default function About() {
           <div className="aboutVideo">{videoTopic("self")}</div>
         </div>
         <div className="videoTab">
-          <h1 className="videoTopic">My Coding Community</h1>
+          <h1 className="videoTopic">Coding Community</h1>
           <div className="aboutVideo">{videoTopic("community")}</div>
         </div>
       </div>
@@ -39,13 +39,10 @@ function videoTopic(topic) {
   }
 
   let videos = [
-    ["Day in the Life", "https://www.youtube.com/embed/oHBFD8cfXho"],
-    [
-      "specialization as a Software Engineer",
-      "https://www.youtube.com/embed/Ouf-tpDAkK4",
-    ],
-    ["Self-Taught", "https://www.youtube.com/embed/3EUDyn_31-Q"],
-    ["Community", "https://www.youtube.com/embed/a0wY2TBs3zY"],
+    ["Why Did I Choose Tech", "https://www.youtube.com/embed/N6HpOu6jzvI"],
+    ["Engineer at Heart", "https://www.youtube.com/embed/RUAFJ4afdfo"],
+    ["Self-Taught Journey", "https://www.youtube.com/embed/SLFQDDVqv_o"],
+    ["Community", "https://www.youtube.com/embed/wx6TUCK6r5w"],
   ];
 
   return (

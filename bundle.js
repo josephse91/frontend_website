@@ -342,7 +342,7 @@ function About() {
     className: "videoTab"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h1", {
     className: "videoTopic"
-  }, "Software Engineer at heart"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+  }, "Software Engineer at Heart"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: "aboutVideo"
   }, videoTopic("specialization"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: "videoTab"
@@ -354,7 +354,7 @@ function About() {
     className: "videoTab"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h1", {
     className: "videoTopic"
-  }, "My Coding Community"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+  }, "Coding Community"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: "aboutVideo"
   }, videoTopic("community")))));
 }
@@ -372,7 +372,7 @@ function videoTopic(topic) {
     select = 3;
   }
 
-  var videos = [["Day in the Life", "https://www.youtube.com/embed/oHBFD8cfXho"], ["specialization as a Software Engineer", "https://www.youtube.com/embed/Ouf-tpDAkK4"], ["Self-Taught", "https://www.youtube.com/embed/3EUDyn_31-Q"], ["Community", "https://www.youtube.com/embed/a0wY2TBs3zY"]];
+  var videos = [["Why Did I Choose Tech", "https://www.youtube.com/embed/N6HpOu6jzvI"], ["Engineer at Heart", "https://www.youtube.com/embed/RUAFJ4afdfo"], ["Self-Taught Journey", "https://www.youtube.com/embed/SLFQDDVqv_o"], ["Community", "https://www.youtube.com/embed/wx6TUCK6r5w"]];
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("iframe", {
     className: "video",
     title: videos[select][0],
@@ -578,7 +578,14 @@ var Home = /*#__PURE__*/function (_React$Component) {
         id: "home"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
         className: "personalSide"
-      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+        className: "homeVideo"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("iframe", {
+        src: "https://www.youtube.com/embed/GnXQU-QiTMo",
+        title: "Home Video",
+        frameborder: "0",
+        allow: "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; allowfullscreen"
+      }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
         className: "infoSide"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
         className: "leadStatement"
