@@ -53,9 +53,72 @@ function myContactInfo() {
   );
 }
 
+function sendMail(e) {
+  e.preventDefault();
+
+  let form = document.forms["visitorForm"];
+  let formName = form["name"].value;
+  let formEmail = form["email"].value;
+  let formMessage = form["message"].value;
+
+  // /*
+  fetch("https://formsubmit.co/ajax/sjoseph.eng@gmail.com", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+      Accept: "application/json",
+    },
+    body: JSON.stringify({
+      name: formName,
+      email: formEmail,
+      message: formMessage,
+    }),
+  })
+    .then((response) => response.json())
+    .then((data) => {
+      if (data.success === "true") {
+        form["name"].value = "";
+        form["email"].value = "";
+        form["message"].value = "";
+      }
+    })
+    .catch((error) => console.log(error));
+  // */
+}
+
+function inputFocus(e) {
+  e.preventDefault();
+
+  let inputBox = e.currentTarget;
+  let inputLabel = inputBox.previousElementSibling;
+
+  if (inputLabel.classList.value) {
+    inputLabel.classList.remove("active");
+  } else {
+    inputLabel.classList.add("active");
+  }
+
+  if (inputBox.value) {
+    inputLabel.classList.add("active");
+  }
+}
+
 function contactForm() {
   return (
-    <form className="visitorForm">
+    <form
+      className="visitorForm"
+      name="visitorForm"
+      action="https://formsubmit.co/sjoseph.eng@gmail.com"
+      method="POST"
+      onSubmit={sendMail}
+    >
+      <input type="hidden" name="_subject" value="Let Connect in Tech!" />
+      <input
+        type="hidden"
+        name="_autoresponse"
+        value="Thanks for sending me a message. I look forward to connecting in the near future"
+      />
+
       <div className="formTitle">
         <h1>GET IN TOUCH</h1>
       </div>
@@ -68,15 +131,30 @@ function contactForm() {
           name="name"
           id="name"
           type="text"
+          onFocus={inputFocus}
+          onBlur={inputFocus}
         />
       </div>
       <div className="formInput">
         <label htmlFor="email">Email</label>
-        <input className="shortInput" name="email" id="email" type="text" />
+        <input
+          className="shortInput"
+          name="email"
+          id="email"
+          type="email"
+          onFocus={inputFocus}
+          onBlur={inputFocus}
+        />
       </div>
       <div className="formInput" id="messageBox">
         <label htmlFor="message">Message</label>
-        <textarea className="longInput" name="message" id="message"></textarea>
+        <textarea
+          className="longInput"
+          name="message"
+          id="message"
+          onFocus={inputFocus}
+          onBlur={inputFocus}
+        ></textarea>
       </div>
       <div className="formInput" id="submitButton">
         <input type="submit" value="Submit" />

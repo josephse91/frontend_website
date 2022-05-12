@@ -270,21 +270,21 @@ function Bullet() {
 function phoneIcon() {
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("svg", {
     xmlns: "http://www.w3.org/2000/svg",
-    "class": "contactIcon",
+    className: "contactIcon",
     viewBox: "0 0 512 512"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("title", null, "Call"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("path", {
     d: "M451 374c-15.88-16-54.34-39.35-73-48.76-24.3-12.24-26.3-13.24-45.4.95-12.74 9.47-21.21 17.93-36.12 14.75s-47.31-21.11-75.68-49.39-47.34-61.62-50.53-76.48 5.41-23.23 14.79-36c13.22-18 12.22-21 .92-45.3-8.81-18.9-32.84-57-48.9-72.8C119.9 44 119.9 47 108.83 51.6A160.15 160.15 0 0083 65.37C67 76 58.12 84.83 51.91 98.1s-9 44.38 23.07 102.64 54.57 88.05 101.14 134.49S258.5 406.64 310.85 436c64.76 36.27 89.6 29.2 102.91 23s22.18-15 32.83-31a159.09 159.09 0 0013.8-25.8C465 391.17 468 391.17 451 374z",
     fill: "none",
     stroke: "currentColor",
-    "stroke-miterlimit": "10",
-    "stroke-width": "32"
+    strokeMiterlimit: "10",
+    strokeWidth: "32"
   }));
 }
 
 function mailIcon() {
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("svg", {
     xmlns: "http://www.w3.org/2000/svg",
-    "class": "contactIcon",
+    className: "contactIcon",
     viewBox: "0 0 512 512"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("title", null, "Mail"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("rect", {
     x: "48",
@@ -295,15 +295,15 @@ function mailIcon() {
     ry: "40",
     fill: "none",
     stroke: "currentColor",
-    "stroke-linecap": "round",
-    "stroke-linejoin": "round",
-    "stroke-width": "32"
+    strokeLinecap: "round",
+    strokeLinejoin: "round",
+    strokeWidth: "32"
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("path", {
     fill: "none",
     stroke: "currentColor",
-    "stroke-linecap": "round",
-    "stroke-linejoin": "round",
-    "stroke-width": "32",
+    strokeLinecap: "round",
+    strokeLinejoin: "round",
+    strokeWidth: "32",
     d: "M112 160l144 112 144-112"
   }));
 }
@@ -452,10 +452,69 @@ function myContactInfo() {
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_svgComponent__WEBPACK_IMPORTED_MODULE_1__.LinkedInLogo, null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_svgComponent__WEBPACK_IMPORTED_MODULE_1__.GithubLogo, null))));
 }
 
+function sendMail(e) {
+  e.preventDefault();
+  var form = document.forms["visitorForm"];
+  var formName = form["name"].value;
+  var formEmail = form["email"].value;
+  var formMessage = form["message"].value; // /*
+
+  fetch("https://formsubmit.co/ajax/sjoseph.eng@gmail.com", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+      Accept: "application/json"
+    },
+    body: JSON.stringify({
+      name: formName,
+      email: formEmail,
+      message: formMessage
+    })
+  }).then(function (response) {
+    return response.json();
+  }).then(function (data) {
+    if (data.success === "true") {
+      form["name"].value = "";
+      form["email"].value = "";
+      form["message"].value = "";
+    }
+  })["catch"](function (error) {
+    return console.log(error);
+  }); // */
+}
+
+function inputFocus(e) {
+  e.preventDefault();
+  var inputBox = e.currentTarget;
+  var inputLabel = inputBox.previousElementSibling;
+
+  if (inputLabel.classList.value) {
+    inputLabel.classList.remove("active");
+  } else {
+    inputLabel.classList.add("active");
+  }
+
+  if (inputBox.value) {
+    inputLabel.classList.add("active");
+  }
+}
+
 function contactForm() {
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("form", {
-    className: "visitorForm"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    className: "visitorForm",
+    name: "visitorForm",
+    action: "https://formsubmit.co/sjoseph.eng@gmail.com",
+    method: "POST",
+    onSubmit: sendMail
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("input", {
+    type: "hidden",
+    name: "_subject",
+    value: "Let Connect in Tech!"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("input", {
+    type: "hidden",
+    name: "_autoresponse",
+    value: "Thanks for sending me a message. I look forward to connecting in the near future"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: "formTitle"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h1", null, "GET IN TOUCH")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: "formInput"
@@ -466,7 +525,9 @@ function contactForm() {
     required: true,
     name: "name",
     id: "name",
-    type: "text"
+    type: "text",
+    onFocus: inputFocus,
+    onBlur: inputFocus
   })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: "formInput"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("label", {
@@ -475,7 +536,9 @@ function contactForm() {
     className: "shortInput",
     name: "email",
     id: "email",
-    type: "text"
+    type: "email",
+    onFocus: inputFocus,
+    onBlur: inputFocus
   })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: "formInput",
     id: "messageBox"
@@ -484,7 +547,9 @@ function contactForm() {
   }, "Message"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("textarea", {
     className: "longInput",
     name: "message",
-    id: "message"
+    id: "message",
+    onFocus: inputFocus,
+    onBlur: inputFocus
   })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: "formInput",
     id: "submitButton"
