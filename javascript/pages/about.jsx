@@ -5,13 +5,11 @@ export default function About() {
     <div className="pageContent" id="about">
       <div className="aboutContent" onClick={videoSelect}>
         <div className="videoTab">
-          <h1 className="videoTopic activeVid">
-            Origin of my Interest in Tech
-          </h1>
+          <h1 className="videoTopic activeVid">Why Did I Choose Tech</h1>
           <div className="aboutVideo activeVid">{videoTopic("day")}</div>
         </div>
         <div className="videoTab">
-          <h1 className="videoTopic">My Fit into Software Engineering</h1>
+          <h1 className="videoTopic">Software Engineer at heart</h1>
           <div className="aboutVideo">{videoTopic("specialization")}</div>
         </div>
         <div className="videoTab">
