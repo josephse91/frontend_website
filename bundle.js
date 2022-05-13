@@ -459,7 +459,7 @@ function sendMail(e) {
   var formEmail = form["email"].value;
   var formMessage = form["message"].value; // /*
 
-  fetch("https://formsubmit.co/ajax/sjoseph.eng@gmail.com", {
+  fetch("https://formsubmit.co/ajax/8783ffa2f15a5fa5983ea372cf049382", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
@@ -477,6 +477,7 @@ function sendMail(e) {
       form["name"].value = "";
       form["email"].value = "";
       form["message"].value = "";
+      window.alert("Thank you, ".concat(formName, "\n\nI look forward to connecting in the near future!"));
     }
   })["catch"](function (error) {
     return console.log(error);
@@ -503,7 +504,7 @@ function contactForm() {
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("form", {
     className: "visitorForm",
     name: "visitorForm",
-    action: "https://formsubmit.co/sjoseph.eng@gmail.com",
+    action: "https://formsubmit.co/8783ffa2f15a5fa5983ea372cf049382 ",
     method: "POST",
     onSubmit: sendMail
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("input", {
@@ -973,7 +974,57 @@ function Portfolio() {
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: "pageContent",
     id: "portfolio"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h1", null, "This will be the portfolio page"));
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    className: "portfolioCollection"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    className: "projectType",
+    id: "interactive"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    className: "projectTitleContainers",
+    id: "interactiveTitle"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h1", null, "Interactive Projects ")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    className: "interactiveProjects"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    className: "interactiveProjectList"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h1", {
+    className: "projectName active"
+  }, "Minesweeper"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h1", {
+    className: "projectName"
+  }, "Job Listing App"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h1", {
+    className: "projectName"
+  }, "Widget"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h1", {
+    className: "projectName"
+  }, "Pending Projects")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    "class": "projectShowcase"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    className: "projectDetails"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", null, "See Feature List")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    className: "project active"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", null, "Minesweeper Project Pending"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    className: "projectFeatures"
+  }, "Function with Features")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    className: "project"
+  }, "Job Listing App Pending"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    className: "project"
+  }, "Widget app Pending"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    className: "project"
+  }, "Pending Projects")))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    className: "projectType",
+    id: "database"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    className: "projectTitleContainers",
+    id: "databaseTitle"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h1", null, "Database/Framework Projects")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    className: "databaseProjects"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    className: "interactiveProjectList"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h1", {
+    className: "projectName active"
+  }, "Music App")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    "class": "projectShowcase"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    className: "project active"
+  }, "Music App Project Pending"))))));
 }
 
 /***/ }),

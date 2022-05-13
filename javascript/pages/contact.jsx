@@ -62,7 +62,7 @@ function sendMail(e) {
   let formMessage = form["message"].value;
 
   // /*
-  fetch("https://formsubmit.co/ajax/sjoseph.eng@gmail.com", {
+  fetch("https://formsubmit.co/ajax/8783ffa2f15a5fa5983ea372cf049382", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
@@ -80,6 +80,9 @@ function sendMail(e) {
         form["name"].value = "";
         form["email"].value = "";
         form["message"].value = "";
+        window.alert(
+          `Thank you, ${formName}\n\nI look forward to connecting in the near future!`
+        );
       }
     })
     .catch((error) => console.log(error));
@@ -108,7 +111,7 @@ function contactForm() {
     <form
       className="visitorForm"
       name="visitorForm"
-      action="https://formsubmit.co/sjoseph.eng@gmail.com"
+      action="https://formsubmit.co/8783ffa2f15a5fa5983ea372cf049382 "
       method="POST"
       onSubmit={sendMail}
     >

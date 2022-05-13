@@ -1,1 +1,96 @@
 @import "../helpers/variables.scss";
+
+.portfolioCollection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.projectType {
+  display: flex;
+  flex-direction: column;
+  width: 75%;
+}
+
+.projectTitleContainers {
+  display: flex;
+  justify-content: center;
+  margin: 1rem;
+
+  h1 {
+    font-size: 2.5rem;
+    color: $subdom;
+  }
+
+  h1:before,
+  h1:after {
+    content: "―――――――";
+  }
+}
+
+.interactiveProjectList {
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+  margin-bottom: 1rem;
+}
+
+.projectDetails {
+  display: flex;
+  justify-content: flex-end;
+
+  p {
+    display: inline-block;
+    font-size: 2rem;
+    border-radius: 0.025rem;
+    background-color: $secondSub;
+    color: $text;
+  }
+}
+
+.projectShowcase {
+  background-color: $secondAccent;
+}
+
+.projectName {
+  display: inline-block;
+  font-size: 2rem;
+  height: 3.5rem;
+  text-align: center;
+  vertical-align: middle;
+  color: $dominate;
+  background-color: $subdom;
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+  cursor: pointer;
+}
+
+.projectName.active {
+  color: $secondSub;
+}
+
+.project {
+  height: 30rem;
+  max-height: 0;
+  overflow: hidden;
+  color: $dominate;
+}
+
+.project.active {
+  position: relative;
+  max-height: 30rem;
+  overflow-y: auto;
+  border: 0.2rem solid $subdom;
+}
+
+.projectFeatures {
+  position: absolute;
+  height: 90%;
+  width: 80%;
+  background-color: white;
+  color: black;
+  border: 0.5rem solid $secondSub;
+  border-radius: 1rem;
+  top: 5%;
+  left: 10%;
+}
