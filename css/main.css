@@ -24,7 +24,7 @@
   -webkit-animation: navdrop 0.5s ease-in-out;
           animation: navdrop 0.5s ease-in-out;
   height: 7.5rem;
-  z-index: 10;
+  z-index: 100;
 }
 
 a.navButton.active {
@@ -674,20 +674,26 @@ h1 {
   margin-bottom: 1rem;
 }
 
-.projectDetails {
+.featureButton {
   display: flex;
   justify-content: flex-end;
 }
-.projectDetails p {
+.featureButton button {
   display: inline-block;
-  font-size: 2rem;
+  font-size: 1.5rem;
   border-radius: 0.025rem;
   background-color: #ffcb9a;
   color: #2c3531;
 }
+.featureButton button.active {
+  display: none;
+}
 
 .projectShowcase {
   background-color: #2c3531;
+}
+.projectShowcase p {
+  cursor: pointer;
 }
 
 .projectName {
@@ -722,7 +728,7 @@ h1 {
 }
 
 .projectFeatures {
-  position: absolute;
+  z-index: 10;
   height: 90%;
   width: 80%;
   background-color: white;
@@ -731,6 +737,23 @@ h1 {
   border-radius: 1rem;
   top: 5%;
   left: 10%;
+  z-index: -1;
+  position: relative;
+}
+
+.projectFeatures.active {
+  z-index: 1;
+}
+
+.featureClose {
+  position: absolute;
+  display: inline-block;
+  font-size: 1.5rem;
+  top: 0.5rem;
+  right: 1rem;
+  cursor: pointer;
+  color: #116466;
+  padding: 0.15rem;
 }
 
 .navButton:hover {

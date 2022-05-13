@@ -35,21 +35,29 @@
   margin-bottom: 1rem;
 }
 
-.projectDetails {
+.featureButton {
   display: flex;
   justify-content: flex-end;
 
-  p {
+  button {
     display: inline-block;
-    font-size: 2rem;
+    font-size: 1.5rem;
     border-radius: 0.025rem;
     background-color: $secondSub;
     color: $text;
+  }
+
+  button.active {
+    display: none;
   }
 }
 
 .projectShowcase {
   background-color: $secondAccent;
+
+  p {
+    cursor: pointer;
+  }
 }
 
 .projectName {
@@ -84,7 +92,8 @@
 }
 
 .projectFeatures {
-  position: absolute;
+  z-index: 10;
+  //   position: absolute;
   height: 90%;
   width: 80%;
   background-color: white;
@@ -93,4 +102,22 @@
   border-radius: 1rem;
   top: 5%;
   left: 10%;
+  z-index: -1;
+  position: relative;
+}
+
+.projectFeatures.active {
+  z-index: 1;
+}
+
+.featureClose {
+  position: absolute;
+  display: inline-block;
+  font-size: 1.5rem;
+  top: 0.5rem;
+  right: 1rem;
+  cursor: pointer;
+  color: $subdom;
+  //   background-color: $secondAccent;
+  padding: 0.15rem;
 }
