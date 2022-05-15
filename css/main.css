@@ -721,7 +721,6 @@ h1 {
 }
 
 .project.active {
-  position: relative;
   max-height: 30rem;
   overflow-y: auto;
   border: 0.2rem solid #116466;
@@ -729,7 +728,7 @@ h1 {
 
 .projectFeatures {
   z-index: 10;
-  height: 90%;
+  height: 80%;
   width: 80%;
   background-color: white;
   color: black;

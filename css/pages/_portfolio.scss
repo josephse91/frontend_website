@@ -85,7 +85,7 @@
 }
 
 .project.active {
-  position: relative;
+  //   position: relative;
   max-height: 30rem;
   overflow-y: auto;
   border: 0.2rem solid $subdom;
@@ -93,8 +93,8 @@
 
 .projectFeatures {
   z-index: 10;
-  //   position: absolute;
-  height: 90%;
+  //   position: sticky;
+  height: 80%;
   width: 80%;
   background-color: white;
   color: black;
