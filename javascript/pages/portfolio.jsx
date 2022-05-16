@@ -33,7 +33,7 @@ export default function Portfolio() {
             <div className="featureClose" onClick={closeFeatureList}>
               x
             </div>
-            Music App Features
+            <h1>Check Github Repository</h1>
           </div>
         </div>
         <div className="projectType" id="interactive">
@@ -58,21 +58,19 @@ export default function Portfolio() {
                 <button onClick={seeProject}>See Project</button>
               </div>
               <div className="projectFeatures active" id="Minesweeper">
-                <div>
-                  <MinesweeperDetails />
-                </div>
+                <MinesweeperDetails />
               </div>
               <div className="projectFeatures" id="Job_Listing_App">
-                <div>Job Listing App Pending</div>
+                <Job_listing_Details />
               </div>
               <div className="projectFeatures" id="Widget">
-                <div>Widget app Pending</div>
+                <Widgets_app />
               </div>
               <div className="projectFeatures" id="Pending_Projects">
-                <div>Pending Projects</div>
+                <Pending_Projects />
               </div>
               <div className="projectFeatures" id="Music_App">
-                <div>Music App Project Pending</div>
+                <Music_App />
               </div>
             </div>
           </div>
@@ -163,15 +161,170 @@ function closeFeatureList(e) {
 
 function MinesweeperDetails() {
   return (
-    <div>
-      <h1>This is the Minesweeper Project</h1>
+    <div className="projectDetails">
+      <h1 className="projectDetailTitle">Minesweeper Project</h1>
 
-      <h3>
-        Integrated asynchronous components that respond to user events with each
-        tile
-        <h3 />
-        <h3>Implemented rendering actions that respond to user events</h3>
-      </h3>
+      <h2 className="projectDetailSubtitle">Programming Highlights</h2>
+      <ul>
+        <li className="projectDetailNote">
+          State management to update the board (React)
+        </li>
+        <li className="projectDetailNote">
+          Event Handlers established to users can select tiles
+        </li>
+        <li className="projectDetailNote">
+          Object Oriented Principles to create tiles, boards and rules of the
+          game
+        </li>
+        <li className="projectDetailNote">CSS styles applied</li>
+      </ul>
+
+      <h2 className="projectDetailSubtitle">Created Working Environment</h2>
+      <ul>
+        <li className="projectDetailNote">
+          Initialized NPM and installing Dependencies
+        </li>
+        <li className="projectDetailNote">Configure Webpack</li>
+      </ul>
+    </div>
+  );
+}
+
+function Job_listing_Details() {
+  return (
+    <div className="projectDetails">
+      <h1 className="projectDetailTitle">Job Listing App</h1>
+
+      <h2 className="projectDetailSubtitle">Programming Highlights</h2>
+      <ul>
+        <li className="projectDetailNote">Manage state using Redux library</li>
+        <li className="projectDetailNote">
+          Managed asynchronous XMLHttpRequests to gather data
+        </li>
+      </ul>
+
+      <h2 className="projectDetailSubtitle">Created Working Environment</h2>
+      <ul>
+        <li className="projectDetailNote">
+          Initialized NPM and installing Dependencies
+        </li>
+        <li className="projectDetailNote">Configure Webpack</li>
+      </ul>
+    </div>
+  );
+}
+
+function Widgets_app() {
+  return (
+    <div className="projectDetails">
+      <h1 className="projectDetailTitle">Widgets App</h1>
+
+      <h2 className="projectDetailSubtitle">Programming Highlights</h2>
+      <ul>
+        <li className="projectDetailNote">
+          Incorporate an API into a component
+        </li>
+        <li className="projectDetailNote">
+          Managed asynchronous XMLHttpRequests to gather data
+        </li>
+        <li className="projectDetailNote">Create multiple simple components</li>
+        <li className="projectDetailNote">
+          Incorporation of Lifecycles with react to manage state
+        </li>
+        <li className="projectDetailNote">CSS styles applied</li>
+      </ul>
+
+      <h2 className="projectDetailSubtitle">Created Working Environment</h2>
+      <ul>
+        <li className="projectDetailNote">
+          Initialized NPM and installing Dependencies
+        </li>
+        <li className="projectDetailNote">Configure Webpack</li>
+      </ul>
+    </div>
+  );
+}
+
+function Pending_Projects() {
+  return (
+    <div className="projectDetails">
+      <h1 className="projectDetailTitle">Sudoku Solver</h1>
+      <ul>
+        <li className="projectDetailNote">
+          Sudoku boards will be generated using XMLHttpRequests
+        </li>
+        <li className="projectDetailNote">
+          Sudoku game will be coded using Object oriented programming
+        </li>
+        <li className="projectDetailNote">
+          Solver will use a data structure to solve the board
+        </li>
+      </ul>
+    </div>
+  );
+}
+
+function Music_App() {
+  return (
+    <div className="projectDetails">
+      <h1 className="projectDetailTitle">Music App</h1>
+
+      <div className="projectDetailBox">
+        <img src="../images/Music App migrations.PNG" />
+        <div className="projectDetailText">
+          <h2 className="projectDetailSubtitle">
+            Established the Rails work environment
+          </h2>
+          <ul>
+            <li className="projectDetailNote">
+              Setting up the schemas by using migrations
+            </li>
+            <li className="projectDetailNote">
+              Activating the PostgreSQL database and Rails database
+              configurations
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div className="projectDetailBox">
+        <img src="../images/Music App sign-in.PNG" />
+        <div className="projectDetailText">
+          <h2 className="projectDetailSubtitle">
+            Created User Models with user Authentication
+          </h2>
+          <ul>
+            <li className="projectDetailNote">
+              Login system uses Rails Validations to determine whether there is
+              an active current user
+            </li>
+            <li className="projectDetailNote">Configure Webpack</li>
+          </ul>
+        </div>
+      </div>
+      <div className="projectDetailBox">
+        <img src="../images/RESTful routing.PNG" />
+        <div className="projectDetailText">
+          <h2 className="projectDetailSubtitle">RESTful routing system</h2>
+        </div>
+      </div>
+      <div className="projectDetailBox">
+        <img src="../images/Music App Route.PNG" />
+        <div className="projectDetailText">
+          <h2 className="projectDetailSubtitle">
+            Trigger Controller Actions from views using forms and links
+          </h2>
+        </div>
+      </div>
+      <div className="projectDetailBox">
+        <img src="../images/Music App new route.PNG" />
+        <div className="projectDetailText">
+          <h2 className="projectDetailSubtitle">
+            Create Data columns/attributes for objects that can be references in
+            routes
+          </h2>
+        </div>
+      </div>
     </div>
   );
 }

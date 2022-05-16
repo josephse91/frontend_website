@@ -547,6 +547,53 @@ a.navButton.active {
   background-color: #116466;
 }
 
+.projectDetails {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  gap: 1rem;
+}
+
+.projectDetailTitle {
+  font-size: 2.5rem;
+  align-self: center;
+  color: #ffcb9a;
+}
+
+.projectDetailSubtitle {
+  font-size: 2rem;
+}
+
+ul {
+  color: white;
+}
+
+.projectDetailNote {
+  font-size: 1.75rem;
+  padding-left: 3rem;
+  margin-bottom: 0.5rem;
+  list-style-type: none;
+}
+
+.projectDetailBox {
+  display: flex;
+  align-items: center;
+  gap: 5rem;
+}
+.projectDetailBox img {
+  height: auto;
+  width: 30rem;
+  display: inline-block;
+  margin-bottom: 1rem;
+}
+.projectDetailBox .projectDetailNote {
+  padding: 0;
+}
+
+.projectDetailText {
+  max-width: 50%;
+}
+
 .navButton:hover {
   background-color: #d1e8e2;
   color: #116466;
@@ -676,8 +723,11 @@ h1 {
 }
 
 .featureButton {
+  position: -webkit-sticky;
+  position: sticky;
   display: flex;
   justify-content: flex-end;
+  top: 0;
 }
 .featureButton button {
   display: inline-block;
@@ -736,7 +786,7 @@ h1 {
   color: black;
   border: 0.5rem solid #ffcb9a;
   border-radius: 1rem;
-  top: 1.5rem;
+  bottom: 1.5rem;
   left: 5%;
   z-index: -1;
 }
