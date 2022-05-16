@@ -1044,7 +1044,7 @@ function Portfolio() {
   }, "See Project")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: "projectFeatures active",
     id: "Minesweeper"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", null, "Minesweeper Project Pending")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(MinesweeperDetails, null))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: "projectFeatures",
     id: "Job_Listing_App"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", null, "Job Listing App Pending")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
@@ -1130,6 +1130,10 @@ function closeFeatureList(e) {
   var close = e.target;
   var detailBox = close.parentElement.parentElement;
   detailBox.classList.remove("active");
+}
+
+function MinesweeperDetails() {
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h1", null, "This is the Minesweeper Project"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h3", null, "Integrated asynchronous components that respond to user events with each tile", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h3", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h3", null, "Implemented rendering actions that respond to user events")));
 }
 
 /***/ }),

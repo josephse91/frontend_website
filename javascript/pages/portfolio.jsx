@@ -58,7 +58,9 @@ export default function Portfolio() {
                 <button onClick={seeProject}>See Project</button>
               </div>
               <div className="projectFeatures active" id="Minesweeper">
-                <div>Minesweeper Project Pending</div>
+                <div>
+                  <MinesweeperDetails />
+                </div>
               </div>
               <div className="projectFeatures" id="Job_Listing_App">
                 <div>Job Listing App Pending</div>
@@ -157,4 +159,19 @@ function closeFeatureList(e) {
   let detailBox = close.parentElement.parentElement;
 
   detailBox.classList.remove("active");
+}
+
+function MinesweeperDetails() {
+  return (
+    <div>
+      <h1>This is the Minesweeper Project</h1>
+
+      <h3>
+        Integrated asynchronous components that respond to user events with each
+        tile
+        <h3 />
+        <h3>Implemented rendering actions that respond to user events</h3>
+      </h3>
+    </div>
+  );
 }
