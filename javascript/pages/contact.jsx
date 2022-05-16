@@ -111,7 +111,7 @@ function contactForm() {
     <form
       className="visitorForm"
       name="visitorForm"
-      action="https://formsubmit.co/8783ffa2f15a5fa5983ea372cf049382 "
+      action="https://formsubmit.co/8783ffa2f15a5fa5983ea372cf049382"
       method="POST"
       onSubmit={sendMail}
     >

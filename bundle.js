@@ -504,7 +504,7 @@ function contactForm() {
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("form", {
     className: "visitorForm",
     name: "visitorForm",
-    action: "https://formsubmit.co/8783ffa2f15a5fa5983ea372cf049382 ",
+    action: "https://formsubmit.co/8783ffa2f15a5fa5983ea372cf049382",
     method: "POST",
     onSubmit: sendMail
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("input", {
@@ -977,6 +977,38 @@ function Portfolio() {
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: "portfolioCollection"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    className: "projectWindowContainer"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    className: "project active",
+    id: "Minesweeper_window"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    className: "featureClose",
+    onClick: closeFeatureList
+  }, "x"), "Minesweeper Features"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    className: "project",
+    id: "Job_Listing_App_window"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    className: "featureClose",
+    onClick: closeFeatureList
+  }, "x"), "Job Listing App Features"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    className: "project",
+    id: "Widget_window"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    className: "featureClose",
+    onClick: closeFeatureList
+  }, "x"), "Widget App Features"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    className: "project",
+    id: "Pending_Projects_window"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    className: "featureClose",
+    onClick: closeFeatureList
+  }, "x"), "Pending App Features"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    className: "project",
+    id: "Music_App_window"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    className: "featureClose",
+    onClick: closeFeatureList
+  }, "x"), "Music App Features")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: "projectType",
     id: "interactive"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
@@ -985,7 +1017,7 @@ function Portfolio() {
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h1", null, "Interactive Projects ")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: "interactiveProjects"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
-    className: "interactiveProjectList",
+    className: "projectLists",
     onClick: projectSelect
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h1", {
     className: "projectName active"
@@ -996,136 +1028,107 @@ function Portfolio() {
   }, "Widget"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h1", {
     className: "projectName"
   }, "Pending Projects")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
-    className: "projectShowcase"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
-    className: "featureButton"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("button", {
-    onClick: seeFeatureList
-  }, "See Feature List")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
-    className: "project active",
-    id: "Minesweeper"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", null, "Minesweeper Project Pending"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
-    className: "projectFeatures",
-    id: "minesweeperDetails"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
-    className: "featureClose",
-    onClick: closeFeatureList
-  }, "x"), "Minesweeper Features")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
-    className: "project",
-    id: "Job_Listing_App"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", null, "Job Listing App Pending"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
-    className: "projectFeatures",
-    id: "jobDetails"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
-    className: "featureClose",
-    onClick: closeFeatureList
-  }, "x"), "Job Listing App Features")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
-    className: "project",
-    id: "Widget"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", null, "Widget app Pending"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
-    className: "projectFeatures",
-    id: "widgetDetails"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
-    className: "featureClose",
-    onClick: closeFeatureList
-  }, "x"), "Widget App Features")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
-    className: "project",
-    id: "Pending_Projects"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", null, "Pending Projects"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
-    className: "projectFeatures",
-    id: "pendingDetails"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
-    className: "featureClose",
-    onClick: closeFeatureList
-  }, "x"), "Pending App Features"))))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
-    className: "projectType",
-    id: "database"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: "projectTitleContainers",
     id: "databaseTitle"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h1", null, "Database/Framework Projects")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
-    className: "databaseProjects"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
-    className: "interactiveProjectList"
+    className: "projectLists",
+    onClick: projectSelect
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h1", {
-    className: "projectName active"
+    className: "projectName"
   }, "Music App")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: "projectShowcase"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: "featureButton"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("button", {
-    onClick: seeFeatureList
-  }, "See Feature List")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
-    className: "project active"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", null, "Music App Project Pending"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    onClick: seeProject
+  }, "See Project")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    className: "projectFeatures active",
+    id: "Minesweeper"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", null, "Minesweeper Project Pending")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: "projectFeatures",
-    id: "musicDetails"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
-    className: "featureClose",
-    onClick: closeFeatureList
-  }, "x"), "Music App Features")))))));
+    id: "Job_Listing_App"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", null, "Job Listing App Pending")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    className: "projectFeatures",
+    id: "Widget"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", null, "Widget app Pending")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    className: "projectFeatures",
+    id: "Pending_Projects"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", null, "Pending Projects")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    className: "projectFeatures",
+    id: "Music_App"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", null, "Music App Project Pending")))))));
 }
 
 function projectSelect(e) {
   e.preventDefault();
   var targetClass = e.target.classList.value;
-  var targetProject = targetClass.includes("projectName") ? e.target : null;
-  if (!targetProject) return;
-  var targetProjectClass = targetProject.classList.value;
-  var allProjects = e.currentTarget.children;
+  var targetProjectButton = targetClass.includes("projectName") ? e.target : null;
+  if (!targetProjectButton) return;
+  var buttonClass = targetProjectButton.classList.value;
+  var allProjectButtons = document.getElementsByClassName("projectName");
 
-  for (var i in allProjects) {
-    if (allProjects[i] === targetProject || !allProjects[i].tagName) continue;
+  for (var i = 0; i < allProjectButtons.length; i++) {
+    if (allProjectButtons[i] === targetProjectButton) continue;
 
-    var _projectId = allProjects[i].innerHTML.replaceAll(" ", "_");
+    var _projectId = allProjectButtons[i].innerHTML.replaceAll(" ", "_");
+
+    var _projectWindowId = _projectId + "_window";
+
+    var _projectWindow = document.getElementById(_projectWindowId);
 
     var _projectActive = document.getElementById(_projectId);
 
     var detailsActive = _projectActive.children[1];
 
-    if (allProjects[i].classList.value.includes("active")) {
-      allProjects[i].classList.remove("active");
+    if (allProjectButtons[i].classList.value.includes("active")) {
+      allProjectButtons[i].classList.remove("active");
 
       _projectActive.classList.remove("active");
 
       detailsActive ? detailsActive.classList.remove("active") : null;
+      _projectWindow ? _projectWindow.classList.remove("active") : null;
       break;
     }
   }
 
-  var projectId = targetProject.innerHTML.replaceAll(" ", "_");
+  var projectId = targetProjectButton.innerHTML.replaceAll(" ", "_");
+  var projectWindowId = projectId + "_window";
   var projectActive = document.getElementById(projectId);
+  var projectWindow = document.getElementById(projectWindowId);
 
-  if (!targetProjectClass.includes(" active")) {
-    targetProject.classList.add("active");
+  if (!buttonClass.includes(" active")) {
+    targetProjectButton.classList.add("active");
     projectActive.classList.add("active");
+    projectWindow.classList.add("active");
   }
 }
 
-function seeFeatureList(e) {
+function seeProject(e) {
   e.preventDefault();
-  var button = e.target;
-  var projects = button.parentElement.parentElement.children;
-  var len = projects.length;
+  var projectDetails = e.target.parentElement.parentElement.children;
   var activeProject;
 
-  for (var i = 1; i < len; i++) {
-    var currentProject = projects[i];
+  for (var i = 1; i < projectDetails.length; i++) {
+    var currentProject = projectDetails[i];
 
-    if (currentProject.classList.value.includes("project active")) {
+    if (currentProject.classList.value.includes("projectFeatures active")) {
       activeProject = currentProject;
       break;
     }
   }
 
-  var details = activeProject.children[1];
-  details.classList.add("active");
+  var projectWindowContainer = document.getElementsByClassName("projectWindowContainer")[0];
+  var activeProjectWindowId = activeProject.id + "_window";
+  var projectWindow = document.getElementById(activeProjectWindowId);
+  projectWindowContainer.classList.add("active");
+  console.log(projectWindowContainer);
+  projectWindow.classList.add("active");
 }
 
 function closeFeatureList(e) {
   e.preventDefault();
   var close = e.target;
-  var detailBox = close.parentElement;
+  var detailBox = close.parentElement.parentElement;
   detailBox.classList.remove("active");
 }
 

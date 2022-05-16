@@ -4,18 +4,19 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  position: relative;
 }
 
 .projectType {
   display: flex;
   flex-direction: column;
-  width: 75%;
+  width: 85%;
 }
 
 .projectTitleContainers {
   display: flex;
   justify-content: center;
-  margin: 1rem;
+  margin: 0.75rem;
 
   h1 {
     font-size: 2.5rem;
@@ -28,11 +29,11 @@
   }
 }
 
-.interactiveProjectList {
+.projectLists {
   display: flex;
   justify-content: center;
   gap: 3rem;
-  margin-bottom: 1rem;
+  margin-bottom: 0.5rem;
 }
 
 .featureButton {
@@ -62,14 +63,14 @@
 
 .projectName {
   display: inline-block;
-  font-size: 2rem;
-  height: 3.5rem;
+  font-size: 1.5rem;
+  height: 2.5rem;
   text-align: center;
   vertical-align: middle;
   color: $dominate;
   background-color: $subdom;
   border-radius: 0.5rem;
-  padding: 0.5rem;
+  padding: 0.25rem;
   cursor: pointer;
 }
 
@@ -77,37 +78,47 @@
   color: $secondSub;
 }
 
-.project {
-  height: 30rem;
+.projectFeatures {
+  height: 35rem;
   max-height: 0;
   overflow: hidden;
   color: $dominate;
 }
 
-.project.active {
-  //   position: relative;
-  max-height: 30rem;
+.projectFeatures.active {
+  max-height: 90%;
   overflow-y: auto;
   border: 0.2rem solid $subdom;
 }
 
-.projectFeatures {
-  z-index: 10;
-  //   position: sticky;
-  height: 80%;
-  width: 80%;
+.projectWindowContainer {
+  position: absolute;
+  width: 90%;
+  height: 80vh;
+  max-height: 80vh;
   background-color: white;
   color: black;
   border: 0.5rem solid $secondSub;
   border-radius: 1rem;
-  top: 5%;
-  left: 10%;
+  top: 1.5rem;
+  left: 5%;
   z-index: -1;
-  position: relative;
 }
 
-.projectFeatures.active {
-  z-index: 1;
+.project {
+  position: relative;
+  max-height: 0;
+  overflow: hidden;
+}
+
+.project.active {
+  max-height: 80vh;
+  height: 80vh;
+  overflow-y: auto;
+}
+
+.projectWindowContainer.active {
+  z-index: 10;
 }
 
 .featureClose {
