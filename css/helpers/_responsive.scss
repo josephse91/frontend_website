@@ -77,6 +77,47 @@
 }
 
 @media only screen and (max-width: 800px) {
+  // Intro
+
+  .introPic {
+    display: none;
+  }
+
+  .intro {
+    grid-template: 1fr / 1fr;
+  }
+
+  .intro_statement {
+    max-inline-size: 80%;
+  }
+
+  .nameplate {
+    gap: 1rem;
+    align-items: center;
+    height: 20rem;
+  }
+
+  .nameplate p {
+    font-size: 3rem;
+    font-weight: 700;
+    margin: 0;
+  }
+
+  #charactertag {
+    font-size: 1.5rem;
+    margin: 0;
+  }
+
+  .intro-content {
+    align-self: center;
+    margin-right: 0;
+  }
+
+  .scrollEnter {
+    align-self: center;
+    margin-right: 0;
+  }
+
   //Navigation
 
   .menuBarcontainer {
@@ -204,6 +245,23 @@
 }
 
 @media only screen and (max-width: 500px) {
+  // Intro
+
+  .intro-content {
+    width: 30rem;
+  }
+
+  .nameplate p {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin: 0;
+  }
+
+  #charactertag {
+    font-size: 1.15rem;
+    margin: 0;
+  }
+
   // Navigation
 
   #nametag {

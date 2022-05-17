@@ -257,6 +257,7 @@ a.navButton.active {
   background-color: #d1e8e2;
   box-shadow: inset 0 -3em 3em rgba(0, 0, 0, 0.1), 0 0 0 2px rgba(0, 0, 0, 0.322), 0.3em 0.3em 1em rgba(0, 0, 0, 0.3);
   padding: 1rem;
+  gap: 1rem;
   border: 1.5rem ridge #116466;
 }
 
@@ -1190,6 +1191,45 @@ ul {
   }
 }
 @media only screen and (max-width: 800px) {
+  .introPic {
+    display: none;
+  }
+
+  .intro {
+    grid-template: 1fr/1fr;
+  }
+
+  .intro_statement {
+    max-inline-size: 80%;
+  }
+
+  .nameplate {
+    gap: 1rem;
+    align-items: center;
+    height: 20rem;
+  }
+
+  .nameplate p {
+    font-size: 3rem;
+    font-weight: 700;
+    margin: 0;
+  }
+
+  #charactertag {
+    font-size: 1.5rem;
+    margin: 0;
+  }
+
+  .intro-content {
+    align-self: center;
+    margin-right: 0;
+  }
+
+  .scrollEnter {
+    align-self: center;
+    margin-right: 0;
+  }
+
   .menuBarcontainer {
     display: inline-block;
   }
@@ -1303,6 +1343,21 @@ ul {
   }
 }
 @media only screen and (max-width: 500px) {
+  .intro-content {
+    width: 30rem;
+  }
+
+  .nameplate p {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin: 0;
+  }
+
+  #charactertag {
+    font-size: 1.15rem;
+    margin: 0;
+  }
+
   #nametag {
     font-size: 1.75rem;
   }
