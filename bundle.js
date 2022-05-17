@@ -977,7 +977,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _projects_Minesweeper_components_game__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../projects/Minesweeper/components/game */ "./projects/Minesweeper/components/game.jsx");
-/* harmony import */ var _projects_job_listing_frontend_entry__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../projects/job listing/frontend/entry */ "./projects/job listing/frontend/entry.jsx");
+/* harmony import */ var _projects_Job_Listing_Widget_Project_frontend_entry__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../projects/Job-Listing-Widget-Project/frontend/entry */ "./projects/Job-Listing-Widget-Project/frontend/entry.jsx");
 
 
 
@@ -999,7 +999,7 @@ function Portfolio() {
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: "featureClose",
     onClick: closeFeatureList
-  }, "x"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_projects_job_listing_frontend_entry__WEBPACK_IMPORTED_MODULE_2__.Job_App, null)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+  }, "x"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_projects_Job_Listing_Widget_Project_frontend_entry__WEBPACK_IMPORTED_MODULE_2__.Job_App, null)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: "project",
     id: "Widget_window"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
@@ -1282,6 +1282,271 @@ function Music_App() {
     className: "projectDetailSubtitle"
   }, "Create Data columns/attributes for objects that can be references in routes"))));
 }
+
+/***/ }),
+
+/***/ "./projects/Job-Listing-Widget-Project/frontend/actions.js":
+/*!*****************************************************************!*\
+  !*** ./projects/Job-Listing-Widget-Project/frontend/actions.js ***!
+  \*****************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+var selectLocation = function selectLocation(city, jobs) {
+  return {
+    type: "SWITCH_LOCATION",
+    city: city,
+    jobs: jobs
+  };
+};
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (selectLocation);
+
+/***/ }),
+
+/***/ "./projects/Job-Listing-Widget-Project/frontend/components/job.jsx":
+/*!*************************************************************************!*\
+  !*** ./projects/Job-Listing-Widget-Project/frontend/components/job.jsx ***!
+  \*************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./projects/Job-Listing-Widget-Project/node_modules/react/index.js");
+
+
+var Job = function Job(_ref) {
+  var title = _ref.title,
+      company = _ref.company,
+      type = _ref.type,
+      location = _ref.location,
+      description = _ref.description,
+      info = _ref.info;
+  var color = "red";
+
+  if (type === "Full Time") {
+    color = "green";
+  }
+
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("li", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("ul", {
+    id: "job_generate"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("li", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("b", null, "Title: "), title), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("li", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("b", null, "Company: "), company, " - ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("span", {
+    className: color
+  }, type)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("li", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("b", null, "Location: "), location), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("li", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("b", null, "Description: "), description), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("li", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("a", {
+    href: info
+  }, "More Info"))));
+};
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Job);
+
+/***/ }),
+
+/***/ "./projects/Job-Listing-Widget-Project/frontend/components/widget.jsx":
+/*!****************************************************************************!*\
+  !*** ./projects/Job-Listing-Widget-Project/frontend/components/widget.jsx ***!
+  \****************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./projects/Job-Listing-Widget-Project/node_modules/react/index.js");
+/* harmony import */ var _job__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./job */ "./projects/Job-Listing-Widget-Project/frontend/components/job.jsx");
+/* harmony import */ var _actions__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./../actions */ "./projects/Job-Listing-Widget-Project/frontend/actions.js");
+function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, "prototype", { writable: false }); return Constructor; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); Object.defineProperty(subClass, "prototype", { writable: false }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } else if (call !== void 0) { throw new TypeError("Derived constructors may only return object or undefined"); } return _assertThisInitialized(self); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})); return true; } catch (e) { return false; } }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+
+
+
+
+var Widget = /*#__PURE__*/function (_React$Component) {
+  _inherits(Widget, _React$Component);
+
+  var _super = _createSuper(Widget);
+
+  function Widget(props) {
+    var _this;
+
+    _classCallCheck(this, Widget);
+
+    _this = _super.call(this, props);
+    _this.forceUpdate = _this.forceUpdate.bind(_assertThisInitialized(_this)); // require this component to re-render whenever the store's state changes
+
+    _this.props.store.subscribe(_this.forceUpdate);
+
+    _this.cities = ["New York", "San Francisco", "Los Angeles"];
+    _this.selectLocation = _actions__WEBPACK_IMPORTED_MODULE_2__["default"].bind(_assertThisInitialized(_this));
+    return _this;
+  }
+
+  _createClass(Widget, [{
+    key: "fetchJobListings",
+    value: function fetchJobListings(city) {
+      $.ajax({
+        url: "https://79vzv34gc4.execute-api.us-west-1.amazonaws.com/default/jobListings?location=".concat(city),
+        type: "GET",
+        success: function (resp) {
+          // tell the store to update with the new location and jobs;
+          // use the action creator 'selectLocation' to build the object to
+          // be dispatched
+          this.props.store.dispatch(this.selectLocation(city, resp));
+        }.bind(this)
+      });
+    }
+  }, {
+    key: "render",
+    value: function render() {
+      var _this2 = this;
+
+      // get the store's current state and deconstruct it into 'jobs'
+      // and 'city' variables
+      var _this$props$store$get = this.props.store.getState(),
+          city = _this$props$store$get.city,
+          jobs = _this$props$store$get.jobs;
+
+      var cityOptions = this.cities.map(function (city) {
+        return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("button", {
+          onClick: function onClick() {
+            _this2.fetchJobListings(city);
+          },
+          key: city,
+          className: "job-option"
+        }, city);
+      });
+      var jobListings = jobs.map(function (job) {
+        return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_job__WEBPACK_IMPORTED_MODULE_1__["default"], {
+          key: job.id,
+          title: job.title,
+          company: job.company,
+          location: job.location,
+          type: job.type,
+          description: job.description,
+          info: job.url
+        });
+      });
+      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h1", null, "Github Job Listings"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h3", null, "City: ", city), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+        className: "location-selector"
+      }, "Location:", cityOptions), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h3", null, jobListings.length, " Job Listings"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("ol", {
+        className: "listings-list"
+      }, jobListings));
+    }
+  }]);
+
+  return Widget;
+}(react__WEBPACK_IMPORTED_MODULE_0__.Component);
+
+;
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Widget);
+
+/***/ }),
+
+/***/ "./projects/Job-Listing-Widget-Project/frontend/entry.jsx":
+/*!****************************************************************!*\
+  !*** ./projects/Job-Listing-Widget-Project/frontend/entry.jsx ***!
+  \****************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "Job_App": () => (/* binding */ Job_App)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./projects/Job-Listing-Widget-Project/node_modules/react/index.js");
+/* harmony import */ var _components_widget__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./components/widget */ "./projects/Job-Listing-Widget-Project/frontend/components/widget.jsx");
+/* harmony import */ var _store__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./store */ "./projects/Job-Listing-Widget-Project/frontend/store.js");
+
+
+
+function Job_App() {
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_components_widget__WEBPACK_IMPORTED_MODULE_1__["default"], {
+    store: _store__WEBPACK_IMPORTED_MODULE_2__["default"]
+  });
+}
+
+/***/ }),
+
+/***/ "./projects/Job-Listing-Widget-Project/frontend/reducer.js":
+/*!*****************************************************************!*\
+  !*** ./projects/Job-Listing-Widget-Project/frontend/reducer.js ***!
+  \*****************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+var initialState = {
+  city: "Please Select",
+  jobs: []
+};
+
+var reducer = function reducer() {
+  var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : initialState;
+  var action = arguments.length > 1 ? arguments[1] : undefined;
+
+  switch (action.type) {
+    case "SWITCH_LOCATION":
+      return {
+        city: action.city,
+        jobs: action.jobs
+      };
+
+    default:
+      return state;
+  }
+};
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (reducer);
+
+/***/ }),
+
+/***/ "./projects/Job-Listing-Widget-Project/frontend/store.js":
+/*!***************************************************************!*\
+  !*** ./projects/Job-Listing-Widget-Project/frontend/store.js ***!
+  \***************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var redux__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! redux */ "./projects/Job-Listing-Widget-Project/node_modules/redux/es/index.js");
+/* harmony import */ var _reducer__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./reducer */ "./projects/Job-Listing-Widget-Project/frontend/reducer.js");
+
+
+var store = (0,redux__WEBPACK_IMPORTED_MODULE_0__.createStore)(_reducer__WEBPACK_IMPORTED_MODULE_1__["default"]);
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (store);
 
 /***/ }),
 
@@ -1762,269 +2027,6 @@ var Board = /*#__PURE__*/function () {
 
   return Board;
 }();
-
-/***/ }),
-
-/***/ "./projects/job listing/frontend/actions.js":
-/*!**************************************************!*\
-  !*** ./projects/job listing/frontend/actions.js ***!
-  \**************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-var selectLocation = function selectLocation(city, jobs) {
-  return {
-    type: "SWITCH_LOCATION",
-    city: city,
-    jobs: jobs
-  };
-};
-
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (selectLocation);
-
-/***/ }),
-
-/***/ "./projects/job listing/frontend/components/job.jsx":
-/*!**********************************************************!*\
-  !*** ./projects/job listing/frontend/components/job.jsx ***!
-  \**********************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./projects/job listing/node_modules/react/index.js");
-
-
-var Job = function Job(_ref) {
-  var title = _ref.title,
-      company = _ref.company,
-      type = _ref.type,
-      location = _ref.location,
-      description = _ref.description,
-      info = _ref.info;
-  var color = "red";
-
-  if (type === "Full Time") {
-    color = "green";
-  }
-
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("li", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("ul", {
-    id: "job_generate"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("li", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("b", null, "Title: "), title), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("li", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("b", null, "Company: "), company, " - ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("span", {
-    className: color
-  }, type)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("li", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("b", null, "Location: "), location), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("li", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("b", null, "Description: "), description)));
-};
-
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Job);
-
-/***/ }),
-
-/***/ "./projects/job listing/frontend/components/widget.jsx":
-/*!*************************************************************!*\
-  !*** ./projects/job listing/frontend/components/widget.jsx ***!
-  \*************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./projects/job listing/node_modules/react/index.js");
-/* harmony import */ var _job__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./job */ "./projects/job listing/frontend/components/job.jsx");
-/* harmony import */ var _actions__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./../actions */ "./projects/job listing/frontend/actions.js");
-function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
-
-function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, "prototype", { writable: false }); return Constructor; }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); Object.defineProperty(subClass, "prototype", { writable: false }); if (superClass) _setPrototypeOf(subClass, superClass); }
-
-function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
-
-function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
-
-function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } else if (call !== void 0) { throw new TypeError("Derived constructors may only return object or undefined"); } return _assertThisInitialized(self); }
-
-function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
-
-function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})); return true; } catch (e) { return false; } }
-
-function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
-
-
-
-
-
-var Widget = /*#__PURE__*/function (_React$Component) {
-  _inherits(Widget, _React$Component);
-
-  var _super = _createSuper(Widget);
-
-  function Widget(props) {
-    var _this;
-
-    _classCallCheck(this, Widget);
-
-    _this = _super.call(this, props);
-    _this.forceUpdate = _this.forceUpdate.bind(_assertThisInitialized(_this)); // require this component to re-render whenever the store's state changes
-
-    _this.props.store.subscribe(_this.forceUpdate);
-
-    _this.cities = ["New York", "San Francisco", "Los Angeles"];
-    _this.selectLocation = _actions__WEBPACK_IMPORTED_MODULE_2__["default"].bind(_assertThisInitialized(_this));
-    return _this;
-  }
-
-  _createClass(Widget, [{
-    key: "fetchJobListings",
-    value: function fetchJobListings(city) {
-      $.ajax({
-        url: "https://79vzv34gc4.execute-api.us-west-1.amazonaws.com/default/jobListings?location=".concat(city),
-        type: "GET",
-        success: function (resp) {
-          // tell the store to update with the new location and jobs;
-          // use the action creator 'selectLocation' to build the object to
-          // be dispatched
-          this.props.store.dispatch(this.selectLocation(city, resp));
-        }.bind(this)
-      });
-    }
-  }, {
-    key: "render",
-    value: function render() {
-      var _this2 = this;
-
-      // get the store's current state and deconstruct it into 'jobs'
-      // and 'city' variables
-      var _this$props$store$get = this.props.store.getState(),
-          city = _this$props$store$get.city,
-          jobs = _this$props$store$get.jobs;
-
-      var cityOptions = this.cities.map(function (city) {
-        return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("button", {
-          onClick: function onClick() {
-            _this2.fetchJobListings(city);
-          },
-          key: city,
-          className: "job-option"
-        }, city);
-      });
-      var jobListings = jobs.map(function (job) {
-        return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_job__WEBPACK_IMPORTED_MODULE_1__["default"], {
-          key: job.id,
-          title: job.title,
-          company: job.company,
-          location: job.location,
-          type: job.type,
-          description: job.description // info = {job.url} No link provided because the Github job link has been depreciated
-
-        });
-      });
-      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h1", null, "Github Job Listings"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h3", null, "City: ", city), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-        className: "location-selector"
-      }, "Location:", cityOptions), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h3", null, jobListings.length, " Job Listings"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("ol", {
-        className: "listings-list"
-      }, jobListings));
-    }
-  }]);
-
-  return Widget;
-}(react__WEBPACK_IMPORTED_MODULE_0__.Component);
-
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Widget);
-
-/***/ }),
-
-/***/ "./projects/job listing/frontend/entry.jsx":
-/*!*************************************************!*\
-  !*** ./projects/job listing/frontend/entry.jsx ***!
-  \*************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "Job_App": () => (/* binding */ Job_App)
-/* harmony export */ });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./projects/job listing/node_modules/react/index.js");
-/* harmony import */ var _components_widget__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./components/widget */ "./projects/job listing/frontend/components/widget.jsx");
-/* harmony import */ var _store__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./store */ "./projects/job listing/frontend/store.js");
-
-
-
-function Job_App() {
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_components_widget__WEBPACK_IMPORTED_MODULE_1__["default"], {
-    store: _store__WEBPACK_IMPORTED_MODULE_2__["default"]
-  });
-}
-
-/***/ }),
-
-/***/ "./projects/job listing/frontend/reducer.js":
-/*!**************************************************!*\
-  !*** ./projects/job listing/frontend/reducer.js ***!
-  \**************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-var initialState = {
-  city: "Please Select",
-  jobs: []
-};
-
-var reducer = function reducer() {
-  var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : initialState;
-  var action = arguments.length > 1 ? arguments[1] : undefined;
-
-  switch (action.type) {
-    case "SWITCH_LOCATION":
-      return {
-        city: action.city,
-        jobs: action.jobs
-      };
-
-    default:
-      return state;
-  }
-};
-
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (reducer);
-
-/***/ }),
-
-/***/ "./projects/job listing/frontend/store.js":
-/*!************************************************!*\
-  !*** ./projects/job listing/frontend/store.js ***!
-  \************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony import */ var redux__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! redux */ "./projects/job listing/node_modules/redux/es/index.js");
-/* harmony import */ var _reducer__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./reducer */ "./projects/job listing/frontend/reducer.js");
-
-
-var store = (0,redux__WEBPACK_IMPORTED_MODULE_0__.createStore)(_reducer__WEBPACK_IMPORTED_MODULE_1__["default"]);
-window.reducer = _reducer__WEBPACK_IMPORTED_MODULE_1__["default"];
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (store);
 
 /***/ }),
 
@@ -37331,10 +37333,10 @@ if (false) {} else {
 
 /***/ }),
 
-/***/ "./projects/job listing/node_modules/object-assign/index.js":
-/*!******************************************************************!*\
-  !*** ./projects/job listing/node_modules/object-assign/index.js ***!
-  \******************************************************************/
+/***/ "./projects/Job-Listing-Widget-Project/node_modules/object-assign/index.js":
+/*!*********************************************************************************!*\
+  !*** ./projects/Job-Listing-Widget-Project/node_modules/object-assign/index.js ***!
+  \*********************************************************************************/
 /***/ ((module) => {
 
 "use strict";
@@ -37432,10 +37434,10 @@ module.exports = shouldUseNative() ? Object.assign : function (target, source) {
 
 /***/ }),
 
-/***/ "./projects/job listing/node_modules/prop-types/checkPropTypes.js":
-/*!************************************************************************!*\
-  !*** ./projects/job listing/node_modules/prop-types/checkPropTypes.js ***!
-  \************************************************************************/
+/***/ "./projects/Job-Listing-Widget-Project/node_modules/prop-types/checkPropTypes.js":
+/*!***************************************************************************************!*\
+  !*** ./projects/Job-Listing-Widget-Project/node_modules/prop-types/checkPropTypes.js ***!
+  \***************************************************************************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 "use strict";
@@ -37451,9 +37453,9 @@ module.exports = shouldUseNative() ? Object.assign : function (target, source) {
 var printWarning = function() {};
 
 if (true) {
-  var ReactPropTypesSecret = __webpack_require__(/*! ./lib/ReactPropTypesSecret */ "./projects/job listing/node_modules/prop-types/lib/ReactPropTypesSecret.js");
+  var ReactPropTypesSecret = __webpack_require__(/*! ./lib/ReactPropTypesSecret */ "./projects/Job-Listing-Widget-Project/node_modules/prop-types/lib/ReactPropTypesSecret.js");
   var loggedTypeFailures = {};
-  var has = __webpack_require__(/*! ./lib/has */ "./projects/job listing/node_modules/prop-types/lib/has.js");
+  var has = __webpack_require__(/*! ./lib/has */ "./projects/Job-Listing-Widget-Project/node_modules/prop-types/lib/has.js");
 
   printWarning = function(text) {
     var message = 'Warning: ' + text;
@@ -37546,10 +37548,10 @@ module.exports = checkPropTypes;
 
 /***/ }),
 
-/***/ "./projects/job listing/node_modules/prop-types/lib/ReactPropTypesSecret.js":
-/*!**********************************************************************************!*\
-  !*** ./projects/job listing/node_modules/prop-types/lib/ReactPropTypesSecret.js ***!
-  \**********************************************************************************/
+/***/ "./projects/Job-Listing-Widget-Project/node_modules/prop-types/lib/ReactPropTypesSecret.js":
+/*!*************************************************************************************************!*\
+  !*** ./projects/Job-Listing-Widget-Project/node_modules/prop-types/lib/ReactPropTypesSecret.js ***!
+  \*************************************************************************************************/
 /***/ ((module) => {
 
 "use strict";
@@ -37569,10 +37571,10 @@ module.exports = ReactPropTypesSecret;
 
 /***/ }),
 
-/***/ "./projects/job listing/node_modules/prop-types/lib/has.js":
-/*!*****************************************************************!*\
-  !*** ./projects/job listing/node_modules/prop-types/lib/has.js ***!
-  \*****************************************************************/
+/***/ "./projects/Job-Listing-Widget-Project/node_modules/prop-types/lib/has.js":
+/*!********************************************************************************!*\
+  !*** ./projects/Job-Listing-Widget-Project/node_modules/prop-types/lib/has.js ***!
+  \********************************************************************************/
 /***/ ((module) => {
 
 module.exports = Function.call.bind(Object.prototype.hasOwnProperty);
@@ -37580,10 +37582,10 @@ module.exports = Function.call.bind(Object.prototype.hasOwnProperty);
 
 /***/ }),
 
-/***/ "./projects/job listing/node_modules/react/cjs/react.development.js":
-/*!**************************************************************************!*\
-  !*** ./projects/job listing/node_modules/react/cjs/react.development.js ***!
-  \**************************************************************************/
+/***/ "./projects/Job-Listing-Widget-Project/node_modules/react/cjs/react.development.js":
+/*!*****************************************************************************************!*\
+  !*** ./projects/Job-Listing-Widget-Project/node_modules/react/cjs/react.development.js ***!
+  \*****************************************************************************************/
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
 "use strict";
@@ -37604,8 +37606,8 @@ if (true) {
   (function() {
 'use strict';
 
-var _assign = __webpack_require__(/*! object-assign */ "./projects/job listing/node_modules/object-assign/index.js");
-var checkPropTypes = __webpack_require__(/*! prop-types/checkPropTypes */ "./projects/job listing/node_modules/prop-types/checkPropTypes.js");
+var _assign = __webpack_require__(/*! object-assign */ "./projects/Job-Listing-Widget-Project/node_modules/object-assign/index.js");
+var checkPropTypes = __webpack_require__(/*! prop-types/checkPropTypes */ "./projects/Job-Listing-Widget-Project/node_modules/prop-types/checkPropTypes.js");
 
 var ReactVersion = '16.14.0';
 
@@ -39503,26 +39505,26 @@ exports.version = ReactVersion;
 
 /***/ }),
 
-/***/ "./projects/job listing/node_modules/react/index.js":
-/*!**********************************************************!*\
-  !*** ./projects/job listing/node_modules/react/index.js ***!
-  \**********************************************************/
+/***/ "./projects/Job-Listing-Widget-Project/node_modules/react/index.js":
+/*!*************************************************************************!*\
+  !*** ./projects/Job-Listing-Widget-Project/node_modules/react/index.js ***!
+  \*************************************************************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 "use strict";
 
 
 if (false) {} else {
-  module.exports = __webpack_require__(/*! ./cjs/react.development.js */ "./projects/job listing/node_modules/react/cjs/react.development.js");
+  module.exports = __webpack_require__(/*! ./cjs/react.development.js */ "./projects/Job-Listing-Widget-Project/node_modules/react/cjs/react.development.js");
 }
 
 
 /***/ }),
 
-/***/ "./projects/job listing/node_modules/redux/es/applyMiddleware.js":
-/*!***********************************************************************!*\
-  !*** ./projects/job listing/node_modules/redux/es/applyMiddleware.js ***!
-  \***********************************************************************/
+/***/ "./projects/Job-Listing-Widget-Project/node_modules/redux/es/applyMiddleware.js":
+/*!**************************************************************************************!*\
+  !*** ./projects/Job-Listing-Widget-Project/node_modules/redux/es/applyMiddleware.js ***!
+  \**************************************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -39530,7 +39532,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (/* binding */ applyMiddleware)
 /* harmony export */ });
-/* harmony import */ var _compose__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./compose */ "./projects/job listing/node_modules/redux/es/compose.js");
+/* harmony import */ var _compose__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./compose */ "./projects/Job-Listing-Widget-Project/node_modules/redux/es/compose.js");
 var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
 
@@ -39582,10 +39584,10 @@ function applyMiddleware() {
 
 /***/ }),
 
-/***/ "./projects/job listing/node_modules/redux/es/bindActionCreators.js":
-/*!**************************************************************************!*\
-  !*** ./projects/job listing/node_modules/redux/es/bindActionCreators.js ***!
-  \**************************************************************************/
+/***/ "./projects/Job-Listing-Widget-Project/node_modules/redux/es/bindActionCreators.js":
+/*!*****************************************************************************************!*\
+  !*** ./projects/Job-Listing-Widget-Project/node_modules/redux/es/bindActionCreators.js ***!
+  \*****************************************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -39643,10 +39645,10 @@ function bindActionCreators(actionCreators, dispatch) {
 
 /***/ }),
 
-/***/ "./projects/job listing/node_modules/redux/es/combineReducers.js":
-/*!***********************************************************************!*\
-  !*** ./projects/job listing/node_modules/redux/es/combineReducers.js ***!
-  \***********************************************************************/
+/***/ "./projects/Job-Listing-Widget-Project/node_modules/redux/es/combineReducers.js":
+/*!**************************************************************************************!*\
+  !*** ./projects/Job-Listing-Widget-Project/node_modules/redux/es/combineReducers.js ***!
+  \**************************************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -39654,9 +39656,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (/* binding */ combineReducers)
 /* harmony export */ });
-/* harmony import */ var _createStore__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./createStore */ "./projects/job listing/node_modules/redux/es/createStore.js");
-/* harmony import */ var lodash_es_isPlainObject__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! lodash-es/isPlainObject */ "./projects/job listing/node_modules/lodash-es/isPlainObject.js");
-/* harmony import */ var _utils_warning__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./utils/warning */ "./projects/job listing/node_modules/redux/es/utils/warning.js");
+/* harmony import */ var _createStore__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./createStore */ "./projects/Job-Listing-Widget-Project/node_modules/redux/es/createStore.js");
+/* harmony import */ var lodash_es_isPlainObject__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! lodash-es/isPlainObject */ "./projects/Job-Listing-Widget-Project/node_modules/lodash-es/isPlainObject.js");
+/* harmony import */ var _utils_warning__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./utils/warning */ "./projects/Job-Listing-Widget-Project/node_modules/redux/es/utils/warning.js");
 
 
 
@@ -39790,10 +39792,10 @@ function combineReducers(reducers) {
 
 /***/ }),
 
-/***/ "./projects/job listing/node_modules/redux/es/compose.js":
-/*!***************************************************************!*\
-  !*** ./projects/job listing/node_modules/redux/es/compose.js ***!
-  \***************************************************************/
+/***/ "./projects/Job-Listing-Widget-Project/node_modules/redux/es/compose.js":
+/*!******************************************************************************!*\
+  !*** ./projects/Job-Listing-Widget-Project/node_modules/redux/es/compose.js ***!
+  \******************************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -39836,10 +39838,10 @@ function compose() {
 
 /***/ }),
 
-/***/ "./projects/job listing/node_modules/redux/es/createStore.js":
-/*!*******************************************************************!*\
-  !*** ./projects/job listing/node_modules/redux/es/createStore.js ***!
-  \*******************************************************************/
+/***/ "./projects/Job-Listing-Widget-Project/node_modules/redux/es/createStore.js":
+/*!**********************************************************************************!*\
+  !*** ./projects/Job-Listing-Widget-Project/node_modules/redux/es/createStore.js ***!
+  \**********************************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -39848,8 +39850,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "ActionTypes": () => (/* binding */ ActionTypes),
 /* harmony export */   "default": () => (/* binding */ createStore)
 /* harmony export */ });
-/* harmony import */ var lodash_es_isPlainObject__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! lodash-es/isPlainObject */ "./projects/job listing/node_modules/lodash-es/isPlainObject.js");
-/* harmony import */ var symbol_observable__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! symbol-observable */ "./projects/job listing/node_modules/symbol-observable/es/index.js");
+/* harmony import */ var lodash_es_isPlainObject__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! lodash-es/isPlainObject */ "./projects/Job-Listing-Widget-Project/node_modules/lodash-es/isPlainObject.js");
+/* harmony import */ var symbol_observable__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! symbol-observable */ "./projects/Job-Listing-Widget-Project/node_modules/symbol-observable/es/index.js");
 
 
 
@@ -40101,10 +40103,10 @@ var ActionTypes = {
 
 /***/ }),
 
-/***/ "./projects/job listing/node_modules/redux/es/index.js":
-/*!*************************************************************!*\
-  !*** ./projects/job listing/node_modules/redux/es/index.js ***!
-  \*************************************************************/
+/***/ "./projects/Job-Listing-Widget-Project/node_modules/redux/es/index.js":
+/*!****************************************************************************!*\
+  !*** ./projects/Job-Listing-Widget-Project/node_modules/redux/es/index.js ***!
+  \****************************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -40116,12 +40118,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "compose": () => (/* reexport safe */ _compose__WEBPACK_IMPORTED_MODULE_4__["default"]),
 /* harmony export */   "createStore": () => (/* reexport safe */ _createStore__WEBPACK_IMPORTED_MODULE_0__["default"])
 /* harmony export */ });
-/* harmony import */ var _createStore__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./createStore */ "./projects/job listing/node_modules/redux/es/createStore.js");
-/* harmony import */ var _combineReducers__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./combineReducers */ "./projects/job listing/node_modules/redux/es/combineReducers.js");
-/* harmony import */ var _bindActionCreators__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./bindActionCreators */ "./projects/job listing/node_modules/redux/es/bindActionCreators.js");
-/* harmony import */ var _applyMiddleware__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./applyMiddleware */ "./projects/job listing/node_modules/redux/es/applyMiddleware.js");
-/* harmony import */ var _compose__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./compose */ "./projects/job listing/node_modules/redux/es/compose.js");
-/* harmony import */ var _utils_warning__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./utils/warning */ "./projects/job listing/node_modules/redux/es/utils/warning.js");
+/* harmony import */ var _createStore__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./createStore */ "./projects/Job-Listing-Widget-Project/node_modules/redux/es/createStore.js");
+/* harmony import */ var _combineReducers__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./combineReducers */ "./projects/Job-Listing-Widget-Project/node_modules/redux/es/combineReducers.js");
+/* harmony import */ var _bindActionCreators__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./bindActionCreators */ "./projects/Job-Listing-Widget-Project/node_modules/redux/es/bindActionCreators.js");
+/* harmony import */ var _applyMiddleware__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./applyMiddleware */ "./projects/Job-Listing-Widget-Project/node_modules/redux/es/applyMiddleware.js");
+/* harmony import */ var _compose__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./compose */ "./projects/Job-Listing-Widget-Project/node_modules/redux/es/compose.js");
+/* harmony import */ var _utils_warning__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./utils/warning */ "./projects/Job-Listing-Widget-Project/node_modules/redux/es/utils/warning.js");
 
 
 
@@ -40143,10 +40145,10 @@ if ( true && typeof isCrushed.name === 'string' && isCrushed.name !== 'isCrushed
 
 /***/ }),
 
-/***/ "./projects/job listing/node_modules/redux/es/utils/warning.js":
-/*!*********************************************************************!*\
-  !*** ./projects/job listing/node_modules/redux/es/utils/warning.js ***!
-  \*********************************************************************/
+/***/ "./projects/Job-Listing-Widget-Project/node_modules/redux/es/utils/warning.js":
+/*!************************************************************************************!*\
+  !*** ./projects/Job-Listing-Widget-Project/node_modules/redux/es/utils/warning.js ***!
+  \************************************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -40178,10 +40180,10 @@ function warning(message) {
 
 /***/ }),
 
-/***/ "./projects/job listing/node_modules/symbol-observable/es/index.js":
-/*!*************************************************************************!*\
-  !*** ./projects/job listing/node_modules/symbol-observable/es/index.js ***!
-  \*************************************************************************/
+/***/ "./projects/Job-Listing-Widget-Project/node_modules/symbol-observable/es/index.js":
+/*!****************************************************************************************!*\
+  !*** ./projects/Job-Listing-Widget-Project/node_modules/symbol-observable/es/index.js ***!
+  \****************************************************************************************/
 /***/ ((module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -40189,7 +40191,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony import */ var _ponyfill_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./ponyfill.js */ "./projects/job listing/node_modules/symbol-observable/es/ponyfill.js");
+/* harmony import */ var _ponyfill_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./ponyfill.js */ "./projects/Job-Listing-Widget-Project/node_modules/symbol-observable/es/ponyfill.js");
 /* module decorator */ module = __webpack_require__.hmd(module);
 /* global window */
 
@@ -40212,10 +40214,10 @@ var result = (0,_ponyfill_js__WEBPACK_IMPORTED_MODULE_0__["default"])(root);
 
 /***/ }),
 
-/***/ "./projects/job listing/node_modules/symbol-observable/es/ponyfill.js":
-/*!****************************************************************************!*\
-  !*** ./projects/job listing/node_modules/symbol-observable/es/ponyfill.js ***!
-  \****************************************************************************/
+/***/ "./projects/Job-Listing-Widget-Project/node_modules/symbol-observable/es/ponyfill.js":
+/*!*******************************************************************************************!*\
+  !*** ./projects/Job-Listing-Widget-Project/node_modules/symbol-observable/es/ponyfill.js ***!
+  \*******************************************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -40275,10 +40277,10 @@ function _extends() {
 
 /***/ }),
 
-/***/ "./projects/job listing/node_modules/lodash-es/_Symbol.js":
-/*!****************************************************************!*\
-  !*** ./projects/job listing/node_modules/lodash-es/_Symbol.js ***!
-  \****************************************************************/
+/***/ "./projects/Job-Listing-Widget-Project/node_modules/lodash-es/_Symbol.js":
+/*!*******************************************************************************!*\
+  !*** ./projects/Job-Listing-Widget-Project/node_modules/lodash-es/_Symbol.js ***!
+  \*******************************************************************************/
 /***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -40286,7 +40288,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony import */ var _root_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./_root.js */ "./projects/job listing/node_modules/lodash-es/_root.js");
+/* harmony import */ var _root_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./_root.js */ "./projects/Job-Listing-Widget-Project/node_modules/lodash-es/_root.js");
 
 
 /** Built-in value references. */
@@ -40297,10 +40299,10 @@ var Symbol = _root_js__WEBPACK_IMPORTED_MODULE_0__["default"].Symbol;
 
 /***/ }),
 
-/***/ "./projects/job listing/node_modules/lodash-es/_baseGetTag.js":
-/*!********************************************************************!*\
-  !*** ./projects/job listing/node_modules/lodash-es/_baseGetTag.js ***!
-  \********************************************************************/
+/***/ "./projects/Job-Listing-Widget-Project/node_modules/lodash-es/_baseGetTag.js":
+/*!***********************************************************************************!*\
+  !*** ./projects/Job-Listing-Widget-Project/node_modules/lodash-es/_baseGetTag.js ***!
+  \***********************************************************************************/
 /***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -40308,9 +40310,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony import */ var _Symbol_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./_Symbol.js */ "./projects/job listing/node_modules/lodash-es/_Symbol.js");
-/* harmony import */ var _getRawTag_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./_getRawTag.js */ "./projects/job listing/node_modules/lodash-es/_getRawTag.js");
-/* harmony import */ var _objectToString_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./_objectToString.js */ "./projects/job listing/node_modules/lodash-es/_objectToString.js");
+/* harmony import */ var _Symbol_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./_Symbol.js */ "./projects/Job-Listing-Widget-Project/node_modules/lodash-es/_Symbol.js");
+/* harmony import */ var _getRawTag_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./_getRawTag.js */ "./projects/Job-Listing-Widget-Project/node_modules/lodash-es/_getRawTag.js");
+/* harmony import */ var _objectToString_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./_objectToString.js */ "./projects/Job-Listing-Widget-Project/node_modules/lodash-es/_objectToString.js");
 
 
 
@@ -40343,10 +40345,10 @@ function baseGetTag(value) {
 
 /***/ }),
 
-/***/ "./projects/job listing/node_modules/lodash-es/_freeGlobal.js":
-/*!********************************************************************!*\
-  !*** ./projects/job listing/node_modules/lodash-es/_freeGlobal.js ***!
-  \********************************************************************/
+/***/ "./projects/Job-Listing-Widget-Project/node_modules/lodash-es/_freeGlobal.js":
+/*!***********************************************************************************!*\
+  !*** ./projects/Job-Listing-Widget-Project/node_modules/lodash-es/_freeGlobal.js ***!
+  \***********************************************************************************/
 /***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -40362,10 +40364,10 @@ var freeGlobal = typeof global == 'object' && global && global.Object === Object
 
 /***/ }),
 
-/***/ "./projects/job listing/node_modules/lodash-es/_getPrototype.js":
-/*!**********************************************************************!*\
-  !*** ./projects/job listing/node_modules/lodash-es/_getPrototype.js ***!
-  \**********************************************************************/
+/***/ "./projects/Job-Listing-Widget-Project/node_modules/lodash-es/_getPrototype.js":
+/*!*************************************************************************************!*\
+  !*** ./projects/Job-Listing-Widget-Project/node_modules/lodash-es/_getPrototype.js ***!
+  \*************************************************************************************/
 /***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -40373,7 +40375,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony import */ var _overArg_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./_overArg.js */ "./projects/job listing/node_modules/lodash-es/_overArg.js");
+/* harmony import */ var _overArg_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./_overArg.js */ "./projects/Job-Listing-Widget-Project/node_modules/lodash-es/_overArg.js");
 
 
 /** Built-in value references. */
@@ -40384,10 +40386,10 @@ var getPrototype = (0,_overArg_js__WEBPACK_IMPORTED_MODULE_0__["default"])(Objec
 
 /***/ }),
 
-/***/ "./projects/job listing/node_modules/lodash-es/_getRawTag.js":
-/*!*******************************************************************!*\
-  !*** ./projects/job listing/node_modules/lodash-es/_getRawTag.js ***!
-  \*******************************************************************/
+/***/ "./projects/Job-Listing-Widget-Project/node_modules/lodash-es/_getRawTag.js":
+/*!**********************************************************************************!*\
+  !*** ./projects/Job-Listing-Widget-Project/node_modules/lodash-es/_getRawTag.js ***!
+  \**********************************************************************************/
 /***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -40395,7 +40397,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony import */ var _Symbol_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./_Symbol.js */ "./projects/job listing/node_modules/lodash-es/_Symbol.js");
+/* harmony import */ var _Symbol_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./_Symbol.js */ "./projects/Job-Listing-Widget-Project/node_modules/lodash-es/_Symbol.js");
 
 
 /** Used for built-in method references. */
@@ -40446,10 +40448,10 @@ function getRawTag(value) {
 
 /***/ }),
 
-/***/ "./projects/job listing/node_modules/lodash-es/_objectToString.js":
-/*!************************************************************************!*\
-  !*** ./projects/job listing/node_modules/lodash-es/_objectToString.js ***!
-  \************************************************************************/
+/***/ "./projects/Job-Listing-Widget-Project/node_modules/lodash-es/_objectToString.js":
+/*!***************************************************************************************!*\
+  !*** ./projects/Job-Listing-Widget-Project/node_modules/lodash-es/_objectToString.js ***!
+  \***************************************************************************************/
 /***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -40483,10 +40485,10 @@ function objectToString(value) {
 
 /***/ }),
 
-/***/ "./projects/job listing/node_modules/lodash-es/_overArg.js":
-/*!*****************************************************************!*\
-  !*** ./projects/job listing/node_modules/lodash-es/_overArg.js ***!
-  \*****************************************************************/
+/***/ "./projects/Job-Listing-Widget-Project/node_modules/lodash-es/_overArg.js":
+/*!********************************************************************************!*\
+  !*** ./projects/Job-Listing-Widget-Project/node_modules/lodash-es/_overArg.js ***!
+  \********************************************************************************/
 /***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -40513,10 +40515,10 @@ function overArg(func, transform) {
 
 /***/ }),
 
-/***/ "./projects/job listing/node_modules/lodash-es/_root.js":
-/*!**************************************************************!*\
-  !*** ./projects/job listing/node_modules/lodash-es/_root.js ***!
-  \**************************************************************/
+/***/ "./projects/Job-Listing-Widget-Project/node_modules/lodash-es/_root.js":
+/*!*****************************************************************************!*\
+  !*** ./projects/Job-Listing-Widget-Project/node_modules/lodash-es/_root.js ***!
+  \*****************************************************************************/
 /***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -40524,7 +40526,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony import */ var _freeGlobal_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./_freeGlobal.js */ "./projects/job listing/node_modules/lodash-es/_freeGlobal.js");
+/* harmony import */ var _freeGlobal_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./_freeGlobal.js */ "./projects/Job-Listing-Widget-Project/node_modules/lodash-es/_freeGlobal.js");
 
 
 /** Detect free variable `self`. */
@@ -40538,10 +40540,10 @@ var root = _freeGlobal_js__WEBPACK_IMPORTED_MODULE_0__["default"] || freeSelf ||
 
 /***/ }),
 
-/***/ "./projects/job listing/node_modules/lodash-es/isObjectLike.js":
-/*!*********************************************************************!*\
-  !*** ./projects/job listing/node_modules/lodash-es/isObjectLike.js ***!
-  \*********************************************************************/
+/***/ "./projects/Job-Listing-Widget-Project/node_modules/lodash-es/isObjectLike.js":
+/*!************************************************************************************!*\
+  !*** ./projects/Job-Listing-Widget-Project/node_modules/lodash-es/isObjectLike.js ***!
+  \************************************************************************************/
 /***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -40582,10 +40584,10 @@ function isObjectLike(value) {
 
 /***/ }),
 
-/***/ "./projects/job listing/node_modules/lodash-es/isPlainObject.js":
-/*!**********************************************************************!*\
-  !*** ./projects/job listing/node_modules/lodash-es/isPlainObject.js ***!
-  \**********************************************************************/
+/***/ "./projects/Job-Listing-Widget-Project/node_modules/lodash-es/isPlainObject.js":
+/*!*************************************************************************************!*\
+  !*** ./projects/Job-Listing-Widget-Project/node_modules/lodash-es/isPlainObject.js ***!
+  \*************************************************************************************/
 /***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -40593,9 +40595,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony import */ var _baseGetTag_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./_baseGetTag.js */ "./projects/job listing/node_modules/lodash-es/_baseGetTag.js");
-/* harmony import */ var _getPrototype_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./_getPrototype.js */ "./projects/job listing/node_modules/lodash-es/_getPrototype.js");
-/* harmony import */ var _isObjectLike_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./isObjectLike.js */ "./projects/job listing/node_modules/lodash-es/isObjectLike.js");
+/* harmony import */ var _baseGetTag_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./_baseGetTag.js */ "./projects/Job-Listing-Widget-Project/node_modules/lodash-es/_baseGetTag.js");
+/* harmony import */ var _getPrototype_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./_getPrototype.js */ "./projects/Job-Listing-Widget-Project/node_modules/lodash-es/_getPrototype.js");
+/* harmony import */ var _isObjectLike_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./isObjectLike.js */ "./projects/Job-Listing-Widget-Project/node_modules/lodash-es/isObjectLike.js");
 
 
 

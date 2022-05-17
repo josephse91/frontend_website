@@ -1,6 +1,6 @@
 import React from "react";
 import Game from "../../projects/Minesweeper/components/game";
-import { Job_App } from "../../projects/job listing/frontend/entry";
+import { Job_App } from "../../projects/Job-Listing-Widget-Project/frontend/entry";
 
 export default function Portfolio() {
   return (
