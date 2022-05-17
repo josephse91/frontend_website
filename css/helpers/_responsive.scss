@@ -15,6 +15,22 @@
   .skills {
     grid-template-columns: repeat(4, 1fr);
   }
+
+  // Contact us
+  .contactWelcome {
+    h1 {
+      font-size: 2rem;
+    }
+  }
+  .contactInfo {
+    h1 {
+      font-size: 2rem;
+    }
+  }
+
+  #contactMission {
+    font-size: 1.75rem;
+  }
 }
 
 @media only screen and (max-width: 945px) {
@@ -40,6 +56,23 @@
   // This is the container for the skills. (Grid)
   .skills {
     grid-template-columns: repeat(3, 1fr);
+  }
+
+  // About me
+
+  .aboutContent {
+    width: 70rem;
+  }
+
+  .videoTopic {
+    font-size: 2.5rem;
+    height: 4rem;
+    border-radius: 0.25rem;
+  }
+
+  .video {
+    width: 44.8;
+    height: 31.5;
   }
 }
 
@@ -122,6 +155,52 @@
   .quoteBox {
     min-width: 40rem;
   }
+  // About me
+  .aboutContent {
+    width: 85%;
+  }
+
+  .videoTopic {
+    font-size: 2rem;
+    height: 4rem;
+    border-radius: 0.25rem;
+  }
+
+  .video {
+    @include videoSize(0.7);
+  }
+
+  //contact
+
+  .bannerText {
+    font-size: 2.5rem;
+  }
+  .contactLeft {
+    margin: 1rem;
+    margin-left: 2rem;
+  }
+
+  .contactGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .visitorForm {
+    grid-row-start: 1;
+    grid-row-end: 2;
+    border-radius: 1rem;
+  }
+
+  .contactWelcome {
+    max-width: 80%;
+    margin-bottom: 1.5rem;
+  }
+
+  .formInput {
+    input,
+    textarea {
+      width: 90%;
+    }
+  }
 }
 
 @media only screen and (max-width: 500px) {
@@ -179,5 +258,63 @@
 
   .quote {
     font-size: 1.5rem;
+  }
+
+  // About me
+
+  .videoTopic {
+    font-size: 1.75rem;
+    height: 4rem;
+    border-radius: 0.25rem;
+  }
+
+  .video {
+    @include videoSize(0.45);
+  }
+
+  //Contact me
+
+  .bannerText {
+    font-size: 1.75rem;
+  }
+
+  .visitorForm {
+    padding-left: 2rem;
+  }
+
+  .formTitle {
+    h1 {
+      font-size: 2rem;
+    }
+  }
+
+  .formInput {
+    margin-left: 1.5rem;
+  }
+
+  .contactWelcome {
+    h1 {
+      margin: 1rem 3rem;
+      font-size: 1.5rem;
+    }
+  }
+
+  .contactLeft {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #contactMission {
+    font-size: 1.5rem;
+  }
+
+  .contactInfo {
+    h1 {
+      display: block;
+      font-size: 1.5rem;
+      padding-left: 1rem;
+      padding-right: 1rem;
+    }
   }
 }
