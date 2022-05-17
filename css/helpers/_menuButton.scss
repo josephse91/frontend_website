@@ -1,0 +1,36 @@
+@import "./variables";
+
+.menuBarcontainer {
+  cursor: pointer;
+  display: none;
+}
+
+.menuBarCase {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.menuBar1,
+.menuBar2,
+.menuBar3 {
+  width: 3.5rem;
+  height: 0.5rem;
+  background-color: $secondAccent;
+  transition: 0.25s;
+}
+
+.change .menuBar1 {
+  -webkit-transform: rotate(-45deg) translate(-0.9rem, 0.55rem);
+  transform: rotate(-45deg) translate(-0.9rem, 0.55rem);
+}
+
+.change .menuBar2 {
+  opacity: 0;
+}
+
+.change .menuBar3 {
+  -webkit-transform: rotate(45deg) translate(-0.75rem, -0.75rem);
+  transform: rotate(45deg) translate(-0.75rem, -0.75rem);
+}

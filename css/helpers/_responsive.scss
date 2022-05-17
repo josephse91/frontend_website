@@ -1,0 +1,183 @@
+@import "./variables";
+
+@media only screen and (max-width: 1175px) {
+  // Home Responsive
+
+  // Youtube Video
+  .homeVideo {
+    iframe {
+      width: 44.8rem;
+      height: 25.2rem;
+    }
+  }
+
+  // This is the container for the skills. (Grid)
+  .skills {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media only screen and (max-width: 945px) {
+  // Navigation Bar
+  .menuOptions {
+    gap: 1.25rem;
+  }
+
+  .navButton {
+    font-size: 1.5rem;
+  }
+
+  // Home Responsive
+
+  // Youtube Video
+  .homeVideo {
+    iframe {
+      width: 35.84rem;
+      height: 20.16rem;
+    }
+  }
+
+  // This is the container for the skills. (Grid)
+  .skills {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  //Navigation
+
+  .menuBarcontainer {
+    display: inline-block;
+  }
+
+  .menuOptions {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    top: 7.5rem;
+    left: -100%;
+    padding-bottom: 7.5rem;
+    flex-direction: column;
+    gap: 0;
+    z-index: -1;
+    transition: left 0.2s ease-in-out;
+  }
+
+  .menuOptions.change {
+    left: 0;
+    transition: left 0.25s ease-in-out;
+  }
+
+  a.navButton {
+    display: flex;
+    height: 25%;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0;
+    background-color: $dominate;
+    color: $subdom;
+    border: 0.1rem solid $subdom;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+
+    &:hover {
+      background-color: $subdom;
+      color: $dominate;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+    }
+  }
+
+  a.navButton.active {
+    background-color: $secondAccent;
+    color: $secondSub;
+  }
+
+  .navSocials {
+    display: none;
+  }
+
+  // Home Responsive
+
+  // Grid format
+  #home {
+    grid-template-columns: 1fr;
+  }
+
+  .leadStatement {
+    h1 {
+      max-width: 50rem;
+    }
+  }
+
+  .homeVideo {
+    iframe {
+      width: 44.8rem;
+      height: 25.2rem;
+    }
+  }
+
+  .quoteBox {
+    min-width: 40rem;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  // Navigation
+
+  #nametag {
+    font-size: 1.75rem;
+  }
+
+  // Home Responsive
+
+  .leadStatement {
+    h1 {
+      font-size: 1.5rem;
+    }
+  }
+
+  // Youtube Video
+  .homeVideo {
+    iframe {
+      width: auto;
+      height: 18.14rem;
+    }
+  }
+
+  // Each section Title
+  .section_title {
+    font-size: 2.5rem;
+  }
+
+  // This is the container for the skills. (Grid)
+  .skills {
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 1.5rem 0.5rem;
+  }
+
+  // Attributes for each skill
+  .skill {
+    font-size: 1.5rem;
+  }
+
+  // Each education menu
+  .education {
+    font-size: 1.5rem;
+  }
+
+  .quoteBox {
+    width: 80%;
+    min-width: 0;
+  }
+
+  .quoteButtons {
+    gap: 1.5rem;
+  }
+
+  .quote {
+    font-size: 1.5rem;
+  }
+}

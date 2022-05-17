@@ -21,7 +21,6 @@ a.navButton.active {
 }
 
 .navButton {
-  font-size: 1.75rem;
   text-decoration: none;
   padding: 2rem 0.5rem;
   color: $dominate;
@@ -29,22 +28,34 @@ a.navButton.active {
   border-radius: 10%;
 
   @extend %hover_colors;
+
+  h1 {
+    font-size: 1.75rem;
+  }
 }
 
 .navsection {
   display: flex;
   gap: 1.5rem;
   align-items: center;
-  width: 33%;
+  color: $dominate;
+}
+
+.menuOptions {
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
   color: $dominate;
 }
 
 #navleft {
   padding-left: 2rem;
+  width: 42.5%;
 }
 
 #navmid {
   justify-content: center;
+  width: 15%;
 }
 
 #self_logo {
@@ -63,6 +74,12 @@ a.navButton.active {
 #navright {
   flex-direction: row-reverse;
   padding-right: 1rem;
+  width: 42.5%;
+}
+
+.navSocials {
+  display: flex;
+  gap: 1rem;
 }
 
 .nav_logo {
