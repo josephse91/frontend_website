@@ -1,6 +1,4 @@
 import React from "react";
-// import ReactCSSTransitionGroup from "react-addons-css-transition-group";
-import CSSTransition, { TransitionGroup } from "react-transition-group";
 
 export default class AutoComplete extends React.Component {
   constructor(props) {

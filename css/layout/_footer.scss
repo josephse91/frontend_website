@@ -1,0 +1,15 @@
+@import "../helpers/variables";
+
+.footerSection {
+  display: flex;
+  justify-content: center;
+  padding: 1rem;
+  border: 1rem;
+  background-color: $subdom;
+  color: $dominate;
+  border-radius: 0.25rem;
+}
+
+.footertag {
+  display: inline-block;
+}

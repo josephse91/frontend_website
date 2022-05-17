@@ -166,6 +166,12 @@ function MinesweeperDetails() {
     <div className="projectDetails">
       <h1 className="projectDetailTitle">Minesweeper Project</h1>
 
+      <h2 className="projectDetailSubtitle">Concept</h2>
+      <ul>
+        <li className="projectDetailNote">
+          Create an interactive version of minesweeper using React
+        </li>
+      </ul>
       <h2 className="projectDetailSubtitle">Programming Highlights</h2>
       <ul>
         <li className="projectDetailNote">
@@ -197,6 +203,13 @@ function Job_listing_Details() {
     <div className="projectDetails">
       <h1 className="projectDetailTitle">Job Listing App</h1>
 
+      <h2 className="projectDetailSubtitle">Concept</h2>
+      <ul>
+        <li className="projectDetailNote">
+          Create a job listing widget that uses the Redux lifecycle to manage
+          State
+        </li>
+      </ul>
       <h2 className="projectDetailSubtitle">Programming Highlights</h2>
       <ul>
         <li className="projectDetailNote">Manage state using Redux library</li>
@@ -221,6 +234,14 @@ function Widgets_app() {
     <div className="projectDetails">
       <h1 className="projectDetailTitle">Widgets App</h1>
 
+      <h2 className="projectDetailSubtitle">Concept</h2>
+      <ul>
+        <li className="projectDetailNote">
+          Build four simple components that capture different React
+          capabilities. (Clock, Interactive Tabs, a Weather Widget, and a Simple
+          Search component)
+        </li>
+      </ul>
       <h2 className="projectDetailSubtitle">Programming Highlights</h2>
       <ul>
         <li className="projectDetailNote">
@@ -251,6 +272,15 @@ function Pending_Projects() {
   return (
     <div className="projectDetails">
       <h1 className="projectDetailTitle">Sudoku Solver</h1>
+      <h2 className="projectDetailSubtitle">Concept</h2>
+      <ul>
+        <li className="projectDetailNote">
+          Create an interactive version of Sudoku and design a solver button
+          that will use and illustrate the power of Data Structures/Algorithms
+        </li>
+      </ul>
+
+      <h2 className="projectDetailSubtitle">Programming Highlights</h2>
       <ul>
         <li className="projectDetailNote">
           Sudoku boards will be generated using XMLHttpRequests
@@ -271,6 +301,13 @@ function Music_App() {
     <div className="projectDetails">
       <h1 className="projectDetailTitle">Music App</h1>
 
+      <h2 className="projectDetailSubtitle">Concept</h2>
+      <ul>
+        <li className="projectDetailNote" id="music_app_concept">
+          Build an inventory system for record labels. This app will track
+          Bands, Albums and Tracks. Wser will have their own accounts.
+        </li>
+      </ul>
       <div className="projectDetailBox">
         <img src="../images/Music App migrations.PNG" />
         <div className="projectDetailText">

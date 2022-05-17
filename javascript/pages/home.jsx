@@ -32,8 +32,8 @@ class Home extends React.Component {
             <iframe
               src="https://www.youtube.com/embed/GnXQU-QiTMo"
               title="Home Video"
-              frameborder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; allowfullscreen"
+              frameBorder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; fullscreen"
             ></iframe>
           </div>
         </div>
