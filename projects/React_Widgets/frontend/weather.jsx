@@ -19,7 +19,7 @@ export default class Weather extends React.Component {
     this.pollWeather = this.pollWeather.bind(this);
   }
 
-  componentDidMount() {
+  UNSAFE_componentDidMount() {
     navigator.geolocation.getCurrentPosition(this.pollWeather);
   }
 
@@ -31,7 +31,7 @@ export default class Weather extends React.Component {
     };
     url += toQueryString(params);
     const apiKey = "f816d7f39052e3a98b21952097a43076";
-    // This is our API key; please use your own!
+
     url += `&APPID=${apiKey}`;
 
     const xmlhttp = new XMLHttpRequest();

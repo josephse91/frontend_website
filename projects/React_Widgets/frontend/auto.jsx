@@ -1,5 +1,6 @@
 import React from "react";
-import ReactCSSTransitionGroup from "react-addons-css-transition-group";
+// import ReactCSSTransitionGroup from "react-addons-css-transition-group";
+import CSSTransition, { TransitionGroup } from "react-transition-group";
 
 export default class AutoComplete extends React.Component {
   constructor(props) {
@@ -58,15 +59,7 @@ export default class AutoComplete extends React.Component {
             value={this.state.inputVal}
             placeholder="Search..."
           />
-          <ul>
-            <ReactCSSTransitionGroup
-              transitionName="auto"
-              transitionEnterTimeout={500}
-              transitionLeaveTimeout={500}
-            >
-              {results}
-            </ReactCSSTransitionGroup>
-          </ul>
+          <ul>{results}</ul>
         </div>
       </div>
     );

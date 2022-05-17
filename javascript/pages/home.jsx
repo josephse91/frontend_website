@@ -219,8 +219,6 @@ class Home extends React.Component {
       let clickedQuoteId = clickedQuote.id.slice(6);
       let quoteNum = Number(clickedQuoteId);
 
-      console.log(that.quotes.length, quoteNum);
-
       that.setState({ quoteSlide: quoteNum });
       that.slideTimer();
     };

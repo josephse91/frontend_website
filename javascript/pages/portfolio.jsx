@@ -149,7 +149,6 @@ function seeProject(e) {
   let projectWindow = document.getElementById(activeProjectWindowId);
 
   projectWindowContainer.classList.add("active");
-  console.log(projectWindowContainer);
   projectWindow.classList.add("active");
 }
 
