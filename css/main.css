@@ -1,5 +1,7 @@
 @charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&family=Playfair+Display:wght@400;500&family=Roboto:ital,wght@0,300;0,400;1,400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap");
 .navButton:hover {
   background-color: #d1e8e2;
   color: #116466;
@@ -808,11 +810,13 @@ h1 {
 }
 
 .featureClose {
-  position: absolute;
+  position: -webkit-sticky;
+  position: sticky;
   display: inline-block;
   font-size: 1.5rem;
   top: 0.5rem;
-  right: 1rem;
+  margin-left: 97%;
+  right: 2rem;
   cursor: pointer;
   color: #116466;
   padding: 0.15rem;
@@ -1158,6 +1162,208 @@ h1 {
   flex-direction: column;
   margin-left: 5%;
   align-items: right;
+}
+
+.navButton:hover {
+  background-color: #d1e8e2;
+  color: #116466;
+}
+
+#self_logo:hover {
+  background-color: #2c3531;
+  color: #ffcb9a;
+}
+
+.widgetApp {
+  width: 550px;
+  margin: 0 auto;
+}
+
+.auto {
+  font-family: "Merriweather";
+  color: white;
+  font-weight: bold;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+  width: 191px;
+  height: 200px;
+  border: 2px solid black;
+  margin: 0 20px 20px 20px;
+  padding: 10px;
+  background-color: violet;
+  background-image: url("https://hd.unsplash.com/6/blurred_lines.jpeg");
+  background-size: cover;
+  background-position: center;
+}
+
+.autoContent {
+  font-size: 1.5rem;
+}
+
+.autoSearch {
+  height: 1rem;
+}
+
+.auto > * {
+  margin-left: 30px;
+}
+
+.auto > input {
+  margin: 10px 30px 0 30px;
+  border: 1px solid black;
+}
+
+.auto li {
+  cursor: pointer;
+  list-style-type: square;
+}
+
+.auto-enter {
+  opacity: 0.01;
+  transform: translateY(500%);
+}
+
+.auto-enter.auto-enter-active {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 700ms ease-in, transform 700ms ease-in;
+}
+
+.auto-leave {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.auto-leave.auto-leave-active {
+  opacity: 0.01;
+  transform: translateY(500%);
+  transition: opacity 700ms ease-in, transform 700ms ease-in;
+}
+
+/* Clock */
+.clockContainer {
+  margin: 2rem;
+}
+
+.clock {
+  font-size: 28px;
+  color: white;
+  font-family: "Orbitron";
+  width: 550px;
+  height: 94px;
+  border: 2px solid black;
+  padding: 10px;
+  background-color: orange;
+  background-image: url("https://hd.unsplash.com/photo-1445109673451-c511bb51bd17");
+  background-size: cover;
+  background-position-y: 20%;
+}
+
+.clockContent {
+  font-size: 2rem;
+}
+
+.clock p {
+  font-family: "merriweather";
+  margin-bottom: 1rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+/* Weather */
+.weather {
+  font-size: 28px;
+  width: 550px;
+  height: 94px;
+  border: 2px solid black;
+  margin: 0 20px 20px 20px;
+  padding: 10px;
+  text-align: center;
+  background-color: lightgreen;
+  background-image: url("https://hd.unsplash.com/photo-1429479196389-7d1afeaa2d21");
+  background-size: cover;
+  background-position-y: 20%;
+}
+
+.weatherContent {
+  font-size: 2rem;
+}
+
+.weather p {
+  margin: 8px;
+}
+
+.loading {
+  margin-top: 30px;
+}
+
+/* Tabs */
+.tab-header {
+  width: 200px;
+  height: 30px;
+  margin: 0 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.tab-header > li {
+  width: 65px;
+  border-top: 2px solid black;
+  border-left: 1px solid black;
+  border-right: 1px solid black;
+  border-bottom: 2px solid black;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  padding-top: 4px;
+  text-align: center;
+  cursor: pointer;
+  background-color: lightpink;
+}
+
+.tab-header > li:first-child {
+  border-left: 2px solid black;
+}
+
+.tab-header > li:last-child {
+  border-right: 2px solid black;
+}
+
+.tab-header > li:hover {
+  background-color: black;
+  color: white;
+}
+
+.activeTab {
+  font-weight: bold;
+}
+
+.tabs {
+  width: 240px;
+  height: 200px;
+}
+
+.tab-content {
+  font-weight: bold;
+  color: white;
+  height: 192px;
+  margin: 0 20px;
+  border-left: 2px solid black;
+  border-bottom: 2px solid black;
+  border-right: 2px solid black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: lightblue;
+  background-image: url("https://hd.unsplash.com/photo-1445112098124-3e76dd67983c");
+  background-size: cover;
+}
+
+.tab-content article {
+  text-align: center;
+}
+
+.interactive {
+  display: flex;
+  justify-content: space-around;
 }
 
 * {

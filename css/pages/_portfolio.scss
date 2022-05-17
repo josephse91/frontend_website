@@ -124,11 +124,12 @@
 }
 
 .featureClose {
-  position: absolute;
+  position: sticky;
   display: inline-block;
   font-size: 1.5rem;
   top: 0.5rem;
-  right: 1rem;
+  margin-left: 97%;
+  right: 2rem;
   cursor: pointer;
   color: $subdom;
   //   background-color: $secondAccent;

@@ -1,6 +1,7 @@
 import React from "react";
 import Game from "../../projects/Minesweeper/components/game";
 import { Job_App } from "../../projects/Job-Listing-Widget-Project/frontend/entry";
+import { Widgets_App } from "../../projects/React_Widgets/frontend/widgets";
 
 export default function Portfolio() {
   return (
@@ -22,7 +23,7 @@ export default function Portfolio() {
           <div className="featureClose" onClick={closeFeatureList}>
             x
           </div>
-          Widget Features
+          <Widgets_App />
         </div>
         <div className="project" id="Pending_Projects_window">
           <div className="featureClose" onClick={closeFeatureList}>
@@ -172,7 +173,7 @@ function MinesweeperDetails() {
           State management to update the board (React)
         </li>
         <li className="projectDetailNote">
-          Event Handlers established to users can select tiles
+          Event Handlers established so users can select tiles
         </li>
         <li className="projectDetailNote">
           Object Oriented Principles to create tiles, boards and rules of the
