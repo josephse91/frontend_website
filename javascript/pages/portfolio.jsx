@@ -1,41 +1,43 @@
 import React from "react";
+import Game from "../../projects/Minesweeper/components/game";
+import { Job_App } from "../../projects/job listing/frontend/entry";
 
 export default function Portfolio() {
   return (
     <div className="pageContent" id="portfolio">
-      <div className="portfolioCollection">
-        <div className="projectWindowContainer">
-          <div className="project active" id="Minesweeper_window">
-            <div className="featureClose" onClick={closeFeatureList}>
-              x
-            </div>
-            Minesweeper Features
+      <div className="projectWindowContainer">
+        <div className="project active" id="Minesweeper_window">
+          <div className="featureClose" onClick={closeFeatureList}>
+            x
           </div>
-          <div className="project" id="Job_Listing_App_window">
-            <div className="featureClose" onClick={closeFeatureList}>
-              x
-            </div>
-            Job Listing App Features
-          </div>
-          <div className="project" id="Widget_window">
-            <div className="featureClose" onClick={closeFeatureList}>
-              x
-            </div>
-            Widget App Features
-          </div>
-          <div className="project" id="Pending_Projects_window">
-            <div className="featureClose" onClick={closeFeatureList}>
-              x
-            </div>
-            Pending App Features
-          </div>
-          <div className="project" id="Music_App_window">
-            <div className="featureClose" onClick={closeFeatureList}>
-              x
-            </div>
-            <h1>Check Github Repository</h1>
-          </div>
+          <Game />
         </div>
+        <div className="project" id="Job_Listing_App_window">
+          <div className="featureClose" onClick={closeFeatureList}>
+            x
+          </div>
+          <Job_App />
+        </div>
+        <div className="project" id="Widget_window">
+          <div className="featureClose" onClick={closeFeatureList}>
+            x
+          </div>
+          Widget Features
+        </div>
+        <div className="project" id="Pending_Projects_window">
+          <div className="featureClose" onClick={closeFeatureList}>
+            x
+          </div>
+          Pending App Features
+        </div>
+        <div className="project" id="Music_App_window">
+          <div className="featureClose" onClick={closeFeatureList}>
+            x
+          </div>
+          <h1>Check Github Repository</h1>
+        </div>
+      </div>
+      <div className="portfolioCollection">
         <div className="projectType" id="interactive">
           <div className="projectTitleContainers" id="interactiveTitle">
             <h1>Interactive Projects </h1>
