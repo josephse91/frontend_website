@@ -131,7 +131,8 @@ function SvgComponents() {
     fill: "url(#brown_grade)"
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("circle", {
     id: "mycircle",
-    fill: "url(#teal_grade)"
+    fill: "url(#teal_grade)",
+    r: "25px"
   })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("use", {
     href: "#mycircle",
     id: "c100_5",

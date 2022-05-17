@@ -18,7 +18,7 @@ function SvgComponents() {
             transform="rotate(45)"
             fill="url(#brown_grade)"
           ></rect>
-          <circle id="mycircle" fill="url(#teal_grade)"></circle>
+          <circle id="mycircle" fill="url(#teal_grade)" r="25px"></circle>
         </defs>
         <use href="#mycircle" id="c100_5" x="100em" y="5em"></use>
         <use href="#mycircle" id="c5_45" x="5em" y="45em"></use>
