@@ -1002,11 +1002,17 @@ function IntroPage() {
       accScroll = _useState2[0],
       scrollUpdate = _useState2[1];
 
+  var _useState3 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(0),
+      _useState4 = _slicedToArray(_useState3, 2),
+      accTouch = _useState4[0],
+      touchUpdate = _useState4[1];
+
   var navigate = (0,react_router_dom__WEBPACK_IMPORTED_MODULE_2__.useNavigate)();
 
   function scrollHandler(e) {
-    var currentScroll = e.deltaY;
-    var scrollRatio = Math.abs(accScroll) / currentScroll;
+    var currentScroll = e.deltaY < 0 ? e.deltaY : 0;
+    var scrollRatio = currentScroll ? accScroll / currentScroll : 0;
+    console.log(scrollRatio);
     scrollUpdate(accScroll + currentScroll);
     setTimeout(scrollUpdate, 1000, 0);
 
@@ -1017,9 +1023,24 @@ function IntroPage() {
     return;
   }
 
+  function swipeHandler(e) {
+    var currentSwipe = e.touches[0];
+    var swipePosition = currentSwipe.screenY;
+    var swipeRatio = accTouch / swipePosition;
+    touchUpdate(accTouch + swipePosition);
+    setTimeout(touchUpdate, 1000, 0);
+
+    if (swipeRatio > 7) {
+      navigate("/sj/home");
+    }
+
+    return;
+  }
+
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: "intro",
-    onWheel: scrollHandler
+    onWheel: scrollHandler,
+    onTouchMove: swipeHandler
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(GreetingBuild, null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(PhotoSide, null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_svgComponent_jsx__WEBPACK_IMPORTED_MODULE_1__.SvgComponents, null));
 }
 

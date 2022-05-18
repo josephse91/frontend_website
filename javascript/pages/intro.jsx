@@ -60,11 +60,14 @@ function PhotoSide() {
 
 function IntroPage() {
   let [accScroll, scrollUpdate] = useState(0);
+  let [accTouch, touchUpdate] = useState(0);
   let navigate = useNavigate();
 
   function scrollHandler(e) {
-    let currentScroll = e.deltaY;
-    let scrollRatio = Math.abs(accScroll) / currentScroll;
+    let currentScroll = e.deltaY < 0 ? e.deltaY : 0;
+    let scrollRatio = currentScroll ? accScroll / currentScroll : 0;
+
+    console.log(scrollRatio);
 
     scrollUpdate(accScroll + currentScroll);
     setTimeout(scrollUpdate, 1000, 0);
@@ -75,8 +78,23 @@ function IntroPage() {
     return;
   }
 
+  function swipeHandler(e) {
+    let currentSwipe = e.touches[0];
+    let swipePosition = currentSwipe.screenY;
+
+    let swipeRatio = accTouch / swipePosition;
+
+    touchUpdate(accTouch + swipePosition);
+    setTimeout(touchUpdate, 1000, 0);
+
+    if (swipeRatio > 7) {
+      navigate("/sj/home");
+    }
+    return;
+  }
+
   return (
-    <div className="intro" onWheel={scrollHandler}>
+    <div className="intro" onWheel={scrollHandler} onTouchMove={swipeHandler}>
       <GreetingBuild />
       <PhotoSide />
       <SvgComponents />
