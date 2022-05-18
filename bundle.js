@@ -1344,7 +1344,8 @@ function Pending_Projects() {
 
 function Music_App() {
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
-    className: "projectDetails"
+    className: "projectDetails",
+    id: "music_app_projectDetails"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h1", {
     className: "projectDetailTitle"
   }, "Music App"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h2", {
@@ -1352,7 +1353,7 @@ function Music_App() {
   }, "Concept"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("ul", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("li", {
     className: "projectDetailNote",
     id: "music_app_concept"
-  }, "Build an inventory system for record labels. This app will track Bands, Albums and Tracks. Wser will have their own accounts.")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+  }, "Build an inventory system for record labels. This app will track Bands, Albums and Tracks. User will have their own accounts.")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: "projectDetailBox"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("img", {
     src: "../images/Music App migrations.PNG"

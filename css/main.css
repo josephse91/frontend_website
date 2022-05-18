@@ -720,6 +720,7 @@ h1 {
 
 .projectLists {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   gap: 3rem;
   margin-bottom: 0.5rem;
@@ -753,13 +754,13 @@ h1 {
 .projectName {
   display: inline-block;
   font-size: 1.5rem;
-  height: 2.5rem;
+  height: 3rem;
   text-align: center;
   vertical-align: middle;
   color: #d1e8e2;
   background-color: #116466;
   border-radius: 0.5rem;
-  padding: 0.25rem;
+  padding: 0.5rem;
   cursor: pointer;
 }
 
@@ -1189,6 +1190,14 @@ ul {
     width: 44.8;
     height: 31.5;
   }
+
+  .projectTitleContainers h1 {
+    font-size: 1.5rem;
+  }
+  .projectTitleContainers h1:before,
+.projectTitleContainers h1:after {
+    content: "――――";
+  }
 }
 @media only screen and (max-width: 800px) {
   .introPic {
@@ -1313,6 +1322,28 @@ ul {
     width: 39.2rem;
   }
 
+  .projectDetailBox {
+    flex-direction: column-reverse;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+  }
+
+  #music_app_concept {
+    margin-bottom: 1.5rem;
+  }
+
+  .projectDetailText {
+    max-width: 100%;
+  }
+
+  .projectDetailBox > .projectDetailText > .projectDetailSubtitle {
+    font-size: 1.75rem;
+  }
+
+  .projectDetailBox > .projectDetailText > ul > .projectDetailNote {
+    font-size: 1.5rem;
+  }
+
   .bannerText {
     font-size: 2.5rem;
   }
@@ -1410,6 +1441,31 @@ ul {
   .video {
     height: 14.175rem;
     width: 25.2rem;
+  }
+
+  .projectLists {
+    gap: 1.5rem;
+  }
+
+  .projectTitleContainers h1:before,
+.projectTitleContainers h1:after {
+    content: "";
+  }
+
+  .projectDetailTitle {
+    font-size: 2rem;
+  }
+
+  .projectDetailSubtitle {
+    font-size: 1.75rem;
+  }
+
+  .projectDetailNote {
+    font-size: 1.25rem;
+  }
+
+  .featureClose {
+    margin-left: 92%;
   }
 
   .bannerText {

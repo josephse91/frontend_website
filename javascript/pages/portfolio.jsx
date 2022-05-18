@@ -298,14 +298,14 @@ function Pending_Projects() {
 
 function Music_App() {
   return (
-    <div className="projectDetails">
+    <div className="projectDetails" id="music_app_projectDetails">
       <h1 className="projectDetailTitle">Music App</h1>
 
       <h2 className="projectDetailSubtitle">Concept</h2>
       <ul>
         <li className="projectDetailNote" id="music_app_concept">
           Build an inventory system for record labels. This app will track
-          Bands, Albums and Tracks. Wser will have their own accounts.
+          Bands, Albums and Tracks. User will have their own accounts.
         </li>
       </ul>
       <div className="projectDetailBox">

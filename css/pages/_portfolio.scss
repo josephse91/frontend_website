@@ -35,6 +35,7 @@
 
 .projectLists {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   gap: 3rem;
   margin-bottom: 0.5rem;
@@ -70,13 +71,13 @@
 .projectName {
   display: inline-block;
   font-size: 1.5rem;
-  height: 2.5rem;
+  height: 3rem;
   text-align: center;
   vertical-align: middle;
   color: $dominate;
   background-color: $subdom;
   border-radius: 0.5rem;
-  padding: 0.25rem;
+  padding: 0.5rem;
   cursor: pointer;
 }
 
