@@ -1012,7 +1012,6 @@ function IntroPage() {
   function scrollHandler(e) {
     var currentScroll = e.deltaY < 0 ? e.deltaY : 0;
     var scrollRatio = currentScroll ? accScroll / currentScroll : 0;
-    console.log(scrollRatio);
     scrollUpdate(accScroll + currentScroll);
     setTimeout(scrollUpdate, 1000, 0);
 
@@ -2411,8 +2410,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (/* binding */ Tabs)
 /* harmony export */ });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./projects/React_Widgets/node_modules/react/index.js");
 function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -2457,7 +2455,7 @@ var Headers = /*#__PURE__*/function (_React$Component) {
       var headers = this.props.panes.map(function (pane, index) {
         var title = pane.title;
         var klass = index === selected ? "activeTab" : "";
-        return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("li", {
+        return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("li", {
           key: index,
           className: klass,
           onClick: function onClick() {
@@ -2465,14 +2463,14 @@ var Headers = /*#__PURE__*/function (_React$Component) {
           }
         }, title, " ");
       });
-      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("ul", {
+      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("ul", {
         className: "tab-header"
       }, headers);
     }
   }]);
 
   return Headers;
-}((react__WEBPACK_IMPORTED_MODULE_0___default().Component));
+}(react__WEBPACK_IMPORTED_MODULE_0__.Component);
 
 var Tabs = /*#__PURE__*/function (_React$Component2) {
   _inherits(Tabs, _React$Component2);
@@ -2503,20 +2501,20 @@ var Tabs = /*#__PURE__*/function (_React$Component2) {
     key: "render",
     value: function render() {
       var pane = this.props.panes[this.state.selectedPane];
-      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h1", null, "Tabs"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h1", null, "Tabs"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
         className: "tabs"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(Headers, {
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(Headers, {
         selectedPane: this.state.selectedPane,
         onTabChosen: this.selectTab,
         panes: this.props.panes
-      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
         className: "tab-content"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("article", null, pane.content))));
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("article", null, pane.content))));
     }
   }]);
 
   return Tabs;
-}((react__WEBPACK_IMPORTED_MODULE_0___default().Component));
+}(react__WEBPACK_IMPORTED_MODULE_0__.Component);
 
 
 

@@ -499,9 +499,7 @@ a.navButton.active {
 
 #bullet {
   max-height: 2rem;
-  max-width: -webkit-fit-content;
-  max-width: -moz-fit-content;
-  max-width: fit-content;
+  max-width: 3rem;
   display: inline-block;
   transform: rotate(270deg);
   margin-right: 1rem;
@@ -632,7 +630,7 @@ h1 {
 }
 
 #about {
-  margin-bottom: 2rem;
+  padding-bottom: 2rem;
 }
 
 .aboutContent {
@@ -688,7 +686,7 @@ h1 {
 }
 
 #portfolio {
-  margin-bottom: 2rem;
+  padding-bottom: 2rem;
 }
 
 .portfolioCollection {
@@ -1237,6 +1235,7 @@ ul {
   .scrollEnter {
     align-self: center;
     margin-right: 0;
+    margin-bottom: 2rem;
   }
 
   .menuBarcontainer {

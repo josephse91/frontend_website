@@ -67,8 +67,6 @@ function IntroPage() {
     let currentScroll = e.deltaY < 0 ? e.deltaY : 0;
     let scrollRatio = currentScroll ? accScroll / currentScroll : 0;
 
-    console.log(scrollRatio);
-
     scrollUpdate(accScroll + currentScroll);
     setTimeout(scrollUpdate, 1000, 0);
 
