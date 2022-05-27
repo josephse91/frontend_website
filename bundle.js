@@ -824,7 +824,9 @@ var Home = /*#__PURE__*/function (_React$Component) {
       var skills = [];
 
       for (var i = 0; i < skill.length; i++) {
+        var skillKey = "skill " + i;
         skills.push( /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("li", {
+          key: skillKey,
           className: "skill"
         }, skill[i]));
       }
@@ -848,8 +850,10 @@ var Home = /*#__PURE__*/function (_React$Component) {
         educationType = binghamton;
       }
 
-      descriptions = educationType.map(function (el) {
+      descriptions = educationType.map(function (el, idx) {
+        var educationKey = type + idx;
         return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("li", {
+          key: educationKey,
           className: "bullet"
         }, el);
       });
@@ -884,8 +888,10 @@ var Home = /*#__PURE__*/function (_React$Component) {
 
         for (var n = 0; n < quotes.length; n++) {
           var quoteId = "quote " + n;
+          var quoteKey = "quoteKey" + n;
           var quoteClass = n === i ? "quoteButton activeQuote" : "quoteButton";
           allButtons.push( /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("span", {
+            key: quoteKey,
             className: quoteClass,
             id: quoteId,
             onClick: clickQuote

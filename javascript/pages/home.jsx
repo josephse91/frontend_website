@@ -130,7 +130,12 @@ class Home extends React.Component {
     let skills = [];
 
     for (let i = 0; i < skill.length; i++) {
-      skills.push(<li className="skill">{skill[i]}</li>);
+      let skillKey = "skill " + i;
+      skills.push(
+        <li key={skillKey} className="skill">
+          {skill[i]}
+        </li>
+      );
     }
     return skills;
   }
@@ -156,7 +161,14 @@ class Home extends React.Component {
       educationType = binghamton;
     }
 
-    descriptions = educationType.map((el) => <li className="bullet">{el}</li>);
+    descriptions = educationType.map((el, idx) => {
+      let educationKey = type + idx;
+      return (
+        <li key={educationKey} className="bullet">
+          {el}
+        </li>
+      );
+    });
     return descriptions;
   }
 
@@ -227,9 +239,15 @@ class Home extends React.Component {
       let allButtons = [];
       for (let n = 0; n < quotes.length; n++) {
         let quoteId = "quote " + n;
+        let quoteKey = "quoteKey" + n;
         let quoteClass = n === i ? "quoteButton activeQuote" : "quoteButton";
         allButtons.push(
-          <span className={quoteClass} id={quoteId} onClick={clickQuote}></span>
+          <span
+            key={quoteKey}
+            className={quoteClass}
+            id={quoteId}
+            onClick={clickQuote}
+          ></span>
         );
       }
 

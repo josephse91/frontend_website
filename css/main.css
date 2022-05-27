@@ -454,6 +454,8 @@ a.navButton.active {
 .section_title {
   font-size: 3rem;
   text-align: center;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
 }
 
 #skills_title {
@@ -515,7 +517,7 @@ a.navButton.active {
 }
 
 .education_description_active {
-  max-height: 15rem;
+  max-height: 25rem;
   transition: max-height 0.2s ease-out;
   margin-bottom: 1rem;
 }
@@ -1300,6 +1302,10 @@ ul {
   .homeVideo iframe {
     width: 44.8rem;
     height: 25.2rem;
+  }
+
+  .section_title {
+    margin-top: 1rem;
   }
 
   .quoteBox {
