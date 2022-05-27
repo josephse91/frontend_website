@@ -1,4 +1,5 @@
 import React from "react";
+import { LinkedInLogo, GithubLogo } from "../components/svgComponent";
 
 export default function About() {
   return (
@@ -20,6 +21,10 @@ export default function About() {
           <h1 className="videoTopic">Coding Community</h1>
           <div className="aboutVideo">{videoTopic("community")}</div>
         </div>
+      </div>
+      <div className="contactLinks">
+        <LinkedInLogo />
+        <GithubLogo />
       </div>
     </div>
   );

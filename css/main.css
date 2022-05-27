@@ -633,15 +633,17 @@ h1 {
 
 #about {
   padding-bottom: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  align-items: center;
+  justify-content: center;
 }
 
 .aboutContent {
-  margin-top: 2rem;
   display: flex;
   flex-direction: column;
   width: 80rem;
-  margin-left: auto;
-  margin-right: auto;
 }
 
 .videoTopic {
@@ -675,6 +677,10 @@ h1 {
 .activeVid {
   max-height: 60rem;
   color: #ffcb9a;
+}
+
+#aboutContactLink {
+  width: 80rem;
 }
 
 .navButton:hover {
@@ -1356,6 +1362,7 @@ ul {
   .contactLeft {
     margin: 1rem;
     margin-left: 2rem;
+    flex-direction: column-reverse;
   }
 
   .contactGrid {
@@ -1496,7 +1503,6 @@ ul {
 
   .contactLeft {
     display: flex;
-    flex-direction: column;
     align-items: center;
   }
 

@@ -260,6 +260,7 @@
   .contactLeft {
     margin: 1rem;
     margin-left: 2rem;
+    flex-direction: column-reverse;
   }
 
   .contactGrid {
@@ -429,7 +430,6 @@
 
   .contactLeft {
     display: flex;
-    flex-direction: column;
     align-items: center;
   }
 

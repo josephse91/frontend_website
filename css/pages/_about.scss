@@ -2,15 +2,17 @@
 
 #about {
   padding-bottom: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  align-items: center;
+  justify-content: center;
 }
 
 .aboutContent {
-  margin-top: 2rem;
   display: flex;
   flex-direction: column;
   width: 80rem;
-  margin-left: auto;
-  margin-right: auto;
 }
 
 .videoTopic {
@@ -48,4 +50,8 @@
 .activeVid {
   max-height: 60rem;
   color: $secondSub;
+}
+
+#aboutContactLink {
+  width: 80rem;
 }
