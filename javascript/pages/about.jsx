@@ -22,7 +22,7 @@ export default function About() {
           <div className="aboutVideo">{videoTopic("community")}</div>
         </div>
       </div>
-      <div className="contactLinks">
+      <div className="contactLinks" id="aboutContactLink">
         <LinkedInLogo />
         <GithubLogo />
       </div>

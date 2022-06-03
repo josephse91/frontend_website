@@ -115,25 +115,29 @@ class Home extends React.Component {
 
   skillList() {
     let skill = [
-      "HTML/CSS",
-      "Javascript ES5/ES6",
+      "Javascript",
       "Ruby",
-      "Ruby on Rails",
+      "Rails",
       "jQuery",
       "React",
       "Redux",
-      "SQL(PostgreSQL/SQLite3)",
-      "Git/GitHub",
-      "SASS",
+      "SQL",
+      "Git",
+      "HTML",
+      "CSS",
     ];
 
     let skills = [];
 
     for (let i = 0; i < skill.length; i++) {
       let skillKey = "skill " + i;
+      let image_file = "./images/" + skill[i] + ".svg";
       skills.push(
         <li key={skillKey} className="skill">
-          {skill[i]}
+          <h5 className="skillNames">{skill[i]}</h5>
+          <div className="skillIcon">
+            <img className="skillLogos" src={image_file}></img>
+          </div>
         </li>
       );
     }

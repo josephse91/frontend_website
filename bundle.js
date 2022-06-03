@@ -456,7 +456,8 @@ function About() {
   }, "Coding Community"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: "aboutVideo"
   }, videoTopic("community")))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
-    className: "contactLinks"
+    className: "contactLinks",
+    id: "aboutContactLink"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_svgComponent__WEBPACK_IMPORTED_MODULE_1__.LinkedInLogo, null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_svgComponent__WEBPACK_IMPORTED_MODULE_1__.GithubLogo, null)));
 }
 
@@ -824,15 +825,23 @@ var Home = /*#__PURE__*/function (_React$Component) {
   }, {
     key: "skillList",
     value: function skillList() {
-      var skill = ["HTML/CSS", "Javascript ES5/ES6", "Ruby", "Ruby on Rails", "jQuery", "React", "Redux", "SQL(PostgreSQL/SQLite3)", "Git/GitHub", "SASS"];
+      var skill = ["Javascript", "Ruby", "Rails", "jQuery", "React", "Redux", "SQL", "Git", "HTML", "CSS"];
       var skills = [];
 
       for (var i = 0; i < skill.length; i++) {
         var skillKey = "skill " + i;
+        var image_file = "./images/" + skill[i] + ".svg";
         skills.push( /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("li", {
           key: skillKey,
           className: "skill"
-        }, skill[i]));
+        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h5", {
+          className: "skillNames"
+        }, skill[i]), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+          className: "skillIcon"
+        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("img", {
+          className: "skillLogos",
+          src: image_file
+        }))));
       }
 
       return skills;
@@ -962,7 +971,9 @@ function CreateLogos() {
   var content = [];
 
   for (var i = 0; i < logos.length; i++) {
+    var iconKey = "icon " + i;
     content.push( /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+      key: iconKey,
       className: "logo",
       id: logos[i]
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("img", {

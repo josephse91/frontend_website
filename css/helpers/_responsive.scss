@@ -13,7 +13,7 @@
 
   // This is the container for the skills. (Grid)
   .skills {
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(5, 1fr);
   }
 
   // Contact us
@@ -55,7 +55,7 @@
 
   // This is the container for the skills. (Grid)
   .skills {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
   }
 
   // About me
@@ -210,6 +210,11 @@
     margin-top: 1rem;
   }
 
+  // This is the container for the skills. (Grid)
+  .skills {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
   .quoteBox {
     min-width: 40rem;
   }
@@ -333,7 +338,7 @@
 
   // This is the container for the skills. (Grid)
   .skills {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     grid-gap: 1.5rem 0.5rem;
   }
 

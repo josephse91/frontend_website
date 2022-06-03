@@ -7,8 +7,9 @@ function CreateLogos() {
   const content = [];
 
   for (let i = 0; i < logos.length; i++) {
+    let iconKey = "icon " + i;
     content.push(
-      <div className="logo" id={logos[i]}>
+      <div key={iconKey} className="logo" id={logos[i]}>
         <img
           className="logo_image"
           src={"./images/" + logos[i] + "_logo.svg"}
