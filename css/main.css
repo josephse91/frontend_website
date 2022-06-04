@@ -615,7 +615,7 @@ a.navButton.active {
 
 .layout {
   background-color: #d1e8e2;
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -1059,6 +1059,7 @@ ul {
 }
 
 .contactInfo {
+  display: inline-block;
   flex-grow: 0.25;
 }
 .contactInfo p {
@@ -1074,10 +1075,10 @@ ul {
   padding: 0.5rem;
 }
 
-.contactInfo .contactIcon {
+.contactIcon {
   display: inline-block;
-  max-height: 1.5rem;
-  max-width: 1.5rem;
+  height: 1.5rem;
+  width: 1.5rem;
 }
 
 .contactLinks {

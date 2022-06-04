@@ -169,6 +169,7 @@
   }
 }
 .contactInfo {
+  display: inline-block;
   flex-grow: 0.25;
   p {
     display: inline-block;
@@ -184,10 +185,10 @@
   padding: 0.5rem;
 }
 
-.contactInfo .contactIcon {
+.contactIcon {
   display: inline-block;
-  max-height: 1.5rem;
-  max-width: 1.5rem;
+  height: 1.5rem;
+  width: 1.5rem;
 }
 
 .contactLinks {
