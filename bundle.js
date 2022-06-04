@@ -830,7 +830,7 @@ var Home = /*#__PURE__*/function (_React$Component) {
 
       for (var i = 0; i < skill.length; i++) {
         var skillKey = "skill " + i;
-        var image_file = "./images/" + skill[i] + ".png";
+        var image_file = "./images/" + skill[i].toLowerCase() + ".png";
         skills.push( /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("li", {
           key: skillKey,
           className: "skill"
