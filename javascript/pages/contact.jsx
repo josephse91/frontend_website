@@ -1,10 +1,5 @@
 import React from "react";
-import {
-  LinkedInLogo,
-  GithubLogo,
-  phoneIcon,
-  mailIcon,
-} from "../components/svgComponent";
+import { LinkedInLogo, GithubLogo } from "../components/svgComponent";
 
 export default function Contact() {
   return (
@@ -36,12 +31,12 @@ function myContactInfo() {
 
       <div className="contactInfo">
         <h1>CONTACT INFORMATION</h1>
-        <div>
-          {phoneIcon()}
+        <div className="contactLines">
+          <img className="contactIcon" src="./images/phone.png" />
           <p>(516) 670-4896</p>
         </div>
-        <div>
-          {mailIcon()}
+        <div className="contactLines">
+          <img className="contactIcon" src="./images/mail.png" />
           <p>sjoseph.eng@gmail.com</p>
         </div>
         <div className="contactLinks">

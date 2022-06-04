@@ -1075,10 +1075,15 @@ ul {
   padding: 0.5rem;
 }
 
+.contactLines {
+  display: flex;
+  gap: 0.25rem;
+}
+
 .contactIcon {
   display: inline-block;
-  height: 1.5rem;
-  width: 1.5rem;
+  height: 2rem;
+  width: 2rem;
 }
 
 .contactLinks {
