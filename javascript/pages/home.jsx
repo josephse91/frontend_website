@@ -131,7 +131,7 @@ class Home extends React.Component {
 
     for (let i = 0; i < skill.length; i++) {
       let skillKey = "skill " + i;
-      let image_file = "./images/" + skill[i] + ".svg";
+      let image_file = "./images/" + skill[i] + ".svg?sanitize=true";
       skills.push(
         <li key={skillKey} className="skill">
           <h5 className="skillNames">{skill[i]}</h5>
