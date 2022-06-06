@@ -10,17 +10,17 @@ export default function Portfolio() {
       <div className="project_container">
         <div
           className="project"
-          onTouchStart={projectTouch}
+          onTouchEnd={projectTouch}
           onMouseEnter={projectHover}
           onMouseLeave={projectHover}
           onMouseOver={projectOver}
         >
-          <img className="project_thumbnail" src="../images/pokeball.png" />
+          <img className="project_thumbnail" src="../images/pokeball.PNG" />
           <ProjectDescriptions project="Pokemon Pokedex" />
         </div>
         <div
           className="project"
-          onTouchStart={projectTouch}
+          onTouchEnd={projectTouch}
           onMouseEnter={projectHover}
           onMouseLeave={projectHover}
           onMouseOver={projectOver}
@@ -30,20 +30,20 @@ export default function Portfolio() {
         </div>
         <div
           className="project"
-          onTouchStart={projectTouch}
+          onTouchEnd={projectTouch}
           onMouseEnter={projectHover}
           onMouseLeave={projectHover}
           onMouseOver={projectOver}
         >
           <img
             className="project_thumbnail"
-            src="../images/music app bands.png"
+            src="../images/music app bands.PNG"
           />
           <ProjectDescriptions project="Music App" />
         </div>
         <div
           className="project"
-          onTouchStart={projectTouch}
+          onTouchEnd={projectTouch}
           onMouseEnter={projectHover}
           onMouseLeave={projectHover}
           onMouseOver={projectOver}

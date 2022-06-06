@@ -1086,18 +1086,18 @@ function Portfolio() {
     className: "project_container"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: "project",
-    onTouchStart: projectTouch,
+    onTouchEnd: projectTouch,
     onMouseEnter: projectHover,
     onMouseLeave: projectHover,
     onMouseOver: projectOver
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("img", {
     className: "project_thumbnail",
-    src: "../images/pokeball.png"
+    src: "../images/pokeball.PNG"
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(ProjectDescriptions, {
     project: "Pokemon Pokedex"
   })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: "project",
-    onTouchStart: projectTouch,
+    onTouchEnd: projectTouch,
     onMouseEnter: projectHover,
     onMouseLeave: projectHover,
     onMouseOver: projectOver
@@ -1108,18 +1108,18 @@ function Portfolio() {
     project: "Minesweeper"
   })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: "project",
-    onTouchStart: projectTouch,
+    onTouchEnd: projectTouch,
     onMouseEnter: projectHover,
     onMouseLeave: projectHover,
     onMouseOver: projectOver
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("img", {
     className: "project_thumbnail",
-    src: "../images/music app bands.png"
+    src: "../images/music app bands.PNG"
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(ProjectDescriptions, {
     project: "Music App"
   })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: "project",
-    onTouchStart: projectTouch,
+    onTouchEnd: projectTouch,
     onMouseEnter: projectHover,
     onMouseLeave: projectHover,
     onMouseOver: projectOver
