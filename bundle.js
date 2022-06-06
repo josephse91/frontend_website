@@ -1176,14 +1176,20 @@ function projectHover(e) {
   var box = e.currentTarget;
   var overlay = box.lastElementChild;
   var overlayClass = overlay.classList.value;
-  overlay.classList.toggle("active");
+
+  if (window.outerWidth > 800) {
+    overlay.classList.toggle("active");
+  }
 }
 
 function projectOver(e) {
   var box = e.currentTarget;
   var overlay = box.lastElementChild;
   var overlayClass = overlay.classList.value;
-  !overlayClass.includes("active") ? overlay.classList.toggle("active") : null;
+
+  if (window.outerWidth > 800) {
+    !overlayClass.includes("active") ? overlay.classList.toggle("active") : null;
+  }
 }
 
 function projectTouch(e) {

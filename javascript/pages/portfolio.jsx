@@ -130,7 +130,9 @@ function projectHover(e) {
   let overlay = box.lastElementChild;
   let overlayClass = overlay.classList.value;
 
-  overlay.classList.toggle("active");
+  if (window.outerWidth > 800) {
+    overlay.classList.toggle("active");
+  }
 }
 
 function projectOver(e) {
@@ -138,7 +140,11 @@ function projectOver(e) {
   let overlay = box.lastElementChild;
   let overlayClass = overlay.classList.value;
 
-  !overlayClass.includes("active") ? overlay.classList.toggle("active") : null;
+  if (window.outerWidth > 800) {
+    !overlayClass.includes("active")
+      ? overlay.classList.toggle("active")
+      : null;
+  }
 }
 
 function projectTouch(e) {
