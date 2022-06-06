@@ -1,369 +1,151 @@
 import React from "react";
-import Game from "../../projects/Minesweeper/components/game";
-import { Job_App } from "../../projects/Job-Listing-Widget-Project/frontend/entry";
-import { Widgets_App } from "../../projects/React_Widgets/frontend/widgets";
 
 export default function Portfolio() {
   return (
     <div className="pageContent" id="portfolio">
-      <div className="projectWindowContainer">
-        <div className="project active" id="Minesweeper_window">
-          <div className="featureClose" onClick={closeFeatureList}>
-            x
-          </div>
-          <Game />
-        </div>
-        <div className="project" id="Job_Listing_App_window">
-          <div className="featureClose" onClick={closeFeatureList}>
-            x
-          </div>
-          <Job_App />
-        </div>
-        <div className="project" id="Widget_window">
-          <div className="featureClose" onClick={closeFeatureList}>
-            x
-          </div>
-          <Widgets_App />
-        </div>
-        <div className="project" id="Pending_Projects_window">
-          <div className="featureClose" onClick={closeFeatureList}>
-            x
-          </div>
-          Pending App Features
-        </div>
-        <div className="project" id="Music_App_window">
-          <div className="featureClose" onClick={closeFeatureList}>
-            x
-          </div>
-          <h1>Check Github Repository</h1>
-        </div>
+      <div className="portfolio_title_block">
+        <h1 className="tab_title">Projects</h1>
+        <p className="projects_motto">Dive into some of my projects</p>
       </div>
-      <div className="portfolioCollection">
-        <div className="projectType" id="interactive">
-          <div className="projectTitleContainers" id="interactiveTitle">
-            <h1>Interactive Projects </h1>
-          </div>
-          <div className="interactiveProjects">
-            <div className="projectLists" onClick={projectSelect}>
-              <h1 className="projectName active">Minesweeper</h1>
-              <h1 className="projectName">Job Listing App</h1>
-              <h1 className="projectName">Widget</h1>
-              <h1 className="projectName">Pending Projects</h1>
-            </div>
-            <div className="projectTitleContainers" id="databaseTitle">
-              <h1>Database/Framework Projects</h1>
-            </div>
-            <div className="projectLists" onClick={projectSelect}>
-              <h1 className="projectName">Music App</h1>
-            </div>
-            <div className="projectShowcase">
-              <div className="featureButton">
-                <button onClick={seeProject}>See Project</button>
-              </div>
-              <div className="projectFeatures active" id="Minesweeper">
-                <MinesweeperDetails />
-              </div>
-              <div className="projectFeatures" id="Job_Listing_App">
-                <Job_listing_Details />
-              </div>
-              <div className="projectFeatures" id="Widget">
-                <Widgets_app />
-              </div>
-              <div className="projectFeatures" id="Pending_Projects">
-                <Pending_Projects />
-              </div>
-              <div className="projectFeatures" id="Music_App">
-                <Music_App />
-              </div>
-            </div>
-          </div>
+      <div className="project_container">
+        <div
+          className="project"
+          onClick={projectTouch}
+          onMouseEnter={projectHover}
+          onMouseLeave={projectHover}
+          onMouseOver={projectOver}
+        >
+          <img className="project_thumbnail" src="../images/pokeball.png" />
+          <ProjectDescriptions project="Pokemon Pokedex" />
+        </div>
+        <div
+          className="project"
+          onClick={projectTouch}
+          onMouseEnter={projectHover}
+          onMouseLeave={projectHover}
+          onMouseOver={projectOver}
+        >
+          <img className="project_thumbnail" src="../images/minesweeper.png" />
+          <ProjectDescriptions project="Minesweeper" />
+        </div>
+        <div
+          className="project"
+          onClick={projectTouch}
+          onMouseEnter={projectHover}
+          onMouseLeave={projectHover}
+          onMouseOver={projectOver}
+        >
+          <img
+            className="project_thumbnail"
+            src="../images/music app bands.png"
+          />
+          <ProjectDescriptions project="Music App" />
+        </div>
+        <div
+          className="project"
+          onClick={projectTouch}
+          onMouseEnter={projectHover}
+          onMouseLeave={projectHover}
+          onMouseOver={projectOver}
+        >
+          <img className="project_thumbnail" src="../images/react widget.png" />
+          <ProjectDescriptions project="React Widget" />
         </div>
       </div>
     </div>
   );
 }
 
-function projectSelect(e) {
-  e.preventDefault();
+function ProjectDescriptions(props) {
+  let projects = {
+    "Pokemon Pokedex": [
+      "A tool made to reference data on pokemon",
+      ["Rails", "Jbuilder", "Javascript", "React", "React Router", "Redux"],
+      "https://github.com/josephse91/pokedex",
+      "https://serge-pokedex.herokuapp.com/#/",
+    ],
+    "Music App": [
+      "Inventory system that holders your favorite albums, artists, songs and lyrics",
+      ["Ruby", "Rails", "SASS"],
+      "https://github.com/josephse91/Music-Inventory-System",
+      "https://serge-music.herokuapp.com/session/new",
+    ],
+    Minesweeper: [
+      "Interactive version of minesweeper",
+      ["Javascript", "React", "CSS"],
+      "https://github.com/josephse91/minesweeper_project",
+      "https://josephse91.github.io/minesweeper_project/",
+    ],
+    "React Widget": [
+      "Useful widgets built to demonstrate React capabilities",
+      ["Javascript", "React", "CSS"],
+      "https://github.com/josephse91/React_widget",
+      "https://josephse91.github.io/React_widget/",
+    ],
+  };
+  let project = props.project;
+  let projectSkills = projects[project][1];
 
-  let targetClass = e.target.classList.value;
-  let targetProjectButton = targetClass.includes("projectName")
-    ? e.target
-    : null;
+  let skillsUsed = projectSkills.map((skill) => {
+    let skill_key = project + "_" + skill;
+    return (
+      <li className="project_skill" key={skill_key}>
+        {skill}
+      </li>
+    );
+  });
 
-  if (!targetProjectButton) return;
+  return (
+    <div className="project_overlay">
+      <h2 className="project_title">{project}</h2>
+      <p className="project_description">{projects[project][0]}</p>
 
-  let buttonClass = targetProjectButton.classList.value;
+      <h3 className="skills_used_title">Skills Used</h3>
+      <ul className="pSkillbox">{skillsUsed}</ul>
 
-  let allProjectButtons = document.getElementsByClassName("projectName");
+      <div className="project_links">
+        <a
+          className="links"
+          id="github_repo_link"
+          href={projects[project][2]}
+          target="_blank"
+        >
+          Github Repository
+        </a>
+        <a
+          className="links"
+          id="live_project_link"
+          href={projects[project][3]}
+          target="_blank"
+        >
+          Live Project
+        </a>
+      </div>
+    </div>
+  );
+}
 
-  for (let i = 0; i < allProjectButtons.length; i++) {
-    if (allProjectButtons[i] === targetProjectButton) continue;
+function projectHover(e) {
+  let box = e.currentTarget;
+  let overlay = box.lastElementChild;
+  let overlayClass = overlay.classList.value;
 
-    let projectId = allProjectButtons[i].innerHTML.replaceAll(" ", "_");
-    let projectWindowId = projectId + "_window";
-    let projectWindow = document.getElementById(projectWindowId);
-    let projectActive = document.getElementById(projectId);
-    let detailsActive = projectActive.children[1];
+  overlay.classList.toggle("active");
+}
 
-    if (allProjectButtons[i].classList.value.includes("active")) {
-      allProjectButtons[i].classList.remove("active");
-      projectActive.classList.remove("active");
-      detailsActive ? detailsActive.classList.remove("active") : null;
-      projectWindow ? projectWindow.classList.remove("active") : null;
-      break;
-    }
+function projectOver(e) {
+  let box = e.currentTarget;
+  let overlay = box.lastElementChild;
+  let overlayClass = overlay.classList.value;
+
+  !overlayClass.includes("active") ? overlay.classList.toggle("active") : null;
+}
+
+function projectTouch(e) {
+  let box = e.currentTarget;
+  let overlay = box.lastElementChild;
+
+  if (window.outerWidth < 800) {
+    overlay.classList.toggle("active");
   }
-
-  let projectId = targetProjectButton.innerHTML.replaceAll(" ", "_");
-  let projectWindowId = projectId + "_window";
-  let projectActive = document.getElementById(projectId);
-  let projectWindow = document.getElementById(projectWindowId);
-
-  if (!buttonClass.includes(" active")) {
-    targetProjectButton.classList.add("active");
-    projectActive.classList.add("active");
-    projectWindow.classList.add("active");
-  }
-}
-
-function seeProject(e) {
-  e.preventDefault();
-
-  let projectDetails = e.target.parentElement.parentElement.children;
-
-  let activeProject;
-
-  for (let i = 1; i < projectDetails.length; i++) {
-    let currentProject = projectDetails[i];
-    if (currentProject.classList.value.includes("projectFeatures active")) {
-      activeProject = currentProject;
-      break;
-    }
-  }
-
-  let projectWindowContainer = document.getElementsByClassName(
-    "projectWindowContainer"
-  )[0];
-  let activeProjectWindowId = activeProject.id + "_window";
-  let projectWindow = document.getElementById(activeProjectWindowId);
-
-  projectWindowContainer.classList.add("active");
-  projectWindow.classList.add("active");
-}
-
-function closeFeatureList(e) {
-  e.preventDefault();
-
-  let close = e.target;
-  let detailBox = close.parentElement.parentElement;
-
-  detailBox.classList.remove("active");
-}
-
-function MinesweeperDetails() {
-  return (
-    <div className="projectDetails">
-      <h1 className="projectDetailTitle">Minesweeper Project</h1>
-
-      <h2 className="projectDetailSubtitle">Concept</h2>
-      <ul>
-        <li className="projectDetailNote">
-          Create an interactive version of minesweeper using React
-        </li>
-      </ul>
-      <h2 className="projectDetailSubtitle">Programming Highlights</h2>
-      <ul>
-        <li className="projectDetailNote">
-          State management to update the board (React)
-        </li>
-        <li className="projectDetailNote">
-          Event Handlers established so users can select tiles
-        </li>
-        <li className="projectDetailNote">
-          Object Oriented Principles to create tiles, boards and rules of the
-          game
-        </li>
-        <li className="projectDetailNote">CSS styles applied</li>
-      </ul>
-
-      <h2 className="projectDetailSubtitle">Created Working Environment</h2>
-      <ul>
-        <li className="projectDetailNote">
-          Initialized NPM and installing Dependencies
-        </li>
-        <li className="projectDetailNote">Configure Webpack</li>
-      </ul>
-    </div>
-  );
-}
-
-function Job_listing_Details() {
-  return (
-    <div className="projectDetails">
-      <h1 className="projectDetailTitle">Job Listing App</h1>
-
-      <h2 className="projectDetailSubtitle">Concept</h2>
-      <ul>
-        <li className="projectDetailNote">
-          Create a job listing widget that uses the Redux lifecycle to manage
-          State
-        </li>
-      </ul>
-      <h2 className="projectDetailSubtitle">Programming Highlights</h2>
-      <ul>
-        <li className="projectDetailNote">Manage state using Redux library</li>
-        <li className="projectDetailNote">
-          Managed asynchronous XMLHttpRequests to gather data
-        </li>
-      </ul>
-
-      <h2 className="projectDetailSubtitle">Created Working Environment</h2>
-      <ul>
-        <li className="projectDetailNote">
-          Initialized NPM and installing Dependencies
-        </li>
-        <li className="projectDetailNote">Configure Webpack</li>
-      </ul>
-    </div>
-  );
-}
-
-function Widgets_app() {
-  return (
-    <div className="projectDetails">
-      <h1 className="projectDetailTitle">Widgets App</h1>
-
-      <h2 className="projectDetailSubtitle">Concept</h2>
-      <ul>
-        <li className="projectDetailNote">
-          Build four simple components that capture different React
-          capabilities. (Clock, Interactive Tabs, a Weather Widget, and a Simple
-          Search component)
-        </li>
-      </ul>
-      <h2 className="projectDetailSubtitle">Programming Highlights</h2>
-      <ul>
-        <li className="projectDetailNote">
-          Incorporate an API into a component
-        </li>
-        <li className="projectDetailNote">
-          Managed asynchronous XMLHttpRequests to gather data
-        </li>
-        <li className="projectDetailNote">Create multiple simple components</li>
-        <li className="projectDetailNote">
-          Incorporation of Lifecycles with react to manage state
-        </li>
-        <li className="projectDetailNote">CSS styles applied</li>
-      </ul>
-
-      <h2 className="projectDetailSubtitle">Created Working Environment</h2>
-      <ul>
-        <li className="projectDetailNote">
-          Initialized NPM and installing Dependencies
-        </li>
-        <li className="projectDetailNote">Configure Webpack</li>
-      </ul>
-    </div>
-  );
-}
-
-function Pending_Projects() {
-  return (
-    <div className="projectDetails">
-      <h1 className="projectDetailTitle">Sudoku Solver</h1>
-      <h2 className="projectDetailSubtitle">Concept</h2>
-      <ul>
-        <li className="projectDetailNote">
-          Create an interactive version of Sudoku and design a solver button
-          that will use and illustrate the power of Data Structures/Algorithms
-        </li>
-      </ul>
-
-      <h2 className="projectDetailSubtitle">Programming Highlights</h2>
-      <ul>
-        <li className="projectDetailNote">
-          Sudoku boards will be generated using XMLHttpRequests
-        </li>
-        <li className="projectDetailNote">
-          Sudoku game will be coded using Object oriented programming
-        </li>
-        <li className="projectDetailNote">
-          Solver will use a data structure to solve the board
-        </li>
-      </ul>
-    </div>
-  );
-}
-
-function Music_App() {
-  return (
-    <div className="projectDetails" id="music_app_projectDetails">
-      <h1 className="projectDetailTitle">Music App</h1>
-
-      <h2 className="projectDetailSubtitle">Concept</h2>
-      <ul>
-        <li className="projectDetailNote" id="music_app_concept">
-          Build an inventory system for record labels. This app will track
-          Bands, Albums and Tracks. User will have their own accounts.
-        </li>
-      </ul>
-      <div className="projectDetailBox">
-        <img src="../images/Music App migrations.PNG" />
-        <div className="projectDetailText">
-          <h2 className="projectDetailSubtitle">
-            Established the Rails work environment
-          </h2>
-          <ul>
-            <li className="projectDetailNote">
-              Setting up the schemas by using migrations
-            </li>
-            <li className="projectDetailNote">
-              Activating the PostgreSQL database and Rails database
-              configurations
-            </li>
-          </ul>
-        </div>
-      </div>
-
-      <div className="projectDetailBox">
-        <img src="../images/Music App sign-in.PNG" />
-        <div className="projectDetailText">
-          <h2 className="projectDetailSubtitle">
-            Created User Models with user Authentication
-          </h2>
-          <ul>
-            <li className="projectDetailNote">
-              Login system uses Rails Validations to determine whether there is
-              an active current user
-            </li>
-            <li className="projectDetailNote">Configure Webpack</li>
-          </ul>
-        </div>
-      </div>
-      <div className="projectDetailBox">
-        <img src="../images/RESTful routing.PNG" />
-        <div className="projectDetailText">
-          <h2 className="projectDetailSubtitle">RESTful routing system</h2>
-        </div>
-      </div>
-      <div className="projectDetailBox">
-        <img src="../images/Music App Route.PNG" />
-        <div className="projectDetailText">
-          <h2 className="projectDetailSubtitle">
-            Trigger Controller Actions from views using forms and links
-          </h2>
-        </div>
-      </div>
-      <div className="projectDetailBox">
-        <img src="../images/Music App new route.PNG" />
-        <div className="projectDetailText">
-          <h2 className="projectDetailSubtitle">
-            Create Data columns/attributes for objects that can be references in
-            routes
-          </h2>
-        </div>
-      </div>
-    </div>
-  );
 }

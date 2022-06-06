@@ -1,194 +1,112 @@
 @import "../helpers/variables.scss";
 
 #portfolio {
-  padding-bottom: 2rem;
-}
-
-.portfolioCollection {
   display: flex;
   flex-direction: column;
   align-items: center;
-  position: relative;
+  padding: 1rem;
+  gap: 1rem;
 }
 
-.projectType {
-  display: flex;
-  flex-direction: column;
-  width: 85%;
-}
-
-.projectTitleContainers {
-  display: flex;
-  justify-content: center;
-  margin: 0.75rem;
-
-  h1 {
-    font-size: 2.5rem;
-    color: $subdom;
-  }
-
-  h1:before,
-  h1:after {
-    content: "―――――――";
-  }
-}
-
-.projectLists {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 3rem;
-  margin-bottom: 0.5rem;
-}
-
-.featureButton {
-  position: sticky;
-  display: flex;
-  justify-content: flex-end;
-  top: 0;
-
-  button {
-    display: inline-block;
-    font-size: 1.5rem;
-    border-radius: 0.025rem;
-    background-color: $secondSub;
-    color: $text;
-  }
-
-  button.active {
-    display: none;
-  }
-}
-
-.projectShowcase {
-  background-color: $secondAccent;
-
-  p {
-    cursor: pointer;
-  }
-}
-
-.projectName {
-  display: inline-block;
-  font-size: 1.5rem;
-  height: 3rem;
+.tab_title {
+  font-size: 4rem;
+  color: $subdom;
   text-align: center;
-  vertical-align: middle;
-  color: $dominate;
-  background-color: $subdom;
-  border-radius: 0.5rem;
-  padding: 0.5rem;
-  cursor: pointer;
 }
 
-.projectName.active {
-  color: $secondSub;
+.projects_motto {
+  font-size: 2rem;
+  color: $text;
 }
 
-.projectFeatures {
-  height: 35rem;
-  max-height: 0;
-  overflow: hidden;
-  color: $dominate;
+@mixin maintain-ratio($width, $ratio: 1 1) {
+  $height: percentage(nth($ratio, 2) / nth($ratio, 1));
+
+  width: $width;
+  height: 0;
+  padding-bottom: $height;
 }
 
-.projectFeatures.active {
-  max-height: 90%;
-  overflow-y: auto;
-  border: 0.2rem solid $subdom;
-}
-
-.projectWindowContainer {
-  position: absolute;
-  width: 90%;
-  height: 80vh;
-  max-height: 80vh;
-  background-color: white;
-  color: black;
-  border: 0.5rem solid $secondSub;
-  border-radius: 1rem;
-  bottom: 1.5rem;
-  left: 5%;
-  z-index: -1;
+.project_container {
+  padding: 2rem;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  width: 100%;
+  justify-items: center;
 }
 
 .project {
   position: relative;
-  max-height: 0;
   overflow: hidden;
+  width: 25rem;
+  height: 25rem;
 }
 
-.project.active {
-  max-height: 80vh;
-  height: 80vh;
-  overflow-y: auto;
+.project_thumbnail {
+  height: 100%;
+  width: 100%;
 }
 
-.projectWindowContainer.active {
-  z-index: 10;
-}
-
-.featureClose {
-  position: sticky;
-  display: inline-block;
-  font-size: 1.5rem;
-  top: 0.5rem;
-  margin-left: 97%;
-  right: 2rem;
-  cursor: pointer;
-  color: $subdom;
-  padding: 0.15rem;
-}
-
-.projectDetails {
+.project_overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: $subdom;
   display: flex;
   flex-direction: column;
-  flex-wrap: nowrap;
   gap: 1rem;
+  transition: transform 0.15s ease-in;
+
+  p,
+  li {
+    color: $dominate;
+  }
 }
 
-.projectDetailTitle {
-  font-size: 2.5rem;
-  align-self: center;
-  color: $secondSub;
+.project_overlay.active {
+  transform: translate(0, -101%);
+  transition: transform 0.15s ease-in;
 }
 
-.projectDetailSubtitle {
+.project_title {
+  text-align: center;
   font-size: 2rem;
+  color: $accent;
 }
 
-ul {
-  color: white;
+.project_description {
+  font-size: 1.5rem;
 }
 
-.projectDetailNote {
-  font-size: 1.75rem;
-  padding-left: 3rem;
-  margin-bottom: 0.5rem;
+.pSkillbox {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
   list-style-type: none;
 }
 
-.projectDetailBox {
+.skills_used_title {
+  color: $accent;
+  font-size: 1.5rem;
+}
+
+.project_skill {
+  font-size: 1.25rem;
+}
+
+.project_links {
   display: flex;
-  align-items: center;
-  gap: 5rem;
-
-  img {
-    height: auto;
-    width: 30rem;
-    display: inline-block;
-    margin-bottom: 1rem;
-  }
-
-  .projectDetailNote {
-    padding: 0;
-  }
+  justify-content: space-around;
+  position: absolute;
+  bottom: 1.5rem;
+  width: 100%;
 }
 
-.projectDetailText {
-  max-width: 50%;
-}
+.links {
+  font-size: 1.25rem;
+  color: $accent;
 
-#music_app_concept {
-  padding: 0;
+  &:visited {
+    color: white;
+  }
 }

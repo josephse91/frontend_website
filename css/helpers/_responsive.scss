@@ -16,6 +16,14 @@
     grid-template-columns: repeat(5, 1fr);
   }
 
+  // Portfolio Tab
+
+  .project_container {
+    grid-template-columns: repeat(2, 30rem);
+    justify-content: center;
+    row-gap: 2rem;
+  }
+
   // Contact us
   .contactWelcome {
     h1 {
@@ -73,18 +81,6 @@
   .video {
     width: 44.8;
     height: 31.5;
-  }
-
-  // Portfolio
-
-  .projectTitleContainers {
-    h1 {
-      font-size: 1.5rem;
-    }
-    h1:before,
-    h1:after {
-      content: "――――";
-    }
   }
 }
 
@@ -235,26 +231,22 @@
 
   // Portfolio
 
-  .projectDetailBox {
-    flex-direction: column-reverse;
-    gap: 0.5rem;
-    margin-bottom: 1rem;
+  .project_container {
+    grid-template-columns: repeat(2, 25rem);
+    row-gap: 2rem;
   }
 
-  #music_app_concept {
-    margin-bottom: 1.5rem;
+  .project_description {
+    font-size: 1.25rem;
   }
 
-  .projectDetailText {
-    max-width: 100%;
+  .project {
+    width: 20rem;
+    height: 20rem;
   }
 
-  .projectDetailBox > .projectDetailText > .projectDetailSubtitle {
-    font-size: 1.75rem;
-  }
-
-  .projectDetailBox > .projectDetailText > ul > .projectDetailNote {
-    font-size: 1.5rem;
+  .pSkillbox {
+    max-height: 5rem;
   }
 
   //contact
@@ -379,31 +371,13 @@
 
   // Portfolio
 
-  .projectLists {
-    gap: 1.5rem;
+  .project_container {
+    grid-template-columns: repeat(1, 25rem);
   }
 
-  .projectTitleContainers {
-    h1:before,
-    h1:after {
-      content: "";
-    }
-  }
-
-  .projectDetailTitle {
-    font-size: 2rem;
-  }
-
-  .projectDetailSubtitle {
-    font-size: 1.75rem;
-  }
-
-  .projectDetailNote {
-    font-size: 1.25rem;
-  }
-
-  .featureClose {
-    margin-left: 92%;
+  .project {
+    width: 20rem;
+    height: 20rem;
   }
 
   //Contact me
