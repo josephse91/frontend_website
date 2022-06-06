@@ -1086,7 +1086,7 @@ function Portfolio() {
     className: "project_container"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: "project",
-    onClick: projectTouch,
+    onTouchStart: projectTouch,
     onMouseEnter: projectHover,
     onMouseLeave: projectHover,
     onMouseOver: projectOver
@@ -1097,7 +1097,7 @@ function Portfolio() {
     project: "Pokemon Pokedex"
   })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: "project",
-    onClick: projectTouch,
+    onTouchStart: projectTouch,
     onMouseEnter: projectHover,
     onMouseLeave: projectHover,
     onMouseOver: projectOver
@@ -1108,7 +1108,7 @@ function Portfolio() {
     project: "Minesweeper"
   })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: "project",
-    onClick: projectTouch,
+    onTouchStart: projectTouch,
     onMouseEnter: projectHover,
     onMouseLeave: projectHover,
     onMouseOver: projectOver
@@ -1119,7 +1119,7 @@ function Portfolio() {
     project: "Music App"
   })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: "project",
-    onClick: projectTouch,
+    onTouchStart: projectTouch,
     onMouseEnter: projectHover,
     onMouseLeave: projectHover,
     onMouseOver: projectOver

@@ -10,7 +10,7 @@ export default function Portfolio() {
       <div className="project_container">
         <div
           className="project"
-          onClick={projectTouch}
+          onTouchStart={projectTouch}
           onMouseEnter={projectHover}
           onMouseLeave={projectHover}
           onMouseOver={projectOver}
@@ -20,7 +20,7 @@ export default function Portfolio() {
         </div>
         <div
           className="project"
-          onClick={projectTouch}
+          onTouchStart={projectTouch}
           onMouseEnter={projectHover}
           onMouseLeave={projectHover}
           onMouseOver={projectOver}
@@ -30,7 +30,7 @@ export default function Portfolio() {
         </div>
         <div
           className="project"
-          onClick={projectTouch}
+          onTouchStart={projectTouch}
           onMouseEnter={projectHover}
           onMouseLeave={projectHover}
           onMouseOver={projectOver}
@@ -43,7 +43,7 @@ export default function Portfolio() {
         </div>
         <div
           className="project"
-          onClick={projectTouch}
+          onTouchStart={projectTouch}
           onMouseEnter={projectHover}
           onMouseLeave={projectHover}
           onMouseOver={projectOver}
