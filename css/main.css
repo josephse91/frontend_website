@@ -646,12 +646,12 @@ h1 {
 }
 
 #about {
-  padding-bottom: 2rem;
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
   align-items: center;
   justify-content: center;
+  padding-top: 2rem;
 }
 
 .aboutContent {
@@ -1255,6 +1255,11 @@ h1 {
   }
 
   .aboutContent {
+    max-height: 100%;
+  }
+
+  .aboutContent,
+#aboutContactLink {
     width: 85%;
   }
 

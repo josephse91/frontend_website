@@ -8,7 +8,7 @@ export default function Layout() {
     <div className="layout">
       <div className="underNav">
         <Navbar />
-        <Outlet className="pageContent" />
+        <Outlet />
       </div>
       <Footer />
     </div>
